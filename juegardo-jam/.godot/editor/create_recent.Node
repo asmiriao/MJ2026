@@ -1,4 +1,6 @@
 CollisionShape3D
+CharacterBody3D
+RigidBody3D
 Area3D
 StaticBody3D
 MeshInstance3D
@@ -10,5 +12,3 @@ DirectionalLight3D
 OmniLight3D
 SpotLight3D
 CSGCombiner3D
-Camera3D
-CSGSphere3D

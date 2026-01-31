@@ -58,6 +58,41 @@ albedo_color = Color(0.26405692, 0.10850083, 0.060662888, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjvhh"]
 albedo_color = Color(0.24200663, 0.123132505, 0.037751403, 1)
 
+[sub_resource type="GDScript" id="GDScript_jjgbg"]
+script/source = "extends CharacterBody3D
+
+const ALMA_1 = preload(\"uid://cxi16kb2wu3h4\")
+
+var is_dialogue_started = false
+var is_player_on_trigger = false
+
+\"\"\"func _on_area_3d_body_entered(body: Node3D) -> void:
+	is_player_on_trigger = true
+	if body.is_in_group(\"Almas\") and is_player_on_trigger:
+		_on_dialogue_started()
+		DialogueManager.show_dialogue_balloon(ALMA_1, \"dialogoAlma1\")
+
+func _ready() -> void:
+	DialogueManager.dialogue_started.connect(_on_dialogue_started)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	
+
+func _process(delta: float) -> void:
+	pass
+
+func _on_dialogue_started():
+	is_dialogue_started = true
+	
+func _on_dialogue_ended():
+	is_dialogue_started = false
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	is_player_on_trigger = true
+	if area.is_in_group(\"Almas\") and is_player_on_trigger:
+		_on_dialogue_started()
+		DialogueManager.show_dialogue_balloon(ALMA_1, \"dialogoAlma1\")\"\"\"
+"
+
 [sub_resource type="Animation" id="Animation_bo1nx"]
 length = 0.001
 tracks/0/type = "value"
@@ -126,7 +161,41 @@ _data = {
 &"entrar en tienda": SubResource("Animation_jjgbg")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bo1nx"]
+size = Vector3(1, 2.8444824, 0.35153198)
+
+[sub_resource type="GDScript" id="GDScript_bo1nx"]
+script/source = "extends Area3D
+
+const ALMA_1 = preload(\"uid://cxi16kb2wu3h4\")
+
+var is_dialogue_started = false
+var is_player_on_trigger = false
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	\"\"\"DialogueManager.dialogue_started.connect(_on_dialogue_started)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)\"\"\"
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if is_player_on_trigger:
+		DialogueManager.show_dialogue_balloon(ALMA_1, \"dialogoAlma1\")
+
+
+func _on_area_entered(area: Area3D) -> void:
+	print(\"Player entered\")
+	is_player_on_trigger = true
+	DialogueManager.show_dialogue_balloon(ALMA_1, \"dialogoAlma1\")
+	
+	
+
+func _on_area_exited(area: Area3D) -> void:
+	is_player_on_trigger = false
+"
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
+size = Vector3(1, 0.27038574, 0.37158203)
 
 [node name="Main" type="Node3D" unique_id=1538424508]
 
@@ -284,14 +353,27 @@ light_specular = 0.0
 shadow_enabled = true
 distance_fade_enabled = true
 
-[node name="Alma" parent="." unique_id=1151249655 instance=ExtResource("1_jjgbg")]
+[node name="Alma" parent="." unique_id=1151249655 groups=["Almas"] instance=ExtResource("1_jjgbg")]
+script = SubResource("GDScript_jjgbg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Alma" unique_id=1061754268]
 libraries/ = SubResource("AnimationLibrary_bo1nx")
 autoplay = &"entrar en tienda"
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1944213490]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Alma" unique_id=380632545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6251221, -1.0008435)
+shape = SubResource("BoxShape3D_bo1nx")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1944213490 groups=["Triggers"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0018957)
+priority = 1
+script = SubResource("GDScript_bo1nx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1012081640]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.48320973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36480713, -0.22556412)
 shape = SubResource("BoxShape3D_jjgbg")
+
+[connection signal="area_entered" from="Area3D" to="Alma" method="_on_area_3d_area_entered"]
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area3D" to="Area3D" method="_on_area_exited"]
+[connection signal="body_entered" from="Area3D" to="Alma" method="_on_area_3d_body_entered"]

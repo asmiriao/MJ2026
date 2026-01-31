@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://befdxg7fmu7mt" path="res://Sprites/Cliente/CLIENT_1.png" id="1_j5xmo"]
 [ext_resource type="Texture2D" uid="uid://dfofg62q2o4" path="res://Sprites/Cliente/CLIENT_2.png" id="2_ge5l7"]
 [ext_resource type="Texture2D" uid="uid://blmopp8i6twb3" path="res://Sprites/Cliente/CLIENT_3.png" id="3_ae78o"]
-[ext_resource type="Script" uid="uid://vfu4rsqpgbhb" path="res://Scenes/client.gd" id="4_ulvc4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5xmo"]
+size = Vector3(1, 2.2958984, 0.11383057)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_25gtd"]
 animations = [{
@@ -22,10 +24,13 @@ animations = [{
 "speed": 4.0
 }]
 
-[node name="Alma" type="Node3D" unique_id=1151249655]
+[node name="Alma" type="CharacterBody3D" unique_id=889273257]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=446839146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6479492, -1.0018921)
+shape = SubResource("BoxShape3D_j5xmo")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=755788618]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0.48446798, -0.9965718)
 sprite_frames = SubResource("SpriteFrames_25gtd")
 autoplay = "default"
-script = ExtResource("4_ulvc4")
