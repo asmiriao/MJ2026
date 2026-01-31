@@ -81,7 +81,7 @@ main_view.gd::GDScript::5365867961863611872::1769853653::0::1::::<>Control<><>0<
 main_view.tscn::PackedScene::4884668666408697448::1769853653::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png
 ::res://Assets/::1769897962
 ::res://Assets/DISEÑO/::1769897962
-::res://Assets/DISEÑO/2D/::1769897986
+::res://Assets/DISEÑO/2D/::1769899320
 carnaval.png::CompressedTexture2D::6523496951016875287::1769897962::1769897985::1::::<><><>0<>0<>402d1242fcf131f42f47835395ff141d<>res://.godot/imported/carnaval.png-d05d9513dfd39ffbf0d28ed8634702ae.ctex::
 CLIENT_1.png::CompressedTexture2D::8977503903403732180::1769897962::1769897985::1::::<><><>0<>0<>01d252f1aae68d4ed73aba1da1f0855d<>res://.godot/imported/CLIENT_1.png-1805b7f134a4c1c5e88a2e0e7e830f08.ctex::
 CLIENT_2.png::CompressedTexture2D::6370750763280856733::1769897962::1769897985::1::::<><><>0<>0<>69206eee492e2d5e332ffd29026b679c<>res://.godot/imported/CLIENT_2.png-563cfa81b7da15674ebe20e7e8c15f4b.ctex::
@@ -105,8 +105,12 @@ WhiteMask.png::CompressedTexture2D::184012996266974337::1769897962::1769897983::
 ::res://Assets/DISEÑO/3D/MODELS/AKU AKU/WAVEFRONT/::1769897987
 Aku-Aku.obj::Mesh::1724729741183092934::1769897962::1769897987::1::::<><><>0<>0<>09bf941644fc77a5efd5def2374b8885<>res://.godot/imported/Aku-Aku.obj-b4958a12eaa7b4b278289df28a97c41a.mesh<*>res://.godot/imported/Aku-Aku.obj-b4958a12eaa7b4b278289df28a97c41a.mesh::
 ::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/::1769897962
-::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/::1769897987
+::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/::1769903778
 caja_registradora.obj::Mesh::7315316634857816268::1769897962::1769897987::1::::<><><>0<>0<>93221e105bd2541d8daa2057bb5a7406<>res://.godot/imported/caja_registradora.obj-2673145bb721055bab6c1de34e09c479.mesh<*>res://.godot/imported/caja_registradora.obj-2673145bb721055bab6c1de34e09c479.mesh::
+::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/::1769903778
+Material-color.png::CompressedTexture2D::1547157656692796879::1769903778::1769903785::1::::<><><>0<>0<>be4c780aee7204722eb55f5a28fae06a<>res://.godot/imported/Material-color.png-de3a725fdfe8a8b1696b0eb1ebb1861e.s3tc.ctex::
+Material-metallic.png::CompressedTexture2D::1548304549284191006::1769903778::1769903812::1::::<><><>0<>0<>ea8fe7bdbe1c5dfce229c98d283735ea<>res://.godot/imported/Material-metallic.png-0dff963ed2cc095c1097869f3b6c8474.s3tc.ctex::
+Material-roughness.png::CompressedTexture2D::2285053646392742740::1769903778::1769903790::1::::<><><>0<>0<>bd6b8cfdf2fe272bbc3cad5b5e5d16e2<>res://.godot/imported/Material-roughness.png-e3025d15598acd3cc24f62944e690257.s3tc.ctex::
 ::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WIP/::1769897962
 ::res://Assets/DISEÑO/3D/MODELS/chihiro/::1769897990
 chihiro.gltf::PackedScene::310993178796762507::1769897962::1769897990::1::::<><><>0<>0<>e35739fa7623f7deaf43ba6acdbd3fac<>res://.godot/imported/chihiro.gltf-7778f61b279294b38a6185973e1b1907.scn::
@@ -139,7 +143,7 @@ majora.obj::Mesh::8717633092376328853::1769897962::1769897987::1::::<><><>0<>0<>
 ::res://Assets/DISEÑO/3D/MODELS/marco puerta/::1769897990
 MarcoPuerta.gltf::PackedScene::1133221530079797825::1769897962::1769897990::1::::<><><>0<>0<>b9b0e68a68cafe65f05257a75a584c4a<>res://.godot/imported/MarcoPuerta.gltf-537a751f5bf90c302ded77f1f5641e18.scn::
 MarcoPuerta.obj::Mesh::2359374422168063862::1769897962::1769897987::1::::<><><>0<>0<>ec68fbe9f4d0aaf624a1db9a3baddb8e<>res://.godot/imported/MarcoPuerta.obj-bde8f04146a9bb8fa9eec30750b8c30e.mesh<*>res://.godot/imported/MarcoPuerta.obj-bde8f04146a9bb8fa9eec30750b8c30e.mesh::
-::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/::1769897982
+::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/::1769899080
 marco_puerta_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::4579722573007272633::1769897962::1769899062::1::::<><><>0<>0<>85691a3be2cfb1a3e15f76ddabcfaa31<>res://.godot/imported/marco_puerta_Base_color_Utility - sRGB - Texture.png-5562fae2c24f5f9a824b4caf07152bee.s3tc.ctex::
 marco_puerta_Height_Utility - Raw.png::CompressedTexture2D::3882647821145442405::1769897962::1769897982::1::::<><><>0<>0<>28d9a058181aecc06d410ac143027a6f<>res://.godot/imported/marco_puerta_Height_Utility - Raw.png-793df02b6f1dcb5107f46b9e427a7657.ctex::
 marco_puerta_Metallic_Utility - Raw.png::CompressedTexture2D::6168694783805674902::1769897962::1769897981::1::::<><><>0<>0<>c3c3c89654b40cbc0824354168edd489<>res://.godot/imported/marco_puerta_Metallic_Utility - Raw.png-8237c449bccfc3593e7ba43faacb53ae.ctex::
@@ -159,7 +163,7 @@ mesa_Roughness_Utility - Raw.png::CompressedTexture2D::5200185847706627752::1769
 ::res://Assets/DISEÑO/3D/MODELS/mostrador/::1769897990
 mostrador.gltf::PackedScene::6235193195314384210::1769897962::1769897990::1::::<><><>0<>0<>0f815beb9929e4b597d85d51b36452b6<>res://.godot/imported/mostrador.gltf-84e6bea9e38bcdbce42781a02f2f6151.scn::
 mostrador.obj::Mesh::5740612801111601170::1769897962::1769897986::1::::<><><>0<>0<>6435bc76c8f507da748a46a4c0847b0a<>res://.godot/imported/mostrador.obj-8f6c1454032d3736e00d7de43410e434.mesh<*>res://.godot/imported/mostrador.obj-8f6c1454032d3736e00d7de43410e434.mesh::
-::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/::1769897983
+::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/::1769898986
 mostrador_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::5223063598336255170::1769897962::1769898931::1::::<><><>0<>0<>204991acd00302b32323d040f5c5d8c6<>res://.godot/imported/mostrador_Base_color_Utility - sRGB - Texture.png-6b5fc1b2ef114034db5d9e616daa58c6.s3tc.ctex::
 mostrador_Height_Utility - Raw.png::CompressedTexture2D::3832551832236288237::1769897962::1769898986::1::::<><><>0<>0<>5407ac241a52b9d8540190185f25efdb<>res://.godot/imported/mostrador_Height_Utility - Raw.png-b2a9b077fe7c873c4406f225a97347a9.s3tc.ctex::
 mostrador_Metallic_Utility - Raw.png::CompressedTexture2D::2069207553704025604::1769897962::1769897982::1::::<><><>0<>0<>63845445c06d12ff62396853a5f560b3<>res://.godot/imported/mostrador_Metallic_Utility - Raw.png-deea7d241568cf4acb98d0dd38a2ed6f.ctex::
@@ -169,14 +173,14 @@ mostrador_Roughness_Utility - Raw.png::CompressedTexture2D::6830726031967796902:
 ::res://Assets/DISEÑO/3D/MODELS/mysterio/::1769897990
 mysterio.gltf::PackedScene::3604035421106637594::1769897962::1769897990::1::::<><><>0<>0<>88ba62d47914049da88d13ae5e697ab4<>res://.godot/imported/mysterio.gltf-4d8a2e5e3903a5bdfdf185b81ba71df5.scn::
 mysterio.obj::Mesh::9165833681961845920::1769897962::1769897986::1::::<><><>0<>0<>864ae90d361ecd0ecfc26dead62d8fb7<>res://.godot/imported/mysterio.obj-0e16100fa66a3e96125858063bcc4b11.mesh<*>res://.godot/imported/mysterio.obj-0e16100fa66a3e96125858063bcc4b11.mesh::
-::res://Assets/DISEÑO/3D/MODELS/telefono/::1769897990
+::res://Assets/DISEÑO/3D/MODELS/telefono/::1769898317
 base telefono.png::CompressedTexture2D::7771193079963706890::1769897962::1769898199::1::::<><><>0<>0<>8d86a75401e604bbb56afd707af34a1c<>res://.godot/imported/base telefono.png-10a36b1c2d3e65e22c0b84c15e889100.s3tc.ctex::
 telefono.gltf::PackedScene::8912627801660598370::1769897962::1769898317::1::::<><><>0<>0<>0d3182699c21c249df9e8ec2d0f6464b<>res://.godot/imported/telefono.gltf-46af3ed9f809cfc3d4f6bc5904fadba9.scn::
 telefono.obj::Mesh::8502277304708981971::1769897962::1769897986::1::::<><><>0<>0<>92d883b9aa568edea014ce0049a60836<>res://.godot/imported/telefono.obj-54fbaa72334549171f5fbef5ef8a338c.mesh<*>res://.godot/imported/telefono.obj-54fbaa72334549171f5fbef5ef8a338c.mesh::
-::res://Assets/DISEÑO/3D/MODELS/telefono/compo/::1769897984
+::res://Assets/DISEÑO/3D/MODELS/telefono/compo/::1769898222
 base_telefono_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::5695919288895525651::1769897962::1769898213::1::::<><><>0<>0<>cb92884098550c80ced6033879ae82c7<>res://.godot/imported/base_telefono_Base_color_Utility - sRGB - Texture.png-8d2898a17aaeac36a65375ddd033c72a.s3tc.ctex::
 telefono_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::2125217613639440576::1769897962::1769898222::1::::<><><>0<>0<>1e0da6085519ef0597514c6e87c0cf23<>res://.godot/imported/telefono_Base_color_Utility - sRGB - Texture.png-56dd4d8d2a691272e4da0e0e1d00f1b1.s3tc.ctex::
-::res://Assets/DISEÑO/3D/MODELS/telefono/tex/::1769897983
+::res://Assets/DISEÑO/3D/MODELS/telefono/tex/::1769898207
 base_telefono_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::125947210708721804::1769897962::1769898207::1::::<><><>0<>0<>851edf6b849a265f9f580223a9eac706<>res://.godot/imported/base_telefono_Base_color_Utility - sRGB - Texture.png-266fb51843296409bb4b1e935b59792d.s3tc.ctex::
 base_telefono_Height_Utility - Raw.png::CompressedTexture2D::4834883558355048843::1769897962::1769897983::1::::<><><>0<>0<>f6cd6831b46f1c07137935cddbb3ab03<>res://.godot/imported/base_telefono_Height_Utility - Raw.png-a74782109d311ebe485d2f08d3e5e60d.ctex::
 base_telefono_Metallic_Utility - Raw.png::CompressedTexture2D::2484638259697125873::1769897962::1769897982::1::::<><><>0<>0<>3cb8272c5f8fdc56a8fbf52790f855f1<>res://.godot/imported/base_telefono_Metallic_Utility - Raw.png-b8b3048b62a5d5dfe9f22925c59f74e3.ctex::
@@ -195,12 +199,13 @@ Ventana.obj::Mesh::2254728666145911152::1769897962::1769897986::1::::<><><>0<>0<
 ::res://Assets/DISEÑO/3D/MODELS/VENTANA/WIP/::1769897962
 ::res://Dialogos/::1769897006
 alma1.dialogue::Resource::6405334322551685403::1769897006::1769897006::1::::<><><>0<>0<>f7413d07a79df537f4d02f6db97f53aa<>res://.godot/imported/alma1.dialogue-7a72dcbf1995fa2a76b0678907f3cfb5.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Scenes/::1769897166
+::res://Scenes/::1769903696
 alma.tscn::PackedScene::2706879635227141888::1769896770::0::1::::<><><>0<>0<><>::uid://befdxg7fmu7mt::::res://Sprites/Cliente/CLIENT_1.png<>uid://dfofg62q2o4::::res://Sprites/Cliente/CLIENT_2.png<>uid://blmopp8i6twb3::::res://Sprites/Cliente/CLIENT_3.png
 main.gd::GDScript::7291943394481473747::1769893423::0::1::::<>Node3D<><>0<>0<><>::
-main.tscn::PackedScene::3075489020373189083::1769899192::0::1::::<><><>0<>0<><>::uid://db5jiie72eovb::::res://Scenes/main.gd<>uid://beth6anwjhq8w::::res://Scenes/alma.tscn<>uid://5jqa2jrqe3y7::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/telefono_Base_color_Utility - sRGB - Texture.png<>uid://cnfe7ubbiqqk6::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/base_telefono_Base_color_Utility - sRGB - Texture.png<>uid://7ehb01p4kqqq::::res://Assets/DISEÑO/3D/MODELS/VENTANA/WAVEFRONT/Ventana.obj<>uid://cn12b3te46tuw::::res://Assets/DISEÑO/3D/MODELS/mostrador/mostrador.obj<>uid://cgoddhc67rqmc::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Base_color_Utility - sRGB - Texture.png<>uid://buurtlpr4bg58::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Height_Utility - Raw.png<>uid://bfjrpn5kl1jow::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Normal_DirectX_Utility - Raw.png<>uid://8u5s1e02f3ti::::res://Assets/DISEÑO/3D/MODELS/marco puerta/MarcoPuerta.obj<>uid://b6ipmkde07jyv::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png<>uid://dc2a252vuut8a::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png<>uid://dchugw2in0jcm::::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj
-::res://Scripts/::1769897166
-game_manager.gd::GDScript::8520500279242844103::1769897166::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::3075489020373189083::1769903696::0::1::::<><><>0<>0<><>::uid://db5jiie72eovb::::res://Scenes/main.gd<>uid://beth6anwjhq8w::::res://Scenes/alma.tscn<>uid://digvd65fjdgtt::::res://Assets/DISEÑO/2D/suelo.png<>uid://5jqa2jrqe3y7::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/telefono_Base_color_Utility - sRGB - Texture.png<>uid://bhjfmx48uingm::::res://Assets/DISEÑO/2D/paredtienda.png<>uid://cnfe7ubbiqqk6::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/base_telefono_Base_color_Utility - sRGB - Texture.png<>uid://7ehb01p4kqqq::::res://Assets/DISEÑO/3D/MODELS/VENTANA/WAVEFRONT/Ventana.obj<>uid://cn12b3te46tuw::::res://Assets/DISEÑO/3D/MODELS/mostrador/mostrador.obj<>uid://cgoddhc67rqmc::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Base_color_Utility - sRGB - Texture.png<>uid://buurtlpr4bg58::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Height_Utility - Raw.png<>uid://bfjrpn5kl1jow::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Normal_DirectX_Utility - Raw.png<>uid://8u5s1e02f3ti::::res://Assets/DISEÑO/3D/MODELS/marco puerta/MarcoPuerta.obj<>uid://b6ipmkde07jyv::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png<>uid://dc2a252vuut8a::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png<>uid://dchugw2in0jcm::::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj
+trastienda.tscn::PackedScene::4142512001756536974::1769900101::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1769901406
+game_manager.gd::GDScript::8520500279242844103::1769901406::0::1::::<>Node<><>0<>0<><>::
 ::res://Sprites/::1769857514
 ::res://Sprites/Cliente/::1769857515
 CLIENT_1.png::CompressedTexture2D::2677721536071520299::1769857296::1769857515::1::::<><><>0<>0<>d824daf6259f6009352c2465b7a60412<>res://.godot/imported/CLIENT_1.png-79d3aaddfea84648f25f8501766a14e0.s3tc.ctex::
