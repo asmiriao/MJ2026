@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cxi16kb2wu3h4"
+path="res://.godot/imported/alma1.dialogue-7a72dcbf1995fa2a76b0678907f3cfb5.tres"
+
+[deps]
+
+source_file="res://Dialogos/alma1.dialogue"
+dest_files=["res://.godot/imported/alma1.dialogue-7a72dcbf1995fa2a76b0678907f3cfb5.tres"]
+
+[params]
+
+defaults=true
