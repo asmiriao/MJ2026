@@ -29,6 +29,10 @@ runtime/state_autoload_shortcuts=["GameManager"]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [global_group]
 
 Almas="almas y clientes"

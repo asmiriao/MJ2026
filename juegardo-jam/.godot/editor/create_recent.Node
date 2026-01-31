@@ -1,9 +1,9 @@
+MeshInstance3D
 CollisionShape3D
 CharacterBody3D
 RigidBody3D
 Area3D
 StaticBody3D
-MeshInstance3D
 AnimationPlayer
 CSGBox3D
 AnimatedSprite3D

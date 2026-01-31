@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkiopd7w0spxb"
+path="res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh"]
+
+source_file="res://Assets/DISEÑO/3D/MODELS/chihiro/chihiro.obj"
+dest_files=["res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh", "res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -24,6 +24,85 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="Animation" id="Animation_bo1nx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jjgbg"]
+resource_name = "entrar en tienda"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8333334),
+"transitions": PackedFloat32Array(-1.8660661, -1.8660661),
+"update": 0,
+"values": [Vector3(-2.645, 0, -4.585), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6, 1.8000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(0.96, 0.96, 0.96), Vector3(1, 1, 1), Vector3(0.96, 0.96, 0.96), Vector3(1, 1, 1), Vector3(0.96, 0.96, 0.96), Vector3(1, 1, 1), Vector3(0.96, 0.96, 0.96), Vector3(1, 1, 1), Vector3(0.96, 0.96, 0.96)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxash"]
+_data = {
+&"RESET": SubResource("Animation_bo1nx"),
+&"entrar en tienda": SubResource("Animation_jjgbg")
+}
+
 [node name="Alma" type="CharacterBody3D" unique_id=889273257]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=446839146]
@@ -34,3 +113,7 @@ shape = SubResource("BoxShape3D_j5xmo")
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0.48446798, -0.9965718)
 sprite_frames = SubResource("SpriteFrames_25gtd")
 autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=217516925]
+libraries/ = SubResource("AnimationLibrary_vxash")
+autoplay = &"entrar en tienda"
