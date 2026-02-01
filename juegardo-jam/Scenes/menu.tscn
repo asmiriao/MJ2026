@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://ddv1jhuh43215"]
 
+[ext_resource type="Script" uid="uid://dkua51xon0f8q" path="res://Scenes/menu.gd" id="1_dldpb"]
 [ext_resource type="Texture2D" uid="uid://digvd65fjdgtt" path="res://Assets/DISEÑO/2D/suelo.png" id="2_kmwmt"]
 [ext_resource type="Texture2D" uid="uid://bhjfmx48uingm" path="res://Assets/DISEÑO/2D/paredtienda.png" id="3_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://5jqa2jrqe3y7" path="res://Assets/DISEÑO/3D/MODELS/telefono/compo/telefono_Base_color_Utility - sRGB - Texture.png" id="5_d77ms"]
@@ -13,7 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="13_nakb8"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="14_pde1v"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="15_747ic"]
+[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="15_kmwmt"]
+[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="16_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
+[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
+[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="18_rc6uw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -213,7 +218,164 @@ albedo_texture = SubResource("GradientTexture2D_h1bgf")
 [sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
 material = SubResource("StandardMaterial3D_pdsj5")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_d77ms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_kmwmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rc6uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dldpb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dldpb"]
+font = ExtResource("18_rc6uw")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_rc6uw"]
+font = ExtResource("18_rc6uw")
+font_size = 42
+
+[sub_resource type="Animation" id="Animation_d77ms"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.8343819, 1.9819263, 0.5361991)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.51309, -0.38575482, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ui:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ui/ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dldpb"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ui/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3p34a"]
+resource_name = "iniciar"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.8343819, 1.9819263, 0.5361991), Vector3(0.94806874, 0.8335624, 0.5361991)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.51309, -0.38575482, 0), Vector3(-0.51309, -0.23719239, 1.28707205e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ui:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.01, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.03333333, 2.3333333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"desactivar_boton"
+}, {
+"args": [],
+"method": &"iniciar_dialogo_jefe"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_owyel"]
+_data = {
+&"RESET": SubResource("Animation_d77ms"),
+&"fade_out": SubResource("Animation_dldpb"),
+&"iniciar": SubResource("Animation_3p34a")
+}
+
 [node name="Menu" type="Node3D" unique_id=1538424508]
+script = ExtResource("1_dldpb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=793002764]
 transform = Transform3D(-0.9970527, -0.07332756, 0.0225585, -0.04174152, 0.7652068, 0.6424297, -0.06436972, 0.6395948, -0.76601243, 0, 0, 0)
@@ -226,7 +388,7 @@ directional_shadow_max_distance = 965.0
 environment = SubResource("Environment_bo1nx")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=264283982]
-transform = Transform3D(0.9265147, 0.18469472, -0.3278085, 0, 0.87123185, 0.4908717, 0.37625864, -0.45479983, 0.80720913, -1.8343819, 1.9819263, 0.5361991)
+transform = Transform3D(0.9265147, 0.1846947, -0.3278085, 0, 0.87123185, 0.4908717, 0.3762586, -0.45479983, 0.80720913, -1.8343819, 1.9819263, 0.5361991)
 fov = 77.0
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=697985963]
@@ -389,3 +551,62 @@ sub_emitter = NodePath(".")
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
+
+[node name="ui" type="Control" parent="." unique_id=713296484]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ui" unique_id=641790898]
+position = Vector2(196.99998, 267)
+scale = Vector2(0.38183594, 0.37548825)
+sprite_frames = SubResource("SpriteFrames_d77ms")
+autoplay = "default"
+frame = 2
+frame_progress = 0.26702207
+
+[node name="trigger warning" type="Label" parent="ui" unique_id=173033451]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 21.0
+offset_right = 1136.0
+offset_bottom = 203.0
+text = "TRIGGER WARNING
+
+ESTE JUEGO CONTIENE REFERENCIAS A LA MUERTE Y LO QUE SUCEDE TRAS ELLA, 
+CONVERSACIONES QUE TRATAN TEMAS TRAUMÁTICOS TALES COMO VIOLENCIA DE GÉNERO
+Y MALTRATO, DISCRIMINACIÓN Y OPRESIÓN, Y GRÁFICAMENTE APARECEN PAYASOS"
+label_settings = SubResource("LabelSettings_dldpb")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ui" unique_id=1718784321]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 474.0
+offset_right = 275.0
+offset_bottom = 534.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ui" unique_id=1906005988]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 484.0
+offset_right = 269.0
+offset_bottom = 527.0
+text = "JUGAR"
+label_settings = SubResource("LabelSettings_rc6uw")
+
+[node name="ColorRect" type="ColorRect" parent="ui" unique_id=57467137]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -7.0
+offset_right = 1165.0
+offset_bottom = 664.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=622489992]
+libraries/ = SubResource("AnimationLibrary_owyel")
+
+[connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]

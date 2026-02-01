@@ -1,3 +1,26 @@
+~ dialogoAlma0
+
+¡Hola, hola! ¿Qué tal en tu nuevo lugar de trabajo? 
+Perdóname por no estar allí, me surgió algo urgente que debía atender. 
+Escucha, vas a atender a clientes muy especiales. Acaban de llegar al más allá y perdieron su identidad, pero aún pueden recordar cosas de sus vidas.
+
+Vendrán a comprar una máscara que les haga recuperar su identidad. 
+Cada máscara que tenemos en venta corresponde a una persona sola y, para hallar cuál es la que le corresponde, deberás hacerles tres preguntas. 
+Ni una más, ni una menos.
+Debes actuar con mucha precaución porque, si escoges una máscara que no les corresponde, se irán de la tienda y vagarán por el mundo con desdicha. 
+Pero, ¡sin presiones!
+Una vez que hayan respondido a todas tus preguntas, debes hacer click en la flecha que tienes en la parte inferior de la pantalla y accederás a los estantes con las mencionadas máscaras que tenemos, 
+puedes consultar el bloc de notas que tienes en la esquina inferior izquierda haciendo click, ahí te aparecerá una guía con las máscaras que ofrecemos. 
+Cuando hayas decidido qué máscara vas a vender, haz click en ella y la agregarás a tu inventario, que lo tienes en la esquina inferior derecha. 
+Vuelve al mostrador haciendo click en la flecha que tienes abajo y volverás al mostrador. Para darle la máscara a la clientela, tan solo tienes que arrastrar la máscara desde tu inventario a su cara. 
+¡No te olvides de preguntarles qué tal se ven con ellas!
+
+¡Y ese es el trabajo! ¿Lo has entendido todo? No respondas, seguro que sí lo hiciste. ¡Ah, lo olvidaba! En la zona de las máscaras tienes la trastienda tras las cortinas. Ve allí para descansar o despejarte siempre que quieras. No me gustaría que lo hicieras delante de la clientela, ya sabes… Te veré después de tu turno para comprobar tu eficacia para el puesto. ¡Nos vemos!
+
+- Empezar
+
+do cargar_main()
+
 ~ dialogoAlma1
 do enter_shadow()
 Tendero: Hola, ¿en qué puedo ayudarte, alma errante?
