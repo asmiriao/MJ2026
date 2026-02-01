@@ -68,7 +68,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 	Alma errante: Vivir en un cubo es bastante práctico si te paras a pensarlo.
 ...
 Tendero: De acuerdo, te asignaré una máscara.
-
+do GameManager.shadow_disappear()
 ~ dialogoAlma3
 
 do enter_shadow()
@@ -92,6 +92,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma4
 
 do enter_shadow()
@@ -115,6 +116,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma5
 
 do enter_shadow()
@@ -138,6 +140,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma6
 
 do enter_shadow()
@@ -161,6 +164,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma7
 
 do enter_shadow()
@@ -184,6 +188,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma8
 
 do enter_shadow()
@@ -207,6 +212,7 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
 ~ dialogoAlma9
 
 do enter_shadow()
@@ -230,5 +236,5 @@ Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
 ...
 
 Tendero: De acuerdo, te asignaré una máscara.
-
+do GameManager.shadow_disappear()
 => END

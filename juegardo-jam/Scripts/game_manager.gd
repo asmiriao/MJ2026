@@ -17,13 +17,14 @@ func _process(delta: float) -> void:
 	pass
 
 func enter_shadow():
+	pass
 	if not activado:
 		instantiate(Vector3(-2645, 0, -4585))
 		activado = true
 		await get_tree().create_timer(2).timeout
 		mostrar_dialogo(alma_actual)
 		#DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma1")
-		
+	
 
 
 func instantiate(pos):
@@ -42,3 +43,6 @@ func cargar_main():
 	
 func cargar_mascaras():
 	get_tree().change_scene_to_file("res://Scenes/mascarass.tscn")
+	
+func fin():
+	print("fin")
