@@ -13,11 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="13_nakb8"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="14_pde1v"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="15_747ic"]
-[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="15_kmwmt"]
-[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="16_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
 [ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="18_rc6uw"]
+=======
+>>>>>>> b6850230932be78fdb27ad5433222dc423708f13
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -217,23 +218,6 @@ albedo_texture = SubResource("GradientTexture2D_h1bgf")
 [sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
 material = SubResource("StandardMaterial3D_pdsj5")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d77ms"]
-animations = [{
-"frames": [{
-"duration": 0.5,
-"texture": ExtResource("15_kmwmt")
-}, {
-"duration": 0.5,
-"texture": ExtResource("16_rc6uw")
-}, {
-"duration": 0.5,
-"texture": ExtResource("17_dldpb")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
 [node name="Menu" type="Node3D" unique_id=1538424508]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=793002764]
@@ -410,6 +394,7 @@ sub_emitter = NodePath(".")
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
+<<<<<<< HEAD
 
 [node name="Control" type="Control" parent="." unique_id=997231937]
 layout_mode = 3
@@ -441,3 +426,5 @@ offset_bottom = 658.0
 position = Vector2(1764, 839.00006)
 scale = Vector2(0.07683336, 0.06833334)
 texture = ExtResource("18_rc6uw")
+=======
+>>>>>>> b6850230932be78fdb27ad5433222dc423708f13

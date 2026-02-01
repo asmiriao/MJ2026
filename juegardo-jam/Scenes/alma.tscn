@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://beth6anwjhq8w"]
 
+[ext_resource type="Script" uid="uid://cma6h55u2oo43" path="res://Scenes/alma.gd" id="1_ge5l7"]
 [ext_resource type="Texture2D" uid="uid://befdxg7fmu7mt" path="res://Sprites/Cliente/CLIENT_1.png" id="1_j5xmo"]
 [ext_resource type="Texture2D" uid="uid://dfofg62q2o4" path="res://Sprites/Cliente/CLIENT_2.png" id="2_ge5l7"]
 [ext_resource type="Texture2D" uid="uid://blmopp8i6twb3" path="res://Sprites/Cliente/CLIENT_3.png" id="3_ae78o"]
@@ -102,6 +103,20 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0, 1.0]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"eliminar"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_jjgbg"]
 resource_name = "entrar en tienda"
@@ -169,6 +184,7 @@ _data = {
 }
 
 [node name="Alma" type="CharacterBody3D" unique_id=889273257]
+script = ExtResource("1_ge5l7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=446839146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6479492, -1.0018921)
