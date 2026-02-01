@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4dq55s3hgd8v"
+path="res://.godot/imported/majoras_loop.wav-902f09e18813e02822babf042f79d671.sample"
+
+[deps]
+
+source_file="res://Assets/SONIDO/LOOPS TRASTIENDA/majoras_loop.wav"
+dest_files=["res://.godot/imported/majoras_loop.wav-902f09e18813e02822babf042f79d671.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

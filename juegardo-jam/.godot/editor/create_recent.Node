@@ -1,8 +1,3 @@
-Button
-AnimatedSprite2D
-AnimatedSprite3D
-Container
-Control
 Sprite3D
 MeshInstance3D
 CSGCombiner3D
@@ -13,3 +8,8 @@ CharacterBody3D
 RigidBody3D
 Area3D
 StaticBody3D
+AnimationPlayer
+CSGBox3D
+AnimatedSprite3D
+Node3D
+DirectionalLight3D

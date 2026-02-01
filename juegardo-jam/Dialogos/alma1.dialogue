@@ -8,7 +8,7 @@ Alma errante: Vas a invertir o qué, ¿broski?
 	Alma errante: Tu verás, manin.
 - Voy a ser el próximo Jeff Bezos.
 	Alma errante: Na na, de lokosss.
-	
-~ dialogoAlma2
-
+do GameManager.shadow_disappear()
 => END
+
+~ dialogoAlma2
