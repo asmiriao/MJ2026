@@ -33,6 +33,7 @@ func instantiate(pos):
 	add_child(instance)
 	
 func shadow_disappear():
+	get_tree().call_group("Almas","animacion_desaparecer")
 	instance.desaparecer()
 
 func mostrar_dialogo(num_alma: int):

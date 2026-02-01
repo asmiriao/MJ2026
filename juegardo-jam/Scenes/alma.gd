@@ -20,6 +20,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func animacion_desaparecer():
+	$AnimationPlayer.play("animacion_desaparecer")
+
 func desaparecer():
 	$AnimationPlayer.play("desaparecer")
 	

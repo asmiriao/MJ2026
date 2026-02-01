@@ -75,6 +75,33 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite3D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j5xmo"]
+resource_name = "animacion_desaparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_vxash"]
 resource_name = "desaparecer"
@@ -179,11 +206,12 @@ tracks/4/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vxash"]
 _data = {
 &"RESET": SubResource("Animation_bo1nx"),
+&"animacion_desaparecer": SubResource("Animation_j5xmo"),
 &"desaparecer": SubResource("Animation_vxash"),
 &"entrar en tienda": SubResource("Animation_jjgbg")
 }
 
-[node name="Alma" type="CharacterBody3D" unique_id=889273257]
+[node name="Alma" type="CharacterBody3D" unique_id=889273257 groups=["Almas"]]
 script = ExtResource("1_ge5l7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=446839146]
