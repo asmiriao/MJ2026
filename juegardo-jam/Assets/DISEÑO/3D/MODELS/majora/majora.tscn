@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://by046ikhweodn"]
+
+[ext_resource type="PackedScene" uid="uid://bran1v8g7hynw" path="res://Assets/DISEÑO/3D/MODELS/majora/majora.gltf" id="1_yene8"]
+[ext_resource type="Texture2D" uid="uid://dp5agq2y18fsv" path="res://Assets/DISEÑO/3D/MODELS/majora/mascara_base-color.png" id="2_2th7t"]
+[ext_resource type="Texture2D" uid="uid://dwl6bgxo20pun" path="res://Assets/DISEÑO/3D/MODELS/majora/cuerno_3-color.png" id="3_t7v44"]
+[ext_resource type="Texture2D" uid="uid://gucsnhey0e36" path="res://Assets/DISEÑO/3D/MODELS/majora/cuerno_5-color.png" id="4_gyolo"]
+[ext_resource type="Texture2D" uid="uid://ftw4oly4dt12" path="res://Assets/DISEÑO/3D/MODELS/majora/ojos-color.png" id="5_0xdhg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pg1k1"]
+albedo_texture = ExtResource("2_2th7t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyctt"]
+albedo_texture = ExtResource("3_t7v44")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bixs4"]
+albedo_texture = ExtResource("4_gyolo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xn0vd"]
+albedo_texture = ExtResource("4_gyolo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j4b7"]
+albedo_texture = ExtResource("4_gyolo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gad7t"]
+albedo_texture = ExtResource("4_gyolo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iekuw"]
+albedo_texture = ExtResource("5_0xdhg")
+
+[node name="majora" unique_id=1763871189 instance=ExtResource("1_yene8")]
+
+[node name="majora mask" parent="." index="0" unique_id=1821816271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036080718, 0, -0.0077667236)
+surface_material_override/0 = SubResource("StandardMaterial3D_pg1k1")
+surface_material_override/1 = SubResource("StandardMaterial3D_jyctt")
+surface_material_override/2 = SubResource("StandardMaterial3D_bixs4")
+surface_material_override/3 = SubResource("StandardMaterial3D_xn0vd")
+surface_material_override/4 = SubResource("StandardMaterial3D_1j4b7")
+surface_material_override/5 = SubResource("StandardMaterial3D_gad7t")
+surface_material_override/6 = SubResource("StandardMaterial3D_iekuw")
