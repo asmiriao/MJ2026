@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-Sprite2D
-Button
-AnimatedSprite2D
-AnimatedSprite3D
-Container
-Control
-=======
->>>>>>> b6850230932be78fdb27ad5433222dc423708f13
 Sprite3D
 MeshInstance3D
 CSGCombiner3D
@@ -16,12 +7,9 @@ CollisionShape3D
 CharacterBody3D
 RigidBody3D
 Area3D
-<<<<<<< HEAD
-=======
 StaticBody3D
 AnimationPlayer
 CSGBox3D
 AnimatedSprite3D
 Node3D
 DirectionalLight3D
->>>>>>> b6850230932be78fdb27ad5433222dc423708f13

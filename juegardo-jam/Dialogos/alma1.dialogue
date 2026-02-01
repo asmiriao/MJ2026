@@ -1,14 +1,210 @@
 ~ dialogoAlma1
 do enter_shadow()
-
-Alma errante: Sin esfuerzo no hay [wave] ganancias [/wave], bro.
-Tendero: Compra mi curso en [wait=1] bitcoins.
-Alma errante: Vas a invertir o qué, ¿broski?
-- Topotamadre
-	Alma errante: Tu verás, manin.
-- Voy a ser el próximo Jeff Bezos.
-	Alma errante: Na na, de lokosss.
+Tendero: Hola, ¿en qué puedo ayudarte, alma errante?
+Alma errante: Necesito un destino, una identidad.
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+Alma errante: ...
+- ¿Tienes miedo de algo?
+	Alma errante: Tengo miedo de que me insulten, ya que significaría que las nuevas generaciones se están olvidando de mí y mi tierra..
+- ¿Crees que fuiste feliz?
+	Alma errante: Muy feliz, sobre todo cuando me daban vino o salía con mi zamarra.
+...
+- ¿De qué color es tu alma?
+	Alma errante: Rojo, como el color de mi fajín..
+- ¿Cómo defines tu marcha?
+	Alma errante: ¿Mi marcha? Yo nunca podía parar en mitad de la calle ni nadie interrumpirme el camino.
+...
+- ¿Cuál es tu color favorito?
+	Alma errante: El negro.
+- ¿Echas de menos a alguien?
+	Alma errante: Echo de menos a mi gente, mi pueblo, mis costumbres. Echo de menos el olor a mar, a lluvia, a alegría. Echo de menos el lugar donde me crié, mis raíces, mi sangre. Y llevaré con orgullo el valor y la cultura de mi tierra eternamente..
+	
+Tendero: De acuerdo, te asignaré una máscara.
 do GameManager.shadow_disappear()
-=> END
+
 
 ~ dialogoAlma2
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Una vez tuve un sueño con una torre. Subía y subía las escaleras, hacia la cumbre, pero jamás terminaba. Fue terrible.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Una vez tuve un sueño con un árbol. Subía y subía por las ramas, hacia lo alto de la copa, pero jamás llegaba. Fue terrible.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: ¿Tengo cara de que me guste comer lapiceros? Honestamente, sí. Me gusta mucho roer lapiceros, pero no vasos.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Yo viví en una gran ciudad. Al tiempo, me mudé a una pequeña ciudad. Después, decidí mudarme a un pueblo grande, hasta que decidí mudarme a un pueblo pequeño. Pero, de repente, me vino una idea fugaz pero poderosa: mudarme al campo. Y así es como acabé viviendo en un cubo..
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Vivir en un cubo es bastante práctico si te paras a pensarlo.
+-  ¿Echas de menos a alguien?
+	Alma errante: Vivir en un cubo es bastante práctico si te paras a pensarlo.
+...
+Tendero: De acuerdo, te asignaré una máscara.
+
+~ dialogoAlma3
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Tengo miedo a mostrar mi rostro, puesto que nadie lo ha visto nunca.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Sí… Dentro de lo que cabe. Jamás tuve permitido poder hablar, así que nunca hablé con nadie sobre la felicidad. Yo solo debía cumplir lo que de mí se esperaba, nada más. Padre se sentiría orgulloso de mí por haber podido cumplir con mi cometido.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Verde, porque lo que más disfrutaba era tirarme en el verde pasto de la pradera y rodar, y rodar… Hasta sentirme libre. Lástima que hace tiempo que no puedo hacerlo. Supongo que fue ahí cuando tornó de ese color.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Desdichada. Siento, ahora, que solo fui una víctima de mis circunstancias y la época en la que viví. No he tenido nada mío, un lugar en el que poder esconderme, poder gritar. Ojalá mis últimos días hubiese podido sentir, más allá de asentir.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Morado, como esta tienda. Es un color que me da cierta fortaleza y esperanza.
+-  ¿Echas de menos a alguien?
+	Alma errante: Echo de menos a madre. Fue la única persona con la que pude hablar, reír, ser feliz. Cuando marchó, padre me envió a otro hogar y me encontró un consorte. Alejarme del lugar donde me crié junto a madre me convirtió en una persona agria y hueca.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma4
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Me da miedo el mal olor.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Yo solo he vivido una vida de preocupación…
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Verde, como el olor de las hierbas aromáticas que huelo cuando hago mi trabajo. Seguramente, mi alma respiró aquel color.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Fea, muy fea. Tenía que haber ayudado a más personas… Era inabarcable.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: El negro, suelo llevarlo siempre.
+-  ¿Echas de menos a alguien?
+	Alma errante: Echo de menos a mis hijes, pero nos volveremos a encontrar y estoy deseando saber sus historias vitales.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma5
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Jamás volveré a tener miedo a nada.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Nunca. Maldigo el día que conocí a ese monstruo que se hacía llamar “mi marido”.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Azul, como el mar en calma. La misma sensación que sentí al divorciarme.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Temprana, ese malnacido debe pagar por todo lo que me hizo y todo el tiempo que jamás recuperaré por su culpa.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Negro, el color del que se me quedó el corazón al instante en el que me di cuenta del tipo de persona que tanto había amado. Se apagó.
+-  ¿Echas de menos a alguien?
+	Alma errante: Echo de menos a madre, ella siempre me apoyó. Sé que ella me espera tras esa puerta y, en cuanto compre mi máscara, nos reencontraremos.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma6
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Tengo miedo de que este mundo no sea un lugar mejor, un lugar seguro.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Sí, mucho. Descubrí quién era en realidad y pude transformar el miedo a la incomprensión en tranquilidad, ya que, lo más importante, fue que por fin podía mostrarme tal y cómo era.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Azul. Curioso, porque siempre me gustó el color azul. Me recuerda a cuando me tumbaba en el suelo a observar el cielo y las nubes con mis hermanes.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila, te lo digo de corazón. Mi vida no fue fácil, pero siempre pude contar con mi familia y amistades, sobre todo cuando me inundaba la confusión y me dieron un lugar en el que poder quitarme este caparazón hasta que no lo necesitase nunca más. Ojalá todo el mundo pueda vivir una vida como la mía, es lo mínimo merecido..
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: El morado. Siempre me pareció el más bonito del arcoíris.
+-  ¿Echas de menos a alguien?
+	Alma errante: A mi comunidad. Me hicieron mucho más fuerte.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma7
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: Tengo miedo de que desaparezca mi pueblo, mi familia.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Sí, fui muy feliz. Pude ver cómo la comunidad en la que me crié creció tanto que era imposible conocer a todo el mundo. Es maravilloso ver ese nivel de prosperidad.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Verde, como los pastos que cuidábamos mi familia y yo para que fuesen óptimos para los animales.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila, apacible. Toda mi familia estuvo conmigo y me arroparon.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Morado, como los atardeceres que disfrutaba junto a mis nietes cuando les contaba la vida allí hace años.
+-  ¿Echas de menos a alguien?
+	Alma errante: No, porque ahora puedo reencontrarme con mis ancestros y todos mis familiares viven en mí.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma8
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: ¿Crees que yo tendría miedo a algo?
+-  ¿Crees que fuiste feliz?
+	Alma errante: Más que tú y más que nadie en el mundo. No imaginas el poder que yo tengo.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Roja, como el color de la pasión. Pasión que yo volcaba siempre en cuidar a Bigotitos.
+-  ¿Cómo defines tu marcha?
+	Alma errante: ¿Perdón? ¿Mi marcha hacia dónde? Yo no me marché, ASCENDÍ a la inmortalidad. Porque una persona como yo siempre será eterna.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Morado, siempre me transmitió mucha paz, como un atardecer en la playa.
+-  ¿Echas de menos a alguien?
+	Alma errante: Echo muchísimo de menos a mi Bigotitos. Sé que está bien cuidado y, cuando me quiera dar cuenta, ya estaré junto a él y volveremos a ser los seres más perfectos del mundo en compañía.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+~ dialogoAlma9
+
+do enter_shadow()
+
+Tendero: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo de algo?
+	Alma errante: No lo sé.
+-  ¿Crees que fuiste feliz?
+	Alma errante: Creo que sí.
+...
+-  ¿De qué color es tu alma?
+	Alma errante: Azul.
+-  ¿Cómo defines tu marcha?
+	Alma errante: No lo sé.
+...
+-  ¿Cuál es tu color favorito?
+	Alma errante: Negro.
+-  ¿Echas de menos a alguien?
+	Alma errante: No lo sé.
+...
+
+Tendero: De acuerdo, te asignaré una máscara.
+
+=> END

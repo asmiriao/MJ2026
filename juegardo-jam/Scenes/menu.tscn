@@ -13,13 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="13_nakb8"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="14_pde1v"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="15_747ic"]
-[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="15_kmwmt"]
-[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="16_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
-[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
-[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="18_dldpb"]
-[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="18_rc6uw"]
-[ext_resource type="Texture2D" uid="uid://c02ixkh3q5wx" path="res://UI/BOTONES/kenney_cursor-pack/Vector/Basic/look_c.svg" id="20_d77ms"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -219,23 +213,6 @@ albedo_texture = SubResource("GradientTexture2D_h1bgf")
 [sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
 material = SubResource("StandardMaterial3D_pdsj5")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d77ms"]
-animations = [{
-"frames": [{
-"duration": 0.5,
-"texture": ExtResource("15_kmwmt")
-}, {
-"duration": 0.5,
-"texture": ExtResource("16_rc6uw")
-}, {
-"duration": 0.5,
-"texture": ExtResource("17_dldpb")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
 [node name="Menu" type="Node3D" unique_id=1538424508]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=793002764]
@@ -412,58 +389,3 @@ sub_emitter = NodePath(".")
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
-
-[node name="Control" type="Control" parent="." unique_id=997231937]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="AnimatedSprite3D" type="AnimatedSprite2D" parent="Control" unique_id=1085422334]
-position = Vector2(336, 289)
-scale = Vector2(0.6127853, 0.45602033)
-sprite_frames = SubResource("SpriteFrames_d77ms")
-autoplay = "default"
-
-[node name="Jugar" type="Button" parent="Control" unique_id=1396304616]
-layout_mode = 0
-offset_left = 135.0
-offset_top = 540.0
-offset_right = 546.0
-offset_bottom = 634.0
-theme_override_fonts/font = ExtResource("18_dldpb")
-theme_override_font_sizes/font_size = 45
-text = "JUGAR"
-
-[node name="Creditos" type="Button" parent="Control" unique_id=831605756]
-layout_mode = 0
-offset_left = 210.0
-offset_top = 701.0
-offset_right = 621.0
-offset_bottom = 795.0
-theme_override_fonts/font = ExtResource("18_dldpb")
-theme_override_font_sizes/font_size = 45
-text = "CRÉDITOS"
-
-[node name="LogoSaturnia" type="Sprite2D" parent="Control" unique_id=1714348122]
-position = Vector2(1777, 813.00006)
-scale = Vector2(0.08045838, 0.074312516)
-texture = ExtResource("18_rc6uw")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=932826840]
-layout_mode = 0
-offset_left = 881.0
-offset_top = 190.0
-offset_right = 1573.0
-offset_bottom = 617.0
-theme_override_fonts/normal_font = ExtResource("18_dldpb")
-theme_override_font_sizes/normal_font_size = 26
-text = "TRIGGER WARNING
-
-ESTE JUEGO TRATA SOBRE PERSONAS QUE PERDIERON LA VIDA Y LO QUE LES SUCEDE TRAS MORIR. TIENE REFERENCIAS A LA MUERTE, CONVERSACIONES ACERCA DE EXPERIENCIAS TRAUMÁTICAS TALES COMO VIOLENCIA DE GÉNERO Y MALTRATO, DISCRIMINACIÓN Y OPRESIÓN"
-horizontal_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=847519840]
-position = Vector2(1098, 200.99998)
-scale = Vector2(1.5624993, 1.3124999)
-texture = ExtResource("20_d77ms")
