@@ -391,3 +391,11 @@ sub_emitter = NodePath(".")
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
+
+[node name="mensaje_final" type="Label" parent="." unique_id=667448506]
+visible = false
+offset_left = 161.0
+offset_top = 149.0
+offset_right = 1012.0
+offset_bottom = 466.0
+text = "texto final"
