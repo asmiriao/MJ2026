@@ -22,6 +22,7 @@ Alma errante: ...
 Tendero: De acuerdo, te asignaré una máscara.
 do GameManager.shadow_disappear()
 
+=> END
 
 ~ dialogoAlma2
 do enter_shadow()
