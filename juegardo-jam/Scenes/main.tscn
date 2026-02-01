@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="11_pdsj5"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="12_ee4r6"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="13_gt3je"]
+[ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_k12tt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -25,16 +26,16 @@ ground_horizon_color = Color(0.8252938, 0.38477385, 0.5551289, 1)
 ground_curve = 0.026390154
 energy_multiplier = 0.1
 
-[sub_resource type="Sky" id="Sky_jjgbg"]
+[sub_resource type="Sky" id="Sky_wsu2k"]
 sky_material = SubResource("ProceduralSkyMaterial_7u77a")
 
 [sub_resource type="Environment" id="Environment_bo1nx"]
 background_mode = 2
-sky = SubResource("Sky_jjgbg")
+sky = SubResource("Sky_wsu2k")
 sky_custom_fov = 43.9
 ambient_light_source = 3
 ambient_light_color = Color(0.24717933, 0.14931628, 0.2665013, 1)
-ambient_light_energy = 9.4
+ambient_light_energy = 7.2
 tonemap_mode = 2
 ssr_enabled = true
 ssr_fade_in = 0.34460938
@@ -54,7 +55,7 @@ fog_depth_curve = 1.3195062
 fog_depth_begin = 0.0
 fog_depth_end = 4000.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.1781
+volumetric_fog_density = 0.15
 volumetric_fog_anisotropy = 0.36
 volumetric_fog_length = 102.08
 volumetric_fog_ambient_inject = 0.1
@@ -204,6 +205,51 @@ albedo_texture = ExtResource("11_pdsj5")
 normal_enabled = true
 normal_texture = ExtResource("12_ee4r6")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ee4r6"]
+albedo_texture = ExtResource("16_k12tt")
+
+[sub_resource type="Curve" id="Curve_wsu2k"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3756552, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k12tt"]
+curve = SubResource("Curve_wsu2k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wsu2k"]
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, -0.1, 0)
+radial_accel_min = -2.2351742e-06
+radial_accel_max = 0.09999776
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = 0.24999776
+damping_max = 0.15
+scale_min = 0.01
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_k12tt")
+
+[sub_resource type="Gradient" id="Gradient_h1bgf"]
+offsets = PackedFloat32Array(0, 0.37025318, 1)
+colors = PackedColorArray(0.6062501, 0.4844082, 0.788519, 1, 0.6062501, 0.4844082, 0.788519, 1, 0.3882353, 0.18431373, 0.38039216, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h1bgf"]
+gradient = SubResource("Gradient_h1bgf")
+fill = 1
+fill_from = Vector2(0.49369746, 0.4852941)
+fill_to = Vector2(0.8802521, 0.16176471)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdsj5"]
+transparency = 2
+alpha_scissor_threshold = 0.001
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(1, 0.69411767, 1, 1)
+albedo_texture = SubResource("GradientTexture2D_h1bgf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
+material = SubResource("StandardMaterial3D_pdsj5")
+
 [node name="Main" type="Node3D" unique_id=1538424508]
 script = ExtResource("1_bo1nx")
 
@@ -315,7 +361,7 @@ light_specular = 1.405
 shadow_enabled = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Luces" unique_id=1155678913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6513286, 1.3317237, -5.6522837)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9985561, 1.775305, -2.2210088)
 light_color = Color(1, 0.3764706, 1, 1)
 light_energy = 0.204
 light_indirect_energy = 0.708
@@ -325,7 +371,7 @@ shadow_enabled = true
 distance_fade_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Luces" unique_id=1368575987]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9027448, 1.302479, -5.1227436)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9027448, 2.537723, -2.3017426)
 light_color = Color(1, 0.3764706, 1, 1)
 light_energy = 0.302
 light_specular = 0.0
@@ -333,7 +379,7 @@ shadow_enabled = true
 distance_fade_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Luces" unique_id=288274724]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0455267, 1.302479, -8.268742)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2574127, 1.9471059, -4.7448845)
 light_color = Color(1, 0.3764706, 1, 1)
 light_energy = 0.102
 light_specular = 0.0
@@ -341,7 +387,7 @@ shadow_enabled = true
 distance_fade_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Luces" unique_id=70746233]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9311554, 1.302479, -8.268742)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9311554, 2.4239297, -4.9670944)
 light_color = Color(1, 0.3764706, 1, 1)
 light_energy = 0.102
 light_specular = 0.0
@@ -375,3 +421,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_6vcvc")
 [node name="CajaRegistradora" type="MeshInstance3D" parent="." unique_id=777086458]
 transform = Transform3D(1.1551074, 0, 0.5743052, 0, 1.2899998, 0, -0.5743052, 0, 1.1551074, -1.062082, 0.29511774, -0.3566484)
 mesh = ExtResource("13_gt3je")
+surface_material_override/0 = SubResource("StandardMaterial3D_ee4r6")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=350770437]
+transform = Transform3D(2.018485, 0, 0, 0, 0.745, 0, 0, 0, 1.3460187, 0, 1.5108544, -1.4593503)
+amount_ratio = 0.969
+sub_emitter = NodePath(".")
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_wsu2k")
+draw_pass_1 = SubResource("QuadMesh_ee4r6")

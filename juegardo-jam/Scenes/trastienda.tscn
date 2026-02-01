@@ -1,5 +1,37 @@
 [gd_scene format=3 uid="uid://b0awtj7w8aab3"]
 
+[ext_resource type="Texture2D" uid="uid://den2wrehu1j2k" path="res://Assets/DISEÑO/2D/paredtrastienda.png" id="1_1dnx0"]
+[ext_resource type="Texture2D" uid="uid://digvd65fjdgtt" path="res://Assets/DISEÑO/2D/suelo.png" id="2_oetrx"]
+[ext_resource type="ArrayMesh" uid="uid://wloc1oqffd3" path="res://Assets/DISEÑO/3D/MODELS/mesa/mesa.obj" id="3_07kks"]
+[ext_resource type="Texture2D" uid="uid://jaakh7sqmtn7" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Base_color_Utility - sRGB - Texture.png" id="4_ei46i"]
+[ext_resource type="Texture2D" uid="uid://db2npbvv8oqv0" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Height_Utility - Raw.png" id="5_sm3mh"]
+[ext_resource type="Texture2D" uid="uid://6m51pochlai8" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Normal_DirectX_Utility - Raw.png" id="6_dlopn"]
+[ext_resource type="Texture2D" uid="uid://cgdakieumgdmu" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Roughness_Utility - Raw.png" id="7_igvlw"]
+[ext_resource type="ArrayMesh" uid="uid://bkiopd7w0spxb" path="res://Assets/DISEÑO/3D/MODELS/chihiro/chihiro.obj" id="8_eqkoq"]
+[ext_resource type="Texture2D" uid="uid://h6ppc6d6hmmb" path="res://Assets/DISEÑO/3D/MODELS/chihiro/textura/chihiro-color.png" id="9_17rpb"]
+[ext_resource type="Texture2D" uid="uid://8si7u2gmeuxa" path="res://Assets/DISEÑO/3D/MODELS/jokerP5/jokermask-color.png" id="10_dlopn"]
+[ext_resource type="ArrayMesh" uid="uid://c6c7xvpxxay6l" path="res://Assets/DISEÑO/3D/MODELS/jokerP5/jokerp5.obj" id="10_ei46i"]
+[ext_resource type="ArrayMesh" uid="uid://dwg5e4y8tdde0" path="res://Assets/DISEÑO/3D/MODELS/majora/majora.obj" id="11_sm3mh"]
+[ext_resource type="ArrayMesh" uid="uid://ytqbufo3mbqc" path="res://Assets/DISEÑO/3D/MODELS/AKU AKU/WAVEFRONT/Aku-Aku.obj" id="12_dlopn"]
+[ext_resource type="ArrayMesh" uid="uid://d3t87aqr1f6jk" path="res://Assets/DISEÑO/3D/MODELS/mysterio/mysterio.obj" id="13_sm3mh"]
+[ext_resource type="Texture2D" uid="uid://caywe5ncwjg3x" path="res://Assets/DISEÑO/2D/mf_doom_cuadro.jpg" id="15_igvlw"]
+[ext_resource type="ArrayMesh" uid="uid://ds8c82afypvt0" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj" id="16_17rpb"]
+[ext_resource type="Texture2D" uid="uid://df2gy5lulr60k" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png" id="17_uo155"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0mud"]
+albedo_texture = ExtResource("4_ei46i")
+roughness_texture = ExtResource("7_igvlw")
+normal_enabled = true
+normal_texture = ExtResource("6_dlopn")
+heightmap_enabled = true
+heightmap_texture = ExtResource("5_sm3mh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtmw3"]
+albedo_texture = ExtResource("9_17rpb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igvlw"]
+albedo_texture = ExtResource("10_dlopn")
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bptog"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
 sky_horizon_color = Color(0.8615999, 0.55724686, 0.7511364, 1)
@@ -44,6 +76,73 @@ volumetric_fog_length = 102.08
 volumetric_fog_ambient_inject = 0.1
 volumetric_fog_sky_affect = 0.929
 
+[sub_resource type="Curve" id="Curve_ei46i"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3756552, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k12tt"]
+curve = SubResource("Curve_ei46i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sm3mh"]
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, -0.1, 0)
+radial_accel_min = -2.2351742e-06
+radial_accel_max = 0.09999776
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = 0.24999776
+damping_max = 0.15
+scale_min = 0.01
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_k12tt")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = 0.09999997
+
+[sub_resource type="Gradient" id="Gradient_k12tt"]
+offsets = PackedFloat32Array(0, 0.37025318, 1)
+colors = PackedColorArray(0.6062501, 0.4844082, 0.788519, 1, 0.6062501, 0.4844082, 0.788519, 1, 0.3882353, 0.18431373, 0.38039216, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlopn"]
+gradient = SubResource("Gradient_k12tt")
+fill = 1
+fill_from = Vector2(0.49369746, 0.4852941)
+fill_to = Vector2(0.8802521, 0.16176471)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdsj5"]
+transparency = 2
+alpha_scissor_threshold = 0.001
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(1, 0.69411767, 1, 1)
+albedo_texture = SubResource("GradientTexture2D_dlopn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_igvlw"]
+material = SubResource("StandardMaterial3D_pdsj5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo155"]
+albedo_texture = ExtResource("1_1dnx0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnm0e"]
+albedo_texture = ExtResource("1_1dnx0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1a2"]
+albedo_texture = ExtResource("2_oetrx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqhb4"]
+albedo_texture = ExtResource("2_oetrx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ugco"]
+albedo_texture = ExtResource("1_1dnx0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqkoq"]
+albedo_texture = ExtResource("15_igvlw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_17rpb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7npk2"]
+albedo_texture = ExtResource("17_uo155")
+
 [node name="Trastienda" type="Node3D" unique_id=468557803]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1975681653]
@@ -53,5 +152,114 @@ light_energy = 4.0
 shadow_enabled = true
 directional_shadow_max_distance = 965.0
 
+[node name="Mesa" type="MeshInstance3D" parent="." unique_id=562645961]
+transform = Transform3D(0.4665256, 0, -0.13258526, 0, 0.485, 0, 0.13258526, 0, 0.4665256, 3.5556684, 0, -5.988765)
+mesh = ExtResource("3_07kks")
+surface_material_override/0 = SubResource("StandardMaterial3D_u0mud")
+
+[node name="Chihiro" type="MeshInstance3D" parent="." unique_id=239986588]
+transform = Transform3D(0.20354263, -0.024400707, 0, 0.024400707, 0.20354263, 0, 0, 0, 0.205, 2.762792, 2.0715222, -7.270196)
+mesh = ExtResource("8_eqkoq")
+surface_material_override/0 = SubResource("StandardMaterial3D_jtmw3")
+
+[node name="Jokerp5" type="MeshInstance3D" parent="." unique_id=1771790520]
+transform = Transform3D(0.049999997, 0.08308159, -0.02444279, 0, 0.028224101, 0.095934354, 0.086602546, -0.047967173, 0.01411205, 4.198929, 0.93603396, -5.866854)
+material_override = SubResource("StandardMaterial3D_igvlw")
+mesh = ExtResource("10_ei46i")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1957031803]
 environment = SubResource("Environment_s072d")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=208860566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8477135, 2.5801258, -3.9021835)
+light_color = Color(1, 0.3764706, 1, 1)
+light_energy = 0.319
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1052772018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.380122, 2.537723, -3.6362362)
+light_color = Color(1, 0.3764706, 1, 1)
+light_energy = 0.302
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=449170725]
+transform = Transform3D(0.9281451, 0.12668131, -0.34999788, 0, 0.9403021, 0.34034118, 0.37221858, -0.315886, 0.87273675, 2.2139912, 2.346188, -4.1088295)
+current = true
+fov = 63.0
+
+[node name="Majora" type="MeshInstance3D" parent="." unique_id=1104000553]
+transform = Transform3D(0.19591922, 0.040194947, -0.00016362185, -0.040194888, 0.1959121, -0.0016793952, -0.00017723971, 0.0016780125, 0.19999288, 3.9368782, 1.356036, -7.273225)
+mesh = ExtResource("11_sm3mh")
+
+[node name="AkuAku" type="MeshInstance3D" parent="." unique_id=676664473]
+transform = Transform3D(0.23901454, -0.021726789, -1.3489766e-09, 0.021726789, 0.23901454, 1.48399755e-08, 0, -1.4901161e-08, 0.24, 4.79725, 2.2992983, -7.2646103)
+mesh = ExtResource("12_dlopn")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1240463549]
+transform = Transform3D(3.428, 0, 0, 0, 1.266, 0, 0, 0, 2.287, 2.7361133, 1.5108544, -5.6246357)
+amount_ratio = 0.969
+sub_emitter = NodePath(".")
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_sm3mh")
+draw_pass_1 = SubResource("QuadMesh_igvlw")
+
+[node name="Mysterio" type="MeshInstance3D" parent="." unique_id=1053441717]
+transform = Transform3D(0.23, 0, 0, 0, 0.2123044, 0.08846945, 0, -0.08846945, 0.2123044, 2.6286712, 0.88536084, -6.081984)
+mesh = ExtResource("13_sm3mh")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=295917687]
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=31179746]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 6.097815, 1.2492588, -3.035389)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(4.3174124, 0.1661377, 8.641174)
+material = SubResource("StandardMaterial3D_uo155")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1743070710]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.41674042, 1.2492588, -3.035389)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(4.3174124, 0.1661377, 8.641174)
+material = SubResource("StandardMaterial3D_lnm0e")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1439124265]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 2.9638653, 0.036222503, -3.035389)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(6.7694435, 0.1661377, 8.641174)
+material = SubResource("StandardMaterial3D_6c1a2")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="CSGCombiner3D" unique_id=248920156]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 2.9638653, 3.2428648, -3.035389)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(6.7694435, 0.1661377, 8.641174)
+material = SubResource("StandardMaterial3D_mqhb4")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1755363955]
+transform = Transform3D(-8.881784e-16, -2.9802322e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, 2.9802322e-08, 2.8842616, 1.2492588, -7.3609757)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(4.3174124, 0.1661377, 6.5661926)
+material = SubResource("StandardMaterial3D_1ugco")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1170258884]
+transform = Transform3D(-8.881784e-16, -2.9802322e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, 2.9802322e-08, 2.859367, 1.2492588, 1.2246428)
+gi_lightmap_texel_scale = 0.01
+size = Vector3(4.3174124, 0.1661377, 6.615982)
+material = SubResource("StandardMaterial3D_mqhb4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=713847312]
+transform = Transform3D(0.4273075, -2.8976852e-09, -0.028115962, -0.028389221, -4.3615238e-08, -0.42319444, 0, 1, -1.8539197e-08, 3.7672842, 2.4075263, -7.2464004)
+material_override = SubResource("StandardMaterial3D_eqkoq")
+mesh = SubResource("PlaneMesh_17rpb")
+
+[node name="CajaCarton" type="MeshInstance3D" parent="." unique_id=1952593632]
+transform = Transform3D(-0.8441127, 0, -0.53616565, 0, 1, 0, 0.53616565, 0, -0.8441127, 1.5511715, 0, -6.521211)
+mesh = ExtResource("16_17rpb")
+surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
+
+[node name="CajaCarton2" type="MeshInstance3D" parent="." unique_id=553702002]
+transform = Transform3D(-0.047106475, 0, -0.9988898, 0, 1, 0, 0.9988898, 0, -0.047106475, 1.5511715, 0.65205884, -6.521211)
+mesh = ExtResource("16_17rpb")
+surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
