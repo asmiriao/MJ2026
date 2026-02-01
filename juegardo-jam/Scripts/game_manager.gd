@@ -23,6 +23,7 @@ func enter_shadow():
 		DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma1")
 		
 
+
 func instantiate(pos):
 	instance = almas.instantiate()
 	instance.position = pos
