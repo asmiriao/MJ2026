@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdakieumgdmu"
-path.s3tc="res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.s3tc.ctex"
+uid="uid://df2gy5lulr60k"
+path.s3tc="res://.godot/imported/-color.png-6a3cc9419b60194879d36afc309edfb2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Roughness_Utility - Raw.png"
-dest_files=["res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.s3tc.ctex"]
+source_file="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png"
+dest_files=["res://.godot/imported/-color.png-6a3cc9419b60194879d36afc309edfb2.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdakieumgdmu"
-path.s3tc="res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.s3tc.ctex"
+uid="uid://bkr5ixf5eeeis"
+path.s3tc="res://.godot/imported/visores.png-b45ee8b4282c129ea783ecbbcb68956b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Roughness_Utility - Raw.png"
-dest_files=["res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.s3tc.ctex"]
+source_file="res://Assets/DISEÑO/2D/visores.png"
+dest_files=["res://.godot/imported/visores.png-b45ee8b4282c129ea783ecbbcb68956b.s3tc.ctex"]
 
 [params]
 

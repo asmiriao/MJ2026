@@ -1,5 +1,8 @@
-GPUParticles3D
+Sprite3D
 MeshInstance3D
+CSGCombiner3D
+Camera3D
+GPUParticles3D
 CollisionShape3D
 CharacterBody3D
 RigidBody3D
@@ -10,6 +13,3 @@ CSGBox3D
 AnimatedSprite3D
 Node3D
 DirectionalLight3D
-OmniLight3D
-SpotLight3D
-CSGCombiner3D

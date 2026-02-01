@@ -1,17 +1,17 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1769897980
+::res://::1769932301
 icon.svg::CompressedTexture2D::8058494397390379118::1769802896::1769802903::1::::<><><>0<>0<>667b4a0f7ecade8fcd324a6769c9a3b2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1769853652
 ::res://addons/dialogue_manager/::1769853653
 constants.gd::GDScript::4240262336831424009::1769853652::0::1::::DMConstants<>RefCounted<><>0<>0<><>::
-dialogue_label.gd::GDScript::480611383085669467::1769853652::0::1::::DialogueLabel<>RichTextLabel<><>0<>1<><>::
+dialogue_label.gd::GDScript::480611383085669467::1769853652::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_label.tscn::PackedScene::5518490004210093266::1769853652::0::1::::<><><>0<>0<><>::uid://g32um0mltv5d::::res://addons/dialogue_manager/dialogue_label.gd
 dialogue_line.gd::GDScript::1208905219044177333::1769853652::0::1::::DialogueLine<>RefCounted<><>0<>0<><>::
 dialogue_manager.gd::GDScript::6774079045493014679::1769853652::0::1::::<>Node<><>0<>0<><>::
 dialogue_processor.gd::GDScript::900179394300351269::1769853652::0::1::::DMDialogueProcessor<>RefCounted<><>0<>0<><>::
-dialogue_resource.gd::GDScript::7268423792262407282::1769853652::0::1::::DialogueResource<>Resource<><>0<>1<><>::
+dialogue_resource.gd::GDScript::7268423792262407282::1769853652::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_response.gd::GDScript::5668140482552713515::1769853652::0::1::::DialogueResponse<>RefCounted<><>0<>0<><>::
-dialogue_responses_menu.gd::GDScript::2520211531407682507::1769853652::0::1::::DialogueResponsesMenu<>Container<><>0<>0<><>::
+dialogue_responses_menu.gd::GDScript::2520211531407682507::1769853652::0::1::::DialogueResponsesMenu<>Container<>res://addons/dialogue_manager/assets/responses_menu.svg<>0<>0<><>::
 editor_translation_parser_plugin.gd::GDScript::6952218891186463517::1769853652::0::1::::DMTranslationParserPlugin<>EditorTranslationParserPlugin<><>0<>0<><>::
 export_plugin.gd::GDScript::1265275163198105838::1769853653::0::1::::DMExportPlugin<>EditorExportPlugin<><>0<>0<><>::
 import_plugin.gd::GDScript::7696928728755687928::1769853653::0::1::::DMImportPlugin<>EditorImportPlugin<><>0<>1<><>::
@@ -81,7 +81,7 @@ main_view.gd::GDScript::5365867961863611872::1769853653::0::1::::<>Control<><>0<
 main_view.tscn::PackedScene::4884668666408697448::1769853653::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png
 ::res://Assets/::1769897962
 ::res://Assets/DISEÑO/::1769897962
-::res://Assets/DISEÑO/2D/::1769899320
+::res://Assets/DISEÑO/2D/::1769907029
 carnaval.png::CompressedTexture2D::6523496951016875287::1769897962::1769897985::1::::<><><>0<>0<>402d1242fcf131f42f47835395ff141d<>res://.godot/imported/carnaval.png-d05d9513dfd39ffbf0d28ed8634702ae.ctex::
 CLIENT_1.png::CompressedTexture2D::8977503903403732180::1769897962::1769897985::1::::<><><>0<>0<>01d252f1aae68d4ed73aba1da1f0855d<>res://.godot/imported/CLIENT_1.png-1805b7f134a4c1c5e88a2e0e7e830f08.ctex::
 CLIENT_2.png::CompressedTexture2D::6370750763280856733::1769897962::1769897985::1::::<><><>0<>0<>69206eee492e2d5e332ffd29026b679c<>res://.godot/imported/CLIENT_2.png-563cfa81b7da15674ebe20e7e8c15f4b.ctex::
@@ -91,23 +91,32 @@ cortinaabierta.png::CompressedTexture2D::2789893307453851522::1769897962::176989
 CortinaCerrada.png::CompressedTexture2D::5281809404572443613::1769897962::1769897986::1::::<><><>0<>0<>53bc5e5fec48985ab50ea88d5b2dffb8<>res://.godot/imported/CortinaCerrada.png-4f9523280007102d4baa7c3173087507.ctex::
 Maori.png::CompressedTexture2D::4396891135205711017::1769897962::1769897984::1::::<><><>0<>0<>93960af2b3c231b87c305f1b15f9a6ba<>res://.godot/imported/Maori.png-06efd8141b974b00370cda3452c64157.ctex::
 MASK_SATURNIA.png::CompressedTexture2D::4808685809101141771::1769897962::1769897984::1::::<><><>0<>0<>31466164c8a3dbe9e8d62d8fdc02a512<>res://.godot/imported/MASK_SATURNIA.png-d24e2d4ca32e24bcdd6e83b295ad2dae.ctex::
+mf_doom_cuadro.jpg::CompressedTexture2D::4823730946403712143::1769906184::1769906188::1::::<><><>0<>0<>499265920158fdf6206d490900335261<>res://.godot/imported/mf_doom_cuadro.jpg-763a7931536e7eaeaf3403564ce053ee.s3tc.ctex::
 Moretta.png::CompressedTexture2D::719914686654270864::1769897962::1769897984::1::::<><><>0<>0<>1f9ce2040bee28e6d6387426cf1a35ae<>res://.godot/imported/Moretta.png-d19f9bf84b3cd05194dde8f9ecdea5c9.ctex::
 Namanari.png::CompressedTexture2D::3314595448376776818::1769897962::1769897984::1::::<><><>0<>0<>b2ecef3b47cee691be0d36bad2da0da8<>res://.godot/imported/Namanari.png-322f2c452e14282426255ee3f31ec97f.ctex::
 paredtienda.png::CompressedTexture2D::2896648257799363564::1769897962::1769899320::1::::<><><>0<>0<>7cd4259b25db782c51e002afa6b34b70<>res://.godot/imported/paredtienda.png-5bc42957217e0ab3ee314c3c729f6e14.s3tc.ctex::
-paredtrastienda.png::CompressedTexture2D::7468533882126790068::1769897962::1769897984::1::::<><><>0<>0<>9923d91625955fffa9ebfef0a7a379c8<>res://.godot/imported/paredtrastienda.png-9afb593add3321974d3aefe97b05276c.ctex::
+paredtrastienda.png::CompressedTexture2D::7468533882126790068::1769897962::1769904719::1::::<><><>0<>0<>0b284852f576490fc3c1bbecacc4804d<>res://.godot/imported/paredtrastienda.png-9afb593add3321974d3aefe97b05276c.s3tc.ctex::
 Peste.png::CompressedTexture2D::5877099773482734943::1769897962::1769897984::1::::<><><>0<>0<>28f26da41aa2333a91c37d61803b1f99<>res://.godot/imported/Peste.png-d159fb9a79c9b6e44cb88f16245c382f.ctex::
 suelo.png::CompressedTexture2D::7734441155745047929::1769897962::1769899275::1::::<><><>0<>0<>c0c706f57dd7b8651417e460508dcfc3<>res://.godot/imported/suelo.png-85d223a3b09d68dfd29dfe88d8fc24ec.s3tc.ctex::
 Victoriana.png::CompressedTexture2D::1802017383420334556::1769897962::1769897985::1::::<><><>0<>0<>1542e2cd371d024deba43a508a143fc1<>res://.godot/imported/Victoriana.png-8fda75f5780535f7b67439b0390f35c1.ctex::
+visores.png::CompressedTexture2D::3125240555156319762::1769907015::1769907029::1::::<><><>0<>0<>de8c251376ea60b5618f1cdb77beb0f6<>res://.godot/imported/visores.png-b45ee8b4282c129ea783ecbbcb68956b.s3tc.ctex::
 WhiteMask.png::CompressedTexture2D::184012996266974337::1769897962::1769897983::1::::<><><>0<>0<>21b19e803b1bdb62e68e4a193c84b679<>res://.godot/imported/WhiteMask.png-1973b84be2aa8532e879d0b380185ecf.ctex::
 ::res://Assets/DISEÑO/3D/::1769897962
-::res://Assets/DISEÑO/3D/MODELS/::1769897962
+::res://Assets/DISEÑO/3D/MODELS/::1769906860
 ::res://Assets/DISEÑO/3D/MODELS/AKU AKU/::1769897962
 ::res://Assets/DISEÑO/3D/MODELS/AKU AKU/WAVEFRONT/::1769897987
 Aku-Aku.obj::Mesh::1724729741183092934::1769897962::1769897987::1::::<><><>0<>0<>09bf941644fc77a5efd5def2374b8885<>res://.godot/imported/Aku-Aku.obj-b4958a12eaa7b4b278289df28a97c41a.mesh<*>res://.godot/imported/Aku-Aku.obj-b4958a12eaa7b4b278289df28a97c41a.mesh::
+::res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/::1769906860
+::res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/::1769906897
+-color.png::CompressedTexture2D::7566353223256861264::1769906860::1769906897::1::::<><><>0<>0<>99967715ef9bb9550dbaf87b2add37cd<>res://.godot/imported/-color.png-6a3cc9419b60194879d36afc309edfb2.s3tc.ctex::
+-metallic.png::CompressedTexture2D::3360006368130715488::1769906860::1769906860::1::::<><><>0<>0<>2117f92a57dd4a4d5a566ee519624bc9<>res://.godot/imported/-metallic.png-0b960627577e163460fc254590e643e9.ctex::
+-roughness.png::CompressedTexture2D::8644451710497575900::1769906860::1769906861::1::::<><><>0<>0<>da6a5884ced482e8e846f5963d122eaa<>res://.godot/imported/-roughness.png-96852d3a6a2abdbcb6c5c05eaa7be6ba.ctex::
+::res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/::1769906861
+CAJA_CARTON.obj::Mesh::8490967486022570763::1769906860::1769906861::1::::<><><>0<>0<>2d4cddab43498aaf5823bf7185bcde47<>res://.godot/imported/CAJA_CARTON.obj-1fea284971d9e088e1aa940c91279786.mesh<*>res://.godot/imported/CAJA_CARTON.obj-1fea284971d9e088e1aa940c91279786.mesh::
 ::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/::1769897962
 ::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/::1769903778
 caja_registradora.obj::Mesh::7315316634857816268::1769897962::1769897987::1::::<><><>0<>0<>93221e105bd2541d8daa2057bb5a7406<>res://.godot/imported/caja_registradora.obj-2673145bb721055bab6c1de34e09c479.mesh<*>res://.godot/imported/caja_registradora.obj-2673145bb721055bab6c1de34e09c479.mesh::
-::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/::1769903778
+::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/::1769903812
 Material-color.png::CompressedTexture2D::1547157656692796879::1769903778::1769903785::1::::<><><>0<>0<>be4c780aee7204722eb55f5a28fae06a<>res://.godot/imported/Material-color.png-de3a725fdfe8a8b1696b0eb1ebb1861e.s3tc.ctex::
 Material-metallic.png::CompressedTexture2D::1548304549284191006::1769903778::1769903812::1::::<><><>0<>0<>ea8fe7bdbe1c5dfce229c98d283735ea<>res://.godot/imported/Material-metallic.png-0dff963ed2cc095c1097869f3b6c8474.s3tc.ctex::
 Material-roughness.png::CompressedTexture2D::2285053646392742740::1769903778::1769903790::1::::<><><>0<>0<>bd6b8cfdf2fe272bbc3cad5b5e5d16e2<>res://.godot/imported/Material-roughness.png-e3025d15598acd3cc24f62944e690257.s3tc.ctex::
@@ -115,8 +124,8 @@ Material-roughness.png::CompressedTexture2D::2285053646392742740::1769903778::17
 ::res://Assets/DISEÑO/3D/MODELS/chihiro/::1769897990
 chihiro.gltf::PackedScene::310993178796762507::1769897962::1769897990::1::::<><><>0<>0<>e35739fa7623f7deaf43ba6acdbd3fac<>res://.godot/imported/chihiro.gltf-7778f61b279294b38a6185973e1b1907.scn::
 chihiro.obj::Mesh::3105701174950712107::1769897962::1769897987::1::::<><><>0<>0<>d1fe4a8920e6ff38dc54e6ec8cc9dfee<>res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh<*>res://.godot/imported/chihiro.obj-71e554be1b5e91cb3772a176058aa778.mesh::
-::res://Assets/DISEÑO/3D/MODELS/chihiro/textura/::1769897987
-chihiro-color.png::CompressedTexture2D::556255310755809425::1769897962::1769897984::1::::<><><>0<>0<>00307e67580659cf9c5c4157cc328d76<>res://.godot/imported/chihiro-color.png-3055d21cac91702f185189b5f1ca7526.ctex::
+::res://Assets/DISEÑO/3D/MODELS/chihiro/textura/::1769905099
+chihiro-color.png::CompressedTexture2D::556255310755809425::1769897962::1769905099::1::::<><><>0<>0<>503fe0d8452357408ec4a73f2e5ed1f4<>res://.godot/imported/chihiro-color.png-3055d21cac91702f185189b5f1ca7526.s3tc.ctex::
 chihiro-metallic.png::CompressedTexture2D::916777937916187028::1769897962::1769897983::1::::<><><>0<>0<>e6d43b12948b458beed69ffd57af2389<>res://.godot/imported/chihiro-metallic.png-50b7f09d4d5cd0be77308a81bf5dc6eb.ctex::
 chihiro-roughness.png::CompressedTexture2D::2511208580110758257::1769897962::1769897983::1::::<><><>0<>0<>0f3e6aadf795e4ec77b9aeb88d9f4176<>res://.godot/imported/chihiro-roughness.png-937df08ff724a0d460c5414e719d7676.ctex::
 chihiro.obj::Mesh::7732562573838892508::1769897962::1769897987::1::::<><><>0<>0<>c4d5b2b0fa6124b543ca1e0044e7d291<>res://.godot/imported/chihiro.obj-df551cfdff7a85aac2095db2301138e6.mesh<*>res://.godot/imported/chihiro.obj-df551cfdff7a85aac2095db2301138e6.mesh::
@@ -134,7 +143,10 @@ estanteria_Roughness_Utility - Raw.png::CompressedTexture2D::1234193992207550648
 Aku-Aku.gltf::PackedScene::1388404511643536085::1769897962::1769897989::1::::<><><>0<>0<>0ac5ca5cf6c83bbd9a01ea294757bc44<>res://.godot/imported/Aku-Aku.gltf-af4412e4cd150d7c1e9ac78fd4063947.scn::
 caja_registradora.glb::PackedScene::1368131923901753419::1769897962::1769897989::1::::<><><>0<>0<>0664828b03cc0e668ff24e223abaf8bd<>res://.godot/imported/caja_registradora.glb-03604dd878ba7b773794dab75e61edb3.scn::
 Ventana.glb::PackedScene::112904088708878002::1769897962::1769897990::1::::<><><>0<>0<>eade7084a9e3f4383077457562de1d54<>res://.godot/imported/Ventana.glb-0ff831aed19c3dc2b9f5cca8b0a5b05f.scn::
-::res://Assets/DISEÑO/3D/MODELS/jokerP5/::1769897990
+::res://Assets/DISEÑO/3D/MODELS/jokerP5/::1769906133
+jokermask-color.png::CompressedTexture2D::2353934613440784830::1769906122::1769906133::1::::<><><>0<>0<>f7a8c91f4900cf0dc74618a6a0af8c4b<>res://.godot/imported/jokermask-color.png-ce545ae615cee29409ad77426ac396e2.s3tc.ctex::
+jokermask-metallic.png::CompressedTexture2D::1015406369117763157::1769906122::1769906122::1::::<><><>0<>0<>ef1e66b415f49721113829d052e22a8f<>res://.godot/imported/jokermask-metallic.png-4900fcbe3ee97799e20c11c3c9d69bb8.ctex::
+jokermask-roughness.png::CompressedTexture2D::6868491745521919090::1769906122::1769906122::1::::<><><>0<>0<>849a731027832178f77723083888aa74<>res://.godot/imported/jokermask-roughness.png-a33a7714d919ea8087790891dfaf0830.ctex::
 jokerp5.gltf::PackedScene::2630540059829783134::1769897962::1769897990::1::::<><><>0<>0<>8fbb10b1cbc98abc8cd89f398b67b304<>res://.godot/imported/jokerp5.gltf-30a2bf054bea4589856c7087db8ada0b.scn::
 jokerp5.obj::Mesh::6954809419939863577::1769897962::1769897987::1::::<><><>0<>0<>f66bf992b31fb6c7498c8e66f33a6bfd<>res://.godot/imported/jokerp5.obj-6eafb980b5fd75004053a72f683308f5.mesh<*>res://.godot/imported/jokerp5.obj-6eafb980b5fd75004053a72f683308f5.mesh::
 ::res://Assets/DISEÑO/3D/MODELS/majora/::1769897990
@@ -153,13 +165,13 @@ marco_puerta_Roughness_Utility - Raw.png::CompressedTexture2D::58210758495412249
 ::res://Assets/DISEÑO/3D/MODELS/mesa/::1769897990
 mesa.gltf::PackedScene::8913151744016512892::1769897962::1769897990::1::::<><><>0<>0<>0104dc3e70a4d6044b237aed160ecbb1<>res://.godot/imported/mesa.gltf-69a1f6befd94426c24ae2176e32828e1.scn::
 mesa.obj::Mesh::46109344493709566::1769897962::1769897987::1::::<><><>0<>0<>d0bd05a56f36d2406aa03ba61a2a8f34<>res://.godot/imported/mesa.obj-e11571a8b15b9a8b0bec04c0f2c37f8d.mesh<*>res://.godot/imported/mesa.obj-e11571a8b15b9a8b0bec04c0f2c37f8d.mesh::
-::res://Assets/DISEÑO/3D/MODELS/mesa/tex/::1769897982
-mesa_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::631717868618245830::1769897962::1769897982::1::::<><><>0<>0<>80ca729422a7da21b04b8f43852b5211<>res://.godot/imported/mesa_Base_color_Utility - sRGB - Texture.png-354e5d7eea677374b638167af1274b3e.ctex::
-mesa_Height_Utility - Raw.png::CompressedTexture2D::7286005287854542339::1769897962::1769897982::1::::<><><>0<>0<>07d15f7058207bbf34dc498c2835d9e8<>res://.godot/imported/mesa_Height_Utility - Raw.png-266bb5c8b50670a9ae568d8f26ef8582.ctex::
+::res://Assets/DISEÑO/3D/MODELS/mesa/tex/::1769904975
+mesa_Base_color_Utility - sRGB - Texture.png::CompressedTexture2D::631717868618245830::1769897962::1769904913::1::::<><><>0<>0<>72239236b94f9ba86ecb8e00720d5d87<>res://.godot/imported/mesa_Base_color_Utility - sRGB - Texture.png-354e5d7eea677374b638167af1274b3e.s3tc.ctex::
+mesa_Height_Utility - Raw.png::CompressedTexture2D::7286005287854542339::1769897962::1769904961::1::::<><><>0<>0<>eb6a3da1a3cea593add71f8cafe98170<>res://.godot/imported/mesa_Height_Utility - Raw.png-266bb5c8b50670a9ae568d8f26ef8582.s3tc.ctex::
 mesa_Metallic_Utility - Raw.png::CompressedTexture2D::3628475195646319961::1769897962::1769897981::1::::<><><>0<>0<>f2906ed5c1bfae8e9765430a956edc15<>res://.godot/imported/mesa_Metallic_Utility - Raw.png-4342eefbf185f13d51d31528cfb3d4f9.ctex::
-mesa_Normal_DirectX_Utility - Raw.png::CompressedTexture2D::2202495435830414265::1769897962::1769897982::1::::<><><>0<>0<>c1ee36215339d397ddc5dfde5d75c9dc<>res://.godot/imported/mesa_Normal_DirectX_Utility - Raw.png-09968613126bd9e1303aeed9e1668b5b.ctex::
+mesa_Normal_DirectX_Utility - Raw.png::CompressedTexture2D::2202495435830414265::1769897962::1769904961::1::::<><><>0<>0<>ae278e66bcd7c46fb449d3355b706a87<>res://.godot/imported/mesa_Normal_DirectX_Utility - Raw.png-09968613126bd9e1303aeed9e1668b5b.s3tc.ctex::
 mesa_Normal_Utility - Raw.png::CompressedTexture2D::5302469942597803091::1769897962::1769897981::1::::<><><>0<>0<>cacf6546c242ca24df29b3aa9b4aa6dc<>res://.godot/imported/mesa_Normal_Utility - Raw.png-b2ee50ad14386aa67fdb806f8d029de3.ctex::
-mesa_Roughness_Utility - Raw.png::CompressedTexture2D::5200185847706627752::1769897962::1769897982::1::::<><><>0<>0<>80a96bd88881919f03d66f8dbafde98c<>res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.ctex::
+mesa_Roughness_Utility - Raw.png::CompressedTexture2D::5200185847706627752::1769897962::1769904975::1::::<><><>0<>0<>a3b97e49c72b77f1329b4d154798e88b<>res://.godot/imported/mesa_Roughness_Utility - Raw.png-39b844141c92b0687c93f71360172854.s3tc.ctex::
 ::res://Assets/DISEÑO/3D/MODELS/mostrador/::1769897990
 mostrador.gltf::PackedScene::6235193195314384210::1769897962::1769897990::1::::<><><>0<>0<>0f815beb9929e4b597d85d51b36452b6<>res://.godot/imported/mostrador.gltf-84e6bea9e38bcdbce42781a02f2f6151.scn::
 mostrador.obj::Mesh::5740612801111601170::1769897962::1769897986::1::::<><><>0<>0<>6435bc76c8f507da748a46a4c0847b0a<>res://.godot/imported/mostrador.obj-8f6c1454032d3736e00d7de43410e434.mesh<*>res://.godot/imported/mostrador.obj-8f6c1454032d3736e00d7de43410e434.mesh::
@@ -199,11 +211,11 @@ Ventana.obj::Mesh::2254728666145911152::1769897962::1769897986::1::::<><><>0<>0<
 ::res://Assets/DISEÑO/3D/MODELS/VENTANA/WIP/::1769897962
 ::res://Dialogos/::1769897006
 alma1.dialogue::Resource::6405334322551685403::1769897006::1769897006::1::::<><><>0<>0<>f7413d07a79df537f4d02f6db97f53aa<>res://.godot/imported/alma1.dialogue-7a72dcbf1995fa2a76b0678907f3cfb5.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Scenes/::1769903696
+::res://Scenes/::1769907384
 alma.tscn::PackedScene::2706879635227141888::1769896770::0::1::::<><><>0<>0<><>::uid://befdxg7fmu7mt::::res://Sprites/Cliente/CLIENT_1.png<>uid://dfofg62q2o4::::res://Sprites/Cliente/CLIENT_2.png<>uid://blmopp8i6twb3::::res://Sprites/Cliente/CLIENT_3.png
 main.gd::GDScript::7291943394481473747::1769893423::0::1::::<>Node3D<><>0<>0<><>::
-main.tscn::PackedScene::3075489020373189083::1769903696::0::1::::<><><>0<>0<><>::uid://db5jiie72eovb::::res://Scenes/main.gd<>uid://beth6anwjhq8w::::res://Scenes/alma.tscn<>uid://digvd65fjdgtt::::res://Assets/DISEÑO/2D/suelo.png<>uid://5jqa2jrqe3y7::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/telefono_Base_color_Utility - sRGB - Texture.png<>uid://bhjfmx48uingm::::res://Assets/DISEÑO/2D/paredtienda.png<>uid://cnfe7ubbiqqk6::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/base_telefono_Base_color_Utility - sRGB - Texture.png<>uid://7ehb01p4kqqq::::res://Assets/DISEÑO/3D/MODELS/VENTANA/WAVEFRONT/Ventana.obj<>uid://cn12b3te46tuw::::res://Assets/DISEÑO/3D/MODELS/mostrador/mostrador.obj<>uid://cgoddhc67rqmc::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Base_color_Utility - sRGB - Texture.png<>uid://buurtlpr4bg58::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Height_Utility - Raw.png<>uid://bfjrpn5kl1jow::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Normal_DirectX_Utility - Raw.png<>uid://8u5s1e02f3ti::::res://Assets/DISEÑO/3D/MODELS/marco puerta/MarcoPuerta.obj<>uid://b6ipmkde07jyv::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png<>uid://dc2a252vuut8a::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png<>uid://dchugw2in0jcm::::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj
-trastienda.tscn::PackedScene::4142512001756536974::1769900101::0::1::::<><><>0<>0<><>::
+main.tscn::PackedScene::3075489020373189083::1769906501::0::1::::<><><>0<>0<><>::uid://db5jiie72eovb::::res://Scenes/main.gd<>uid://beth6anwjhq8w::::res://Scenes/alma.tscn<>uid://digvd65fjdgtt::::res://Assets/DISEÑO/2D/suelo.png<>uid://5jqa2jrqe3y7::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/telefono_Base_color_Utility - sRGB - Texture.png<>uid://bhjfmx48uingm::::res://Assets/DISEÑO/2D/paredtienda.png<>uid://cnfe7ubbiqqk6::::res://Assets/DISEÑO/3D/MODELS/telefono/compo/base_telefono_Base_color_Utility - sRGB - Texture.png<>uid://7ehb01p4kqqq::::res://Assets/DISEÑO/3D/MODELS/VENTANA/WAVEFRONT/Ventana.obj<>uid://cn12b3te46tuw::::res://Assets/DISEÑO/3D/MODELS/mostrador/mostrador.obj<>uid://cgoddhc67rqmc::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Base_color_Utility - sRGB - Texture.png<>uid://buurtlpr4bg58::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Height_Utility - Raw.png<>uid://bfjrpn5kl1jow::::res://Assets/DISEÑO/3D/MODELS/mostrador/tex/mostrador_Normal_DirectX_Utility - Raw.png<>uid://8u5s1e02f3ti::::res://Assets/DISEÑO/3D/MODELS/marco puerta/MarcoPuerta.obj<>uid://b6ipmkde07jyv::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png<>uid://dc2a252vuut8a::::res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png<>uid://dchugw2in0jcm::::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj<>uid://wbppwn8e2pxn::::res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png
+trastienda.tscn::PackedScene::4142512001756536974::1769907384::0::1::::<><><>0<>0<><>::uid://den2wrehu1j2k::::res://Assets/DISEÑO/2D/paredtrastienda.png<>uid://digvd65fjdgtt::::res://Assets/DISEÑO/2D/suelo.png<>uid://wloc1oqffd3::::res://Assets/DISEÑO/3D/MODELS/mesa/mesa.obj<>uid://jaakh7sqmtn7::::res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Base_color_Utility - sRGB - Texture.png<>uid://db2npbvv8oqv0::::res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Height_Utility - Raw.png<>uid://6m51pochlai8::::res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Normal_DirectX_Utility - Raw.png<>uid://cgdakieumgdmu::::res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Roughness_Utility - Raw.png<>uid://bkiopd7w0spxb::::res://Assets/DISEÑO/3D/MODELS/chihiro/chihiro.obj<>uid://h6ppc6d6hmmb::::res://Assets/DISEÑO/3D/MODELS/chihiro/textura/chihiro-color.png<>uid://8si7u2gmeuxa::::res://Assets/DISEÑO/3D/MODELS/jokerP5/jokermask-color.png<>uid://c6c7xvpxxay6l::::res://Assets/DISEÑO/3D/MODELS/jokerP5/jokerp5.obj<>uid://dwg5e4y8tdde0::::res://Assets/DISEÑO/3D/MODELS/majora/majora.obj<>uid://ytqbufo3mbqc::::res://Assets/DISEÑO/3D/MODELS/AKU AKU/WAVEFRONT/Aku-Aku.obj<>uid://d3t87aqr1f6jk::::res://Assets/DISEÑO/3D/MODELS/mysterio/mysterio.obj<>uid://caywe5ncwjg3x::::res://Assets/DISEÑO/2D/mf_doom_cuadro.jpg<>uid://ds8c82afypvt0::::res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj<>uid://df2gy5lulr60k::::res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png
 ::res://Scripts/::1769901406
 game_manager.gd::GDScript::8520500279242844103::1769901406::0::1::::<>Node<><>0<>0<><>::
 ::res://Sprites/::1769857514
@@ -211,6 +223,6 @@ game_manager.gd::GDScript::8520500279242844103::1769901406::0::1::::<>Node<><>0<
 CLIENT_1.png::CompressedTexture2D::2677721536071520299::1769857296::1769857515::1::::<><><>0<>0<>d824daf6259f6009352c2465b7a60412<>res://.godot/imported/CLIENT_1.png-79d3aaddfea84648f25f8501766a14e0.s3tc.ctex::
 CLIENT_2.png::CompressedTexture2D::6521992671497205::1769857296::1769857514::1::::<><><>0<>0<>c51d293464616e1245fa8133ceab0048<>res://.godot/imported/CLIENT_2.png-8e60296a6998f4f0948099729cbbdae3.s3tc.ctex::
 CLIENT_3.png::CompressedTexture2D::3184148160801958494::1769857296::1769857515::1::::<><><>0<>0<>2fb3ad148ae5bf9e24bde0e51b5c20b7<>res://.godot/imported/CLIENT_3.png-59395e1c1c772442f25e21a9e19d81a3.s3tc.ctex::
-::res://UI/::1769863141
+::res://UI/::1769906847
 balloon.gd::GDScript::8867185218296700225::1769858425::0::1::::<>CanvasLayer<><>0<>0<><>::
-balloon.tscn::PackedScene::6564983900231404471::1769863141::0::1::::<><><>0<>0<><>::uid://dyllili16gs54::::res://UI/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
+balloon.tscn::PackedScene::6564983900231404471::1769906847::0::1::::<><><>0<>0<><>::uid://dyllili16gs54::::res://UI/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://bb52rsfwhkxbn::::res://addons/dialogue_manager/dialogue_responses_menu.gd
