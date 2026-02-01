@@ -1,3 +1,4 @@
+Sprite2D
 Button
 AnimatedSprite2D
 AnimatedSprite3D
@@ -12,4 +13,3 @@ CollisionShape3D
 CharacterBody3D
 RigidBody3D
 Area3D
-StaticBody3D

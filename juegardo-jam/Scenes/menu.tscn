@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="16_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
 [ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
+[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="18_rc6uw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -424,10 +425,19 @@ autoplay = "default"
 
 [node name="Button" type="Button" parent="Control" unique_id=1396304616]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 248.0
+offset_top = 723.0
+offset_right = 618.0
+offset_bottom = 806.0
 
 [node name="Button2" type="Button" parent="Control" unique_id=430457367]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 182.0
+offset_top = 577.0
+offset_right = 555.0
+offset_bottom = 658.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=2118340306]
+position = Vector2(1764, 839.00006)
+scale = Vector2(0.07683336, 0.06833334)
+texture = ExtResource("18_rc6uw")
