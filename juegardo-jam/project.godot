@@ -25,6 +25,10 @@ GameManager="*uid://dtnnnok2hji12"
 runtime/balloon_path="res://UI/balloon.tscn"
 runtime/state_autoload_shortcuts=["GameManager"]
 
+[editor]
+
+movie_writer/disable_vsync=true
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
