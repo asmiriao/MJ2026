@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://digvd65fjdgtt" path="res://Assets/DISEÑO/2D/suelo.png" id="18_xov7l"]
 [ext_resource type="ArrayMesh" uid="uid://ds8c82afypvt0" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj" id="19_e8060"]
 [ext_resource type="Texture2D" uid="uid://df2gy5lulr60k" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png" id="20_xdb4h"]
+[ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="22_2raxt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0mud"]
 albedo_texture = ExtResource("13_wsei3")
@@ -351,6 +352,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
 transform = Transform3D(-0.047106475, 0, -0.9988898, 0, 1, 0, 0.9988898, 0, -0.047106475, 0.32028723, 0.65205884, -6.521211)
 mesh = ExtResource("19_e8060")
 surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1967337846]
+stream = ExtResource("22_2raxt")
+volume_db = -22.006
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Payaso/ButtonPayaso" to="." method="_on_button_payaso_pressed"]
 [connection signal="pressed" from="Maori/ButtonMaori" to="." method="_on_button_maori_pressed"]
