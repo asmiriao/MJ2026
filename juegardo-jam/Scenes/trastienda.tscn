@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cnu8gu1sxmqnt" path="res://Assets/DISEÑO/3D/MODELS/AKU AKU/Pluma2-color.png" id="22_564du"]
 [ext_resource type="Texture2D" uid="uid://rr8tcd80buwi" path="res://Assets/DISEÑO/3D/MODELS/AKU AKU/Pluma1-color.png" id="23_f85p2"]
 [ext_resource type="PackedScene" uid="uid://by046ikhweodn" path="res://Assets/DISEÑO/3D/MODELS/majora/majora.tscn" id="30_5xbhp"]
+[ext_resource type="AudioStream" uid="uid://ba3cg5mrwgsc4" path="res://Assets/SONIDO/TRASTIENDA.mp3" id="31_pjjdg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0mud"]
 albedo_texture = ExtResource("4_ei46i")
@@ -340,3 +341,9 @@ spot_angle_attenuation = 0.5176326
 
 [node name="majora" parent="." unique_id=1763871189 instance=ExtResource("30_5xbhp")]
 transform = Transform3D(0.18567042, 0.059594378, 0, -0.059594378, 0.18567042, 0, 0, 0, 0.195, 3.8854556, 1.3749804, -7.2135)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1251603031]
+stream = ExtResource("31_pjjdg")
+volume_db = -24.425
+autoplay = true
+parameters/looping = true

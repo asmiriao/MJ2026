@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boub78ybaco77"
+path="res://.godot/imported/TELEFONO (1).mp3-4898dddd225dec3de21e078ec726c439.mp3str"
+
+[deps]
+
+source_file="res://Assets/SONIDO/TELEFONO (1).mp3"
+dest_files=["res://.godot/imported/TELEFONO (1).mp3-4898dddd225dec3de21e078ec726c439.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

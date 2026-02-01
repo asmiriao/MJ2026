@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
 [ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
 [ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="18_rc6uw"]
+[ext_resource type="AudioStream" uid="uid://crup8jaa1ho28" path="res://Assets/SONIDO/menu.mp3" id="20_d77ms"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -608,5 +609,12 @@ color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=622489992]
 libraries/ = SubResource("AnimationLibrary_owyel")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1329674207]
+stream = ExtResource("20_d77ms")
+volume_db = -26.549
+max_db = -0.385
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]

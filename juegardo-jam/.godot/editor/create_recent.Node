@@ -1,7 +1,10 @@
+Label
+Sprite2D
+Control
+AudioStreamPlayer3D
 Button
 ColorRect
 AnimationPlayer
-Label
 Node3D
 SpotLight3D
 Sprite3D
@@ -9,6 +12,3 @@ MeshInstance3D
 CSGCombiner3D
 Camera3D
 GPUParticles3D
-CollisionShape3D
-CharacterBody3D
-RigidBody3D
