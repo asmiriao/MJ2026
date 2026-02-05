@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="11_pdsj5"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="12_ee4r6"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="13_gt3je"]
+[ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="16_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_k12tt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
@@ -399,3 +400,11 @@ offset_top = 149.0
 offset_right = 1012.0
 offset_bottom = 466.0
 text = "texto final"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1284244398]
+stream = ExtResource("16_h1bgf")
+attenuation_model = 2
+volume_db = -21.775
+max_db = -6.0
+autoplay = true
+parameters/looping = true
