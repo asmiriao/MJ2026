@@ -36,11 +36,13 @@ sky_custom_fov = 43.9
 ambient_light_source = 3
 ambient_light_color = Color(0.24717933, 0.14931628, 0.2665013, 1)
 ambient_light_energy = 7.2
-tonemap_mode = 2
+tonemap_mode = 4
+tonemap_exposure = 1.05
+tonemap_agx_contrast = 1.38
 ssr_enabled = true
 ssr_fade_in = 0.34460938
 ssr_fade_out = 2.378414
-ssr_depth_tolerance = 8.41
+ssr_depth_tolerance = 47.71
 sdfgi_bounce_feedback = 0.34
 sdfgi_cascades = 2
 sdfgi_min_cell_size = 0.01
@@ -279,11 +281,6 @@ gi_lightmap_texel_scale = 0.01
 size = Vector3(4.5210037, 0.1661377, 12.5147705)
 material = SubResource("StandardMaterial3D_hibaj")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D9" unique_id=434495413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, -9.529121e-21, 0, 1, -0.6727146, 0, 3.3256922)
-operation = 2
-size = Vector3(3.0072937, 1, 1.3953934)
-
 [node name="CSGBox3D14" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D9" unique_id=340405901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07964206, 0.055763245, -2.040523)
 transparency = 1.0
@@ -319,11 +316,14 @@ size = Vector3(3.0072937, 1, 2.3413696)
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.8660254, 0, -0.8660254, 0.49999997, -0.13457263, 2.4153173, -0.18922645)
 light_color = Color(0.7280238, 0.78017795, 0.85683936, 1)
 light_energy = 3.95
-light_indirect_energy = 1.063
-light_volumetric_fog_energy = 1.714
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 3.02
 light_size = 1.0
-light_specular = 1.405
+light_specular = 5.724
 shadow_enabled = true
+shadow_normal_bias = 6.092
+spot_attenuation = 0.14
+spot_angle = 47.21
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Luces" unique_id=1155678913]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9985561, 1.775305, -2.2210088)
