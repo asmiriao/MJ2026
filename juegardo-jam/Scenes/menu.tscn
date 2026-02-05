@@ -439,11 +439,6 @@ gi_lightmap_texel_scale = 0.01
 size = Vector3(4.5210037, 0.1661377, 12.5147705)
 material = SubResource("StandardMaterial3D_hibaj")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D9" unique_id=434495413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, -9.529121e-21, 0, 1, -0.6727146, 0, 3.3256922)
-operation = 2
-size = Vector3(3.0072937, 1, 1.3953934)
-
 [node name="CSGBox3D14" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D9" unique_id=340405901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07964206, 0.055763245, -2.040523)
 transparency = 1.0
