@@ -344,6 +344,7 @@ transform = Transform3D(0.18567042, 0.059594378, 0, -0.059594378, 0.18567042, 0,
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1251603031]
 stream = ExtResource("31_pjjdg")
+attenuation_model = 2
 volume_db = -24.425
 autoplay = true
 parameters/looping = true

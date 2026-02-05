@@ -612,6 +612,7 @@ libraries/ = SubResource("AnimationLibrary_owyel")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1329674207]
 stream = ExtResource("20_d77ms")
+attenuation_model = 2
 volume_db = -26.549
 max_db = -0.385
 autoplay = true
