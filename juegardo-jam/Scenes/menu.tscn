@@ -641,7 +641,7 @@ color = Color(0, 0, 0, 0)
 metadata/_edit_lock_ = true
 
 [node name="SaturniaBlanco" type="Sprite2D" parent="ui" unique_id=232104886]
-position = Vector2(1824.0983, 975.2499)
+position = Vector2(1824.0983, 929.2499)
 scale = Vector2(0.05801838, 0.059732687)
 texture = ExtResource("20_3p34a")
 
