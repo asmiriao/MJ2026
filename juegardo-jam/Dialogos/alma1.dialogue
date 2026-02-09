@@ -1,8 +1,9 @@
 ~ dialogoAlma0
 
 ¡Hola, hola! ¿Qué tal en tu nuevo lugar de trabajo? 
-Perdóname por no estar allí, me surgió algo urgente que debía atender. 
-Escucha, vas a atender a clientes muy especiales. Acaban de llegar al más allá y perdieron su identidad. Necesitan una máscara
+Perdóname por no estar allí, me surgió algo que debía atender [wave] urgentemente [/wave]. 
+Escucha, vas a atender a clientes muy especiales. Acaban de llegar al más allá y perdieron su identidad. Necesitan una máscara.
+Para saber qué máscara va acorde a sus personalidades, les tendrás que hacer [wave] tres preguntas [/wave]. Después, deberás elegir una máscara de las que tenemos en venta.
 
 Debes actuar con mucha precaución porque, si escoges una máscara que no les corresponde, vagarán por el mundo sin saber quiénes son. 
 Pero, ¡sin presiones!
@@ -28,7 +29,7 @@ Alma errante: ...
 - ¿Cómo defines tu marcha?
 	Alma errante: Yo marchaba sin poder parar. Supongo que mi marcha de este mundo fue similar.
 - ¿Echas algo de menos?
-	Alma errante: Echo de menos el olor a mar y a lluvia. Echo de menos el lugar donde me crié, sus costumbres y su [wave] cultura [/wave].
+	Alma errante: Echo de menos el olor a lluvia, el lugar donde me crié, sus costumbres y su [wave] cultura [/wave].
 ...	
 Tú: De acuerdo, te asignaré una máscara.
 do GameManager.shadow_disappear()
