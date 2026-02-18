@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="16_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_k12tt"]
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://Scenes/dither.gdshader" id="17_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="18_b3802"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -400,6 +401,14 @@ transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1797622818]
+material = SubResource("ShaderMaterial_b3802")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="mensaje_final" type="Label" parent="." unique_id=667448506]
 visible = false
 offset_left = 161.0
@@ -417,11 +426,6 @@ autoplay = true
 parameters/looping = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=539856314]
+layer = 60019
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1797622818]
-material = SubResource("ShaderMaterial_b3802")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Cursor" parent="CanvasLayer" unique_id=1291160640 instance=ExtResource("18_b3802")]

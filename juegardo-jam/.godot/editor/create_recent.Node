@@ -1,3 +1,5 @@
+CanvasLayer
+AnimatedSprite2D
 AudioStreamPlayer3D
 Label
 Sprite2D
@@ -11,4 +13,3 @@ Sprite3D
 MeshInstance3D
 CSGCombiner3D
 Camera3D
-GPUParticles3D

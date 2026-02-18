@@ -22,6 +22,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ds8c82afypvt0" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj" id="19_e8060"]
 [ext_resource type="Texture2D" uid="uid://df2gy5lulr60k" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png" id="20_xdb4h"]
 [ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="22_2raxt"]
+[ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="23_lhvtj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0mud"]
 albedo_texture = ExtResource("13_wsei3")
@@ -361,6 +362,11 @@ attenuation_model = 2
 volume_db = -22.006
 autoplay = true
 parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=378996138]
+layer = 104286
+
+[node name="Cursor" parent="CanvasLayer" unique_id=1291160640 instance=ExtResource("23_lhvtj")]
 
 [connection signal="pressed" from="Payaso/ButtonPayaso" to="." method="_on_button_payaso_pressed"]
 [connection signal="pressed" from="Maori/ButtonMaori" to="." method="_on_button_maori_pressed"]

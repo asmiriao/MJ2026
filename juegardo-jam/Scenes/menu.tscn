@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="18_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="20_3p34a"]
 [ext_resource type="AudioStream" uid="uid://crup8jaa1ho28" path="res://Assets/SONIDO/menu.mp3" id="20_d77ms"]
+[ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="22_owyel"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -655,5 +656,10 @@ volume_db = -26.549
 max_db = -0.385
 autoplay = true
 parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=371976157]
+layer = 104286
+
+[node name="Cursor" parent="CanvasLayer" unique_id=1291160640 instance=ExtResource("22_owyel")]
 
 [connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]
