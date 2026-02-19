@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d164pt2l2reny"]
+
+[ext_resource type="Script" uid="uid://6d1x24blbcs8" path="res://autoload/audio_manager/audio_manager.gd" id="1_veri3"]
+[ext_resource type="AudioStream" uid="uid://crup8jaa1ho28" path="res://Assets/SONIDO/menu.mp3" id="2_1ir50"]
+[ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="3_1ir50"]
+
+[node name="AudioManager" type="Node" unique_id=120797141 node_paths=PackedStringArray("stream_player", "resource_preloader")]
+script = ExtResource("1_veri3")
+stream_player = NodePath("AudioStreamPlayer")
+resource_preloader = NodePath("ResourcePreloader")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1464697552]
+stream = ExtResource("2_1ir50")
+volume_db = -26.549
+autoplay = true
+parameters/looping = true
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=598316034]
+resources = [PackedStringArray("menu", "mostrador_main_loop"), [ExtResource("2_1ir50"), ExtResource("3_1ir50")]]

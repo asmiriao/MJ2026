@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://clulu1cc3rrjo"]
+
+[ext_resource type="Script" uid="uid://bmtkk6bpvs53t" path="res://Scripts/class/MenuControllerClass.gd" id="1_udjf4"]
+[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="2_4qonb"]
+[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="3_riabb"]
+[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="4_sq38h"]
+[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="5_clreq"]
+[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="6_bqphc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vngv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4qonb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_riabb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sq38h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6sshm"]
+line_spacing = 5.0
+paragraph_spacing = 5.0
+font = ExtResource("5_clreq")
+font_size = 25
+outline_size = 3
+shadow_color = Color(0, 0, 0, 0.92941177)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwcqm"]
+font = ExtResource("5_clreq")
+font_size = 42
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=537494712]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ui" type="Control" parent="." unique_id=1365403067]
+custom_minimum_size = Vector2(960, 540)
+layout_mode = 2
+
+[node name="MenuController" type="Node" parent="ui" unique_id=680846341 node_paths=PackedStringArray("options_menu")]
+script = ExtResource("1_udjf4")
+options_menu = NodePath("")
+metadata/_custom_type_script = "uid://bmtkk6bpvs53t"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ui" unique_id=1463390439]
+position = Vector2(366.33902, 310.5282)
+scale = Vector2(0.54104906, 0.50201404)
+sprite_frames = SubResource("SpriteFrames_3vngv")
+autoplay = "default"
+
+[node name="trigger warning" type="Label" parent="ui" unique_id=905190334]
+layout_mode = 0
+offset_left = 95.01965
+offset_top = 919.4409
+offset_right = 963.01965
+offset_bottom = 1145.4409
+text = "TRIGGER WARNING
+ESTE JUEGO CONTIENE PAYASOS, REFERENCIAS A LA MUERTE,
+VIOLENCIA DE GÉNERO, MALTRATO, DISCRIMINACIÓN Y OPRESIÓN."
+label_settings = SubResource("LabelSettings_6sshm")
+
+[node name="PlayButton" type="Button" parent="ui" unique_id=2083155417]
+layout_mode = 0
+offset_left = 243.67242
+offset_top = 561.48895
+offset_right = 510.67242
+offset_bottom = 644.48895
+
+[node name="Label" type="Label" parent="ui/PlayButton" unique_id=1110865071]
+layout_mode = 0
+offset_left = 69.735535
+offset_top = 21.652893
+offset_right = 180.73553
+offset_bottom = 64.65289
+theme_override_fonts/font = ExtResource("5_clreq")
+theme_override_font_sizes/font_size = 20
+text = "JUGAR"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="Options" type="Button" parent="ui" unique_id=1745704120]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 791.0
+offset_right = 592.0
+offset_bottom = 874.0
+
+[node name="Label" type="Label" parent="ui/Options" unique_id=1189673893]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -21.5
+offset_right = 79.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_clreq")
+theme_override_font_sizes/font_size = 20
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="CreditosButton" type="Button" parent="ui" unique_id=2026933968]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 679.0
+offset_right = 549.0
+offset_bottom = 762.0
+
+[node name="Label2" type="Label" parent="ui/CreditosButton" unique_id=302796950]
+layout_mode = 0
+offset_left = 50.59018
+offset_top = 21.652893
+offset_right = 207.59018
+offset_bottom = 64.65289
+theme_override_fonts/font = ExtResource("5_clreq")
+theme_override_font_sizes/font_size = 20
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="ColorRect" type="ColorRect" parent="ui" unique_id=189379780]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="SaturniaBlanco" type="TextureRect" parent="." unique_id=1885301382]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+texture = ExtResource("6_bqphc")
+expand_mode = 1
+
+[connection signal="pressed" from="ui/Options" to="ui/MenuController" method="_on_options_button_pressed"]
