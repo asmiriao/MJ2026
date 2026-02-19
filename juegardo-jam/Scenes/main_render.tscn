@@ -31,7 +31,9 @@ handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
-[node name="Menu" parent="CurrentScene/SubViewport" unique_id=331887721 instance=ExtResource("2_1crp2")]
+[node name="Menu" parent="CurrentScene/SubViewport" unique_id=331887721 node_paths=PackedStringArray("play_button", "menu_controller") instance=ExtResource("2_1crp2")]
+play_button = NodePath("../../../MainMenuUI/ui/PlayButton")
+menu_controller = NodePath("../../../MainMenuUI/ui/MenuController")
 
 [node name="ColorRect" type="ColorRect" parent="CurrentScene/SubViewport" unique_id=1698654490]
 material = SubResource("ShaderMaterial_1crp2")
@@ -42,24 +44,27 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" parent="." unique_id=537494712 instance=ExtResource("3_0nupa")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="MainMenuUI" parent="." unique_id=537494712 instance=ExtResource("3_0nupa")]
+layout_mode = 1
 
-[node name="MenuController" parent="HBoxContainer/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="0" unique_id=680846341 node_paths=PackedStringArray("options_menu")]
+[node name="MenuController" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="0" unique_id=680846341 node_paths=PackedStringArray("options_menu", "main_menu_ui")]
 options_menu = NodePath("../../../OptionsMenu")
+main_menu_ui = NodePath("../..")
 
-[node name="Cursor" parent="." unique_id=2036012360 instance=ExtResource("8_0l1pn")]
+[node name="SaturniaBlanco" parent="MainMenuUI" index="1" unique_id=1885301382]
+layout_direction = 2
 
 [node name="OptionsMenu" parent="." unique_id=1701979943 instance=ExtResource("9_bcb7j")]
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="HBoxContainer/ui/MenuController" method="_on_close_button_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=831127693]
+layer = 2
 
-[editable path="HBoxContainer"]
+[node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("8_0l1pn")]
+
+[connection signal="pressed" from="MainMenuUI/ui/PlayButton" to="CurrentScene/SubViewport/Menu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="MainMenuUI/ui/MenuController" method="_on_close_button_pressed"]
+
+[editable path="MainMenuUI"]
 [editable path="OptionsMenu"]

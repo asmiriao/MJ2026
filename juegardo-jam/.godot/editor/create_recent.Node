@@ -1,3 +1,5 @@
+CanvasLayer
+AnimationPlayer
 ResourcePreloader
 AudioStreamPlayer
 Node
@@ -11,5 +13,3 @@ VSlider
 HSlider
 Container
 SubViewportContainer
-TextureRect
-SubViewport
