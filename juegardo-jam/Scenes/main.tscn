@@ -16,7 +16,6 @@
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="13_gt3je"]
 [ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="16_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_k12tt"]
-[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://Scenes/dither.gdshader" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="18_b3802"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
@@ -219,12 +218,6 @@ albedo_texture = SubResource("GradientTexture2D_h1bgf")
 [sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
 material = SubResource("StandardMaterial3D_pdsj5")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3802"]
-shader = ExtResource("17_h1bgf")
-shader_parameter/fog_color = Color(1, 1, 1, 1)
-shader_parameter/resolution_downsampling = 4.0
-shader_parameter/bit_depth = 32.0
-
 [node name="Main" type="Node3D" unique_id=1538424508]
 script = ExtResource("1_bo1nx")
 
@@ -400,14 +393,6 @@ sub_emitter = NodePath(".")
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1797622818]
-material = SubResource("ShaderMaterial_b3802")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="mensaje_final" type="Label" parent="." unique_id=667448506]
 visible = false

@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://ct0we1imjkljr"]
+
+[ext_resource type="PackedScene" uid="uid://ddv1jhuh43215" path="res://Scenes/menu.tscn" id="2_1crp2"]
+[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://Scenes/dither.gdshader" id="2_5r70e"]
+[ext_resource type="Script" uid="uid://bmtkk6bpvs53t" path="res://Scripts/class/MenuControllerClass.gd" id="3_63c64"]
+[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="3_o8naw"]
+[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="4_0l1pn"]
+[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="5_bcb7j"]
+[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="6_63c64"]
+[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="7_owv4f"]
+[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="8_0l1pn"]
+[ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu.tscn" id="9_bcb7j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1crp2"]
+shader = ExtResource("2_5r70e")
+shader_parameter/fog_color = Color(1, 1, 1, 1)
+shader_parameter/resolution_downsampling = 2.0
+shader_parameter/bit_depth = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vngv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o8naw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0l1pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bcb7j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6sshm"]
+line_spacing = 5.0
+paragraph_spacing = 5.0
+font = ExtResource("6_63c64")
+font_size = 25
+outline_size = 3
+shadow_color = Color(0, 0, 0, 0.92941177)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwcqm"]
+font = ExtResource("6_63c64")
+font_size = 42
+
+[node name="MainRender" type="Control" unique_id=475464034]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1749758531]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=550232260]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Menu" parent="SubViewportContainer/SubViewport" unique_id=331887721 node_paths=PackedStringArray("play_button") instance=ExtResource("2_1crp2")]
+play_button = NodePath("../../../HBoxContainer/ui/PlayButton")
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=1698654490]
+material = SubResource("ShaderMaterial_1crp2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=983739583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ui" type="Control" parent="HBoxContainer" unique_id=1775410624]
+custom_minimum_size = Vector2(960, 540)
+layout_mode = 2
+
+[node name="MenuController" type="Node" parent="HBoxContainer/ui" unique_id=104320544 node_paths=PackedStringArray("options_button")]
+script = ExtResource("3_63c64")
+options_button = NodePath("../Options")
+metadata/_custom_type_script = "uid://bmtkk6bpvs53t"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/ui" unique_id=1981455373]
+position = Vector2(366.33902, 310.5282)
+scale = Vector2(0.54104906, 0.50201404)
+sprite_frames = SubResource("SpriteFrames_3vngv")
+autoplay = "default"
+
+[node name="trigger warning" type="Label" parent="HBoxContainer/ui" unique_id=706937827]
+layout_mode = 0
+offset_left = 95.01965
+offset_top = 919.4409
+offset_right = 963.01965
+offset_bottom = 1145.4409
+text = "TRIGGER WARNING
+ESTE JUEGO CONTIENE PAYASOS, REFERENCIAS A LA MUERTE,
+VIOLENCIA DE GÉNERO, MALTRATO, DISCRIMINACIÓN Y OPRESIÓN."
+label_settings = SubResource("LabelSettings_6sshm")
+
+[node name="PlayButton" type="Button" parent="HBoxContainer/ui" unique_id=1936526938]
+layout_mode = 0
+offset_left = 243.67242
+offset_top = 561.48895
+offset_right = 510.67242
+offset_bottom = 644.48895
+
+[node name="Label" type="Label" parent="HBoxContainer/ui/PlayButton" unique_id=1151269113]
+layout_mode = 0
+offset_left = 69.735535
+offset_top = 21.652893
+offset_right = 180.73553
+offset_bottom = 64.65289
+theme_override_fonts/font = ExtResource("6_63c64")
+theme_override_font_sizes/font_size = 20
+text = "JUGAR"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="Options" type="Button" parent="HBoxContainer/ui" unique_id=161823562]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 791.0
+offset_right = 592.0
+offset_bottom = 874.0
+
+[node name="Label" type="Label" parent="HBoxContainer/ui/Options" unique_id=2118781221]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -21.5
+offset_right = 79.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_63c64")
+theme_override_font_sizes/font_size = 20
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="CreditosButton" type="Button" parent="HBoxContainer/ui" unique_id=224014122]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 679.0
+offset_right = 549.0
+offset_bottom = 762.0
+
+[node name="Label2" type="Label" parent="HBoxContainer/ui/CreditosButton" unique_id=754994240]
+layout_mode = 0
+offset_left = 50.59018
+offset_top = 21.652893
+offset_right = 207.59018
+offset_bottom = 64.65289
+theme_override_fonts/font = ExtResource("6_63c64")
+theme_override_font_sizes/font_size = 20
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_mwcqm")
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ui" unique_id=383984259]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="SaturniaBlanco" type="TextureRect" parent="HBoxContainer" unique_id=217266113]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+texture = ExtResource("7_owv4f")
+expand_mode = 1
+
+[node name="Cursor" parent="." unique_id=2036012360 instance=ExtResource("8_0l1pn")]
+
+[node name="OptionsMenu" parent="." unique_id=1701979943 instance=ExtResource("9_bcb7j")]
+layout_mode = 1

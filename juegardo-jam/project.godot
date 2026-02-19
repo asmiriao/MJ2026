@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 GameManager="*uid://dtnnnok2hji12"
+Debug="*uid://b4qqfi3faytj0"
 
 [dialogue_manager]
 
@@ -29,13 +30,15 @@ runtime/state_autoload_shortcuts=["GameManager"]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/window_width_override=1080
+window/size/window_height_override=720
 window/frame_pacing/android/enable_frame_pacing=false
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [filesystem]
 
@@ -45,6 +48,14 @@ import/blender/enabled=false
 
 Almas="almas y clientes"
 Triggers=""
+
+[input]
+
+click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [internationalization]
 

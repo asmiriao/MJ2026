@@ -14,14 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b6ipmkde07jyv" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Base_color_Utility - sRGB - Texture.png" id="13_nakb8"]
 [ext_resource type="Texture2D" uid="uid://dc2a252vuut8a" path="res://Assets/DISEÑO/3D/MODELS/marco puerta/tex/marco_puerta_Normal_DirectX_Utility - Raw.png" id="14_pde1v"]
 [ext_resource type="ArrayMesh" uid="uid://dchugw2in0jcm" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/caja_registradora.obj" id="15_747ic"]
-[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="15_kmwmt"]
-[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="16_rc6uw"]
 [ext_resource type="Texture2D" uid="uid://wbppwn8e2pxn" path="res://Assets/DISEÑO/3D/MODELS/CAJA REGISTRADORA/WAVEFRONT/texturas/Material-color.png" id="16_x0760"]
-[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="17_dldpb"]
-[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="18_rc6uw"]
-[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="20_3p34a"]
 [ext_resource type="AudioStream" uid="uid://crup8jaa1ho28" path="res://Assets/SONIDO/menu.mp3" id="20_d77ms"]
-[ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="22_owyel"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7u77a"]
 sky_top_color = Color(0.506145, 0.22550824, 0.49458563, 1)
@@ -223,35 +217,6 @@ albedo_texture = SubResource("GradientTexture2D_h1bgf")
 [sub_resource type="QuadMesh" id="QuadMesh_ee4r6"]
 material = SubResource("StandardMaterial3D_pdsj5")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d77ms"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_kmwmt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_rc6uw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_dldpb")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="LabelSettings" id="LabelSettings_dldpb"]
-line_spacing = 5.0
-paragraph_spacing = 5.0
-font = ExtResource("18_rc6uw")
-font_size = 25
-outline_size = 3
-shadow_color = Color(0, 0, 0, 0.92941177)
-
-[sub_resource type="LabelSettings" id="LabelSettings_rc6uw"]
-font = ExtResource("18_rc6uw")
-font_size = 42
-
 [sub_resource type="Animation" id="Animation_d77ms"]
 length = 0.001
 tracks/0/type = "value"
@@ -278,46 +243,10 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(-0.51309, -0.38575482, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ui:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ui/ColorRect:color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_dldpb"]
 resource_name = "fade_out"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ui/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_3p34a"]
 resource_name = "iniciar"
@@ -346,25 +275,13 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(-0.51309, -0.38575482, 0), Vector3(-0.51309, -0.23719239, 1.28707205e-08)]
 }
-tracks/2/type = "value"
+tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ui:modulate")
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.01, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0.03333333, 2.3333333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -383,8 +300,9 @@ _data = {
 &"iniciar": SubResource("Animation_3p34a")
 }
 
-[node name="Menu" type="Node3D" unique_id=1538424508]
+[node name="Menu" type="Node3D" unique_id=1538424508 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_dldpb")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=793002764]
 transform = Transform3D(-0.9970527, -0.07332756, 0.0225585, -0.04174152, 0.7652068, 0.6424297, -0.06436972, 0.6395948, -0.76601243, 0, 0, 0)
@@ -570,82 +488,6 @@ transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_wsu2k")
 draw_pass_1 = SubResource("QuadMesh_ee4r6")
 
-[node name="ui" type="Control" parent="." unique_id=713296484]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ui" unique_id=641790898]
-position = Vector2(366.33902, 310.5282)
-scale = Vector2(0.54104906, 0.50201404)
-sprite_frames = SubResource("SpriteFrames_d77ms")
-autoplay = "default"
-frame = 2
-frame_progress = 0.26702207
-
-[node name="trigger warning" type="Label" parent="ui" unique_id=173033451]
-layout_mode = 0
-offset_left = 95.01965
-offset_top = 919.4409
-offset_right = 963.01965
-offset_bottom = 1145.4409
-text = "TRIGGER WARNING
-ESTE JUEGO CONTIENE PAYASOS, REFERENCIAS A LA MUERTE,
-VIOLENCIA DE GÉNERO, MALTRATO, DISCRIMINACIÓN Y OPRESIÓN."
-label_settings = SubResource("LabelSettings_dldpb")
-
-[node name="Button" type="Button" parent="ui" unique_id=1718784321]
-layout_mode = 0
-offset_left = 243.67242
-offset_top = 561.48895
-offset_right = 510.67242
-offset_bottom = 644.48895
-
-[node name="Label" type="Label" parent="ui/Button" unique_id=1906005988]
-layout_mode = 0
-offset_left = 69.735535
-offset_top = 21.652893
-offset_right = 180.73553
-offset_bottom = 64.65289
-theme_override_fonts/font = ExtResource("18_rc6uw")
-theme_override_font_sizes/font_size = 20
-text = "JUGAR"
-label_settings = SubResource("LabelSettings_rc6uw")
-
-[node name="Button2" type="Button" parent="ui" unique_id=1327650201]
-layout_mode = 0
-offset_left = 281.92035
-offset_top = 695.0103
-offset_right = 548.92035
-offset_bottom = 778.0103
-
-[node name="Label2" type="Label" parent="ui/Button2" unique_id=944695999]
-layout_mode = 0
-offset_left = 50.59018
-offset_top = 21.652893
-offset_right = 207.59018
-offset_bottom = 64.65289
-theme_override_fonts/font = ExtResource("18_rc6uw")
-theme_override_font_sizes/font_size = 20
-text = "CRÉDITOS"
-label_settings = SubResource("LabelSettings_rc6uw")
-
-[node name="ColorRect" type="ColorRect" parent="ui" unique_id=57467137]
-layout_mode = 0
-offset_left = -9.0
-offset_top = -7.0
-offset_right = 1165.0
-offset_bottom = 664.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0)
-metadata/_edit_lock_ = true
-
-[node name="SaturniaBlanco" type="Sprite2D" parent="ui" unique_id=232104886]
-position = Vector2(1824.0983, 929.2499)
-scale = Vector2(0.05801838, 0.059732687)
-texture = ExtResource("20_3p34a")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=622489992]
 libraries/ = SubResource("AnimationLibrary_owyel")
 
@@ -656,10 +498,3 @@ volume_db = -26.549
 max_db = -0.385
 autoplay = true
 parameters/looping = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=371976157]
-layer = 104286
-
-[node name="Cursor" parent="CanvasLayer" unique_id=1291160640 instance=ExtResource("22_owyel")]
-
-[connection signal="pressed" from="ui/Button" to="." method="_on_button_pressed"]
