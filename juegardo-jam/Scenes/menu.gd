@@ -6,6 +6,9 @@ const ALMA_1 = preload("uid://cxi16kb2wu3h4")
 @export var animation_player : AnimationPlayer
 @export var menu_controller : MenuController
 
+func _ready() -> void:
+	AudioManager.stream_player.playing = true
+
 func _on_play_button_pressed():
 	animation_player.play("iniciar")
 	menu_controller.hide_main_menu()

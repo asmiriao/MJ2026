@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cmcfr5anxsk4a"]
+
+[ext_resource type="Script" uid="uid://dqodfjujf027w" path="res://Scenes/splash_logo/splash_logo.gd" id="1_fmghn"]
+[ext_resource type="Shader" uid="uid://ftancp7jbxd2" path="res://dissolve.gdshader" id="2_d7o7s"]
+[ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="3_r7ra5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_c42gb"]
+offset = Vector3(156.25, 0, 0)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8y2mk"]
+noise = SubResource("FastNoiseLite_c42gb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8upuk"]
+shader = ExtResource("2_d7o7s")
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_8y2mk")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.26999999396496
+shader_parameter/burn_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_bsi15"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:material:shader_parameter/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_6mno2"]
+resource_name = "dissolve"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:material:shader_parameter/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.5, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s2g68"]
+_data = {
+&"RESET": SubResource("Animation_bsi15"),
+&"dissolve": SubResource("Animation_6mno2")
+}
+
+[node name="SplashLogo" type="Control" unique_id=506529447 node_paths=PackedStringArray("animation_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fmghn")
+animation_player = NodePath("DissolveAnim")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=206203633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=300584234]
+material = SubResource("ShaderMaterial_8upuk")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_r7ra5")
+expand_mode = 1
+
+[node name="DissolveAnim" type="AnimationPlayer" parent="." unique_id=404216592]
+libraries/ = SubResource("AnimationLibrary_s2g68")
+autoplay = &"dissolve"
+
+[connection signal="animation_finished" from="DissolveAnim" to="." method="_on_dissolve_anim_animation_finished"]

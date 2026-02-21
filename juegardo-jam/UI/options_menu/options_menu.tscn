@@ -1,17 +1,13 @@
 [gd_scene format=3 uid="uid://b36tp7mq6kfa2"]
 
+[ext_resource type="Script" uid="uid://cu61r85mam23h" path="res://UI/options_menu/VolumeController.gd" id="1_xfd8j"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqxaa"]
 bg_color = Color(0.14406255, 0.14406255, 0.14406249, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf62s"]
-border_width_top = 27
-border_width_bottom = 11
-border_color = Color(0.8, 0.8, 0.8, 0)
-border_blend = true
 
 [node name="OptionsMenu" type="Control" unique_id=2126775385]
 layout_mode = 3
@@ -21,6 +17,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
+
+[node name="VolumeController" type="Node" parent="." unique_id=1223459056 node_paths=PackedStringArray("music_slider", "sfx_slider")]
+script = ExtResource("1_xfd8j")
+music_slider = NodePath("../Panel/HBoxContainer/VBoxContainer/MusicSlider")
+sfx_slider = NodePath("../Panel/HBoxContainer/VBoxContainer/SfxSlider")
+metadata/_custom_type_script = "uid://cu61r85mam23h"
 
 [node name="Panel" type="Panel" parent="." unique_id=1837789469]
 custom_minimum_size = Vector2(800, 400)
@@ -54,16 +56,31 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1957121645]
+[node name="MusicVolumeLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1957121645]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Volumen"
+text = "Música"
 
-[node name="HSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=911769255]
+[node name="MusicSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=911769255]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/slider = SubResource("StyleBoxFlat_xf62s")
+min_value = -80.0
+max_value = 0.0
+value = -15.0
+
+[node name="SfxVolumeLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1318802609]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Efectos"
+
+[node name="SfxSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=309082614]
+layout_mode = 2
+size_flags_vertical = 3
+min_value = -80.0
+max_value = 0.0
+value = -15.0
 
 [node name="Control" type="Control" parent="Panel/HBoxContainer" unique_id=617320305]
 layout_mode = 2
@@ -76,10 +93,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -70.0
-offset_right = -28.0
-offset_bottom = -20.0
+offset_left = -176.0
+offset_top = -98.0
+offset_right = -54.0
+offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
 
@@ -97,3 +114,6 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Cerrar"
+
+[connection signal="value_changed" from="Panel/HBoxContainer/VBoxContainer/MusicSlider" to="VolumeController" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Panel/HBoxContainer/VBoxContainer/SfxSlider" to="VolumeController" method="_on_sfx_slider_value_changed"]

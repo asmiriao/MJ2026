@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bg5djrrflticm"]
+
+[ext_resource type="PackedScene" uid="uid://ddv1jhuh43215" path="res://Scenes/menu.tscn" id="1_n45e2"]
+[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_opfnp"]
+[ext_resource type="PackedScene" uid="uid://clulu1cc3rrjo" path="res://UI/main_menu_ui.tscn" id="3_cp0ys"]
+[ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="4_yhxw7"]
+[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="5_trj04"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1crp2"]
+shader = ExtResource("2_opfnp")
+shader_parameter/fog_color = Color(1, 1, 1, 1)
+shader_parameter/resolution_downsampling = 3.0
+shader_parameter/bit_depth = 12.0
+
+[sub_resource type="Animation" id="Animation_n45e2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentScene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenuUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_opfnp"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentScene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenuUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.96666664),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
+_data = {
+&"RESET": SubResource("Animation_n45e2"),
+&"fade_in": SubResource("Animation_opfnp")
+}
+
+[node name="MainMenu" type="Control" unique_id=475464034]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="CurrentScene" type="SubViewportContainer" parent="." unique_id=1749758531]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="CurrentScene" unique_id=550232260]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Menu" parent="CurrentScene/SubViewport" unique_id=331887721 node_paths=PackedStringArray("play_button", "menu_controller") instance=ExtResource("1_n45e2")]
+play_button = NodePath("../../../MainMenuUI/ui/PlayButton")
+menu_controller = NodePath("../../../MainMenuUI/ui/MenuController")
+
+[node name="ColorRect" type="ColorRect" parent="CurrentScene/SubViewport" unique_id=1698654490]
+material = SubResource("ShaderMaterial_1crp2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenuUI" parent="." unique_id=537494712 instance=ExtResource("3_cp0ys")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+
+[node name="MenuController" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="0" unique_id=680846341 node_paths=PackedStringArray("options_menu", "main_menu_ui")]
+options_menu = NodePath("../../../OptionsMenu")
+main_menu_ui = NodePath("../..")
+
+[node name="SaturniaBlanco" parent="MainMenuUI" index="1" unique_id=1885301382]
+layout_direction = 2
+
+[node name="OptionsMenu" parent="." unique_id=1701979943 instance=ExtResource("4_yhxw7")]
+visible = false
+layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=831127693]
+layer = 2
+
+[node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("5_trj04")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=643689124]
+libraries/ = SubResource("AnimationLibrary_cp0ys")
+autoplay = &"fade_in"
+
+[node name="Background" type="ColorRect" parent="." unique_id=262719750]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="MainMenuUI/ui/PlayButton" to="CurrentScene/SubViewport/Menu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="MainMenuUI/ui/MenuController" method="_on_close_button_pressed"]
+
+[editable path="MainMenuUI"]
+[editable path="OptionsMenu"]

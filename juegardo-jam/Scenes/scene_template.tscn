@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c5gfj1tkt3cd8"]
+
+[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="1_ts16j"]
+[ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="2_wgqsk"]
+[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="3_c8giw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w38fq"]
+shader = ExtResource("1_ts16j")
+shader_parameter/fog_color = Color(1, 1, 1, 1)
+shader_parameter/resolution_downsampling = 3.0
+shader_parameter/bit_depth = 12.0
+
+[node name="SceneTemplate" type="Control" unique_id=657806378]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CurrentScene" type="SubViewportContainer" parent="." unique_id=2016247286]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="CurrentScene" unique_id=2119568852]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="CurrentScene/SubViewport" unique_id=2126182671]
+material = SubResource("ShaderMaterial_w38fq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="OptionsMenu" parent="." unique_id=2126775385 instance=ExtResource("2_wgqsk")]
+visible = false
+layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=46999582]
+layer = 2
+
+[node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("3_c8giw")]
+
+[editable path="OptionsMenu"]

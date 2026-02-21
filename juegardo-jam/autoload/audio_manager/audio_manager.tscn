@@ -11,8 +11,8 @@ resource_preloader = NodePath("ResourcePreloader")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1464697552]
 stream = ExtResource("2_1ir50")
-volume_db = -26.549
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=598316034]

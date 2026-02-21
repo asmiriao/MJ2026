@@ -1,5 +1,9 @@
-CanvasLayer
+res://UI/options_menu/VolumeController.gd
 AnimationPlayer
+ColorRect
+Timer
+TextureRect
+CanvasLayer
 ResourcePreloader
 AudioStreamPlayer
 Node
@@ -9,7 +13,3 @@ Panel
 Control
 HBoxContainer
 VBoxContainer
-VSlider
-HSlider
-Container
-SubViewportContainer

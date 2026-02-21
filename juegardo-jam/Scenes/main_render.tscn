@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ct0we1imjkljr"]
 
 [ext_resource type="PackedScene" uid="uid://ddv1jhuh43215" path="res://Scenes/menu.tscn" id="2_1crp2"]
-[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://Scenes/dither.gdshader" id="2_5r70e"]
+[ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_5r70e"]
 [ext_resource type="PackedScene" uid="uid://clulu1cc3rrjo" path="res://UI/main_menu_ui.tscn" id="3_0nupa"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="8_0l1pn"]
-[ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu.tscn" id="9_bcb7j"]
+[ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="9_bcb7j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1crp2"]
 shader = ExtResource("2_5r70e")
