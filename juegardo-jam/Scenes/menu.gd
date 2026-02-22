@@ -1,6 +1,6 @@
 extends Node3D
 
-const ALMA_1 = preload("uid://cxi16kb2wu3h4")
+const PRESENTATION_DIALOGUE = preload("uid://bdxlks7dao2my")
 
 @export var play_button : Button
 @export var animation_player : AnimationPlayer
@@ -16,8 +16,6 @@ func _on_play_button_pressed():
 func desactivar_boton():
 	play_button.disabled = true
 
+# se llama desde el animation player -> "iniciar"
 func iniciar_dialogo_jefe():
-	DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma0")
-
-func pruebaa():
-	pass
+	DialogueManager.show_dialogue_balloon(PRESENTATION_DIALOGUE, "dialogoAlma0")

@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://clulu1cc3rrjo" path="res://UI/main_menu_ui.tscn" id="3_cp0ys"]
 [ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="4_yhxw7"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="5_trj04"]
+[ext_resource type="PackedScene" uid="uid://dqjbhtmv351ut" path="res://UI/simple_transition/simple_transition.tscn" id="6_opfnp"]
+[ext_resource type="Script" uid="uid://cgn6ks1kkgv22" path="res://Scripts/transitioner_to_main.gd" id="7_cp0ys"]
+[ext_resource type="PackedScene" uid="uid://b8deyqhtr5fg0" path="res://Scenes/intro_cutscene/intro_cutscene.tscn" id="8_yhxw7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1crp2"]
 shader = ExtResource("2_opfnp")
@@ -124,6 +127,7 @@ layout_mode = 1
 layer = 2
 
 [node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("5_trj04")]
+top_level = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=643689124]
 libraries/ = SubResource("AnimationLibrary_cp0ys")
@@ -140,8 +144,21 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="SimpleTransition" parent="." unique_id=432621957 instance=ExtResource("6_opfnp")]
+visible = false
+layout_mode = 1
+
+[node name="TransitionerToMain" type="Node" parent="." unique_id=1935292431 node_paths=PackedStringArray("simple_transition", "resource_preloader")]
+script = ExtResource("7_cp0ys")
+simple_transition = NodePath("../SimpleTransition")
+resource_preloader = NodePath("ResourcePreloader")
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="TransitionerToMain" unique_id=1893911503]
+resources = [PackedStringArray("intro_cutscene"), [ExtResource("8_yhxw7")]]
+
 [connection signal="pressed" from="MainMenuUI/ui/PlayButton" to="CurrentScene/SubViewport/Menu" method="_on_play_button_pressed"]
 [connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="MainMenuUI/ui/MenuController" method="_on_close_button_pressed"]
 
 [editable path="MainMenuUI"]
 [editable path="OptionsMenu"]
+[editable path="SimpleTransition"]

@@ -54,7 +54,7 @@ _data = {
 &"dissolve": SubResource("Animation_6mno2")
 }
 
-[node name="SplashLogo" type="Control" unique_id=506529447 node_paths=PackedStringArray("animation_player")]
+[node name="SplashLogo" type="Control" unique_id=506529447]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,7 +62,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fmghn")
-animation_player = NodePath("DissolveAnim")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=206203633]
 layout_mode = 1

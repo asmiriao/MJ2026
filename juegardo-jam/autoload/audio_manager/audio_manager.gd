@@ -8,3 +8,16 @@ func _ready() -> void:
 	stream_player.stream = resource_preloader.get_resource("menu")
 	stream_player.playing = false
 	pass
+
+func reduce_volume_to_zero() -> void:
+	var tween = create_tween()
+	tween.tween_property(stream_player, "volume_db", -40, 3.0)
+	
+func turn_up_volume_from_zero() -> void:
+	var tween = create_tween()
+	tween.tween_property(stream_player, "volume_db", 0, 1)
+
+func load_mostrador_main_loop() -> void:
+	stream_player.stream = resource_preloader.get_resource("mostrador_main_loop")
+	
+	

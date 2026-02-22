@@ -1,12 +1,11 @@
-res://UI/options_menu/VolumeController.gd
 AnimationPlayer
+CanvasLayer
+ResourcePreloader
+Node
 ColorRect
 Timer
 TextureRect
-CanvasLayer
-ResourcePreloader
 AudioStreamPlayer
-Node
 Label
 Button
 Panel

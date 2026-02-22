@@ -1,4 +1,7 @@
 extends Node
+
+signal transition_volume_down
+
 const ALMA_1 = preload("uid://cxi16kb2wu3h4")
 
 var instance
@@ -40,7 +43,8 @@ func mostrar_dialogo(num_alma: int):
 	DialogueManager.show_dialogue_balloon(ALMA_1, instance.dialogos[alma_actual])
 	
 func cargar_main():
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	emit_signal("transition_volume_down")
+	#get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
 func cargar_mascaras():
 	get_tree().change_scene_to_file("res://Scenes/mascarass.tscn")

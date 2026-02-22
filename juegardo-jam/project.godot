@@ -10,12 +10,13 @@ config_version=5
 
 [application]
 
-config/name="juegardo jam"
-run/main_scene="uid://ddv1jhuh43215"
+config/name="Mask of Souls"
+run/main_scene="uid://cmcfr5anxsk4a"
 config/features=PackedStringArray("4.6", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/show_image=false
 config/icon="res://icon.svg"
+boot_splash/show_image.editor_runtime=false
+boot_splash/bg_color.editor_hint=Color(0.14117648, 0.14117648, 0.14117648, 1)
+boot_splash/bg_color.editor_runtime=Color(0, 0, 0, 1)
 
 [audio]
 
@@ -66,7 +67,7 @@ click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue", "res://Dialogos/introduction.dialogue")
 
 [physics]
 
