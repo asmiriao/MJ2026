@@ -1,0 +1,22 @@
+~ dialogoAlma4
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Me da miedo la muerte, aunque parezca [wave ]sorprendente [/wave].
+-  ¿Fuiste feliz?
+	Alma errante: Yo solo he vivido una vida de preocupación.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: Me gustaban mucho las fiestas vecinales. Hace ya mucho que no se pueden celebrar.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Fea, muy fea. Tenía que haber ayudado a más personas. Era inabarcable.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos el mundo antes de todo esto. Antaño podíamos disfrutar de la vida, ahora solo esperábamos no estar enfermos.
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END

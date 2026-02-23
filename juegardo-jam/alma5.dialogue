@@ -1,0 +1,22 @@
+~ dialogoAlma5
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Jamás volveré a tener miedo a nada.
+-  ¿Fuiste feliz?
+	Alma errante: No. Maldigo el día que conocí a ese monstruo y me casé con él.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El teatro. Era el único lugar donde me sentía [wave] viva [/wave].
+-  ¿Cómo defines tu marcha?
+	Alma errante: Temprana. Ese malnacido debe pagar por todo lo que me hizo y todo el tiempo que jamás recuperaré por su culpa.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos a madre, ella siempre me apoyó. Sé que me está esperando tras esa puerta y sabe mejor que nadie que no soy un demonio. No entiendo por qué, siempre, quienes más dolor han sufrido, se consideran seres malvados.
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END

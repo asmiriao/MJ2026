@@ -1,0 +1,22 @@
+~ dialogoAlma3
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de mostrar mi rostro, puesto que casi nadie lo ha visto.
+-  ¿Fuiste feliz?
+	Alma errante: Sí… Fui [wave] algo [/wave] feliz. Al menos, el tiempo que pasé con mi familia. Desde que no tuve permitido poder hablar, no era tan feliz. Yo debía cumplir lo que de mí se esperaba, nada más. Padre se sentiría orgulloso de mí.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El [wave] Carnaval [/wave]
+-  ¿Cómo defines tu marcha?
+	Alma errante: Desdichada. Siento, ahora, que solo fui una [wave] víctima [/wave] de mis circunstancias y la época en la que viví. No he tenido nada mío, un lugar en el que poder esconderme, poder [wave] gritar [/wave]. Ojalá mis últimos días hubiese podido sentir, más allá de asentir.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos a madre. Fue la única persona con la que pude hablar, reír, ser feliz. Cuando marchó, padre me envió a otro hogar y me encontró un consorte. Alejarme del lugar donde me crié junto a madre me convirtió en una persona agria y hueca.
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END

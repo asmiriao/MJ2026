@@ -1,0 +1,44 @@
+~ dialogoAlma8
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que mi existencia sea un crimen.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, pude ser feliz ya que, una vez al año, podíamos ser libres y expresarnos como quisiéramos.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El [wave] Carnaval [/wave] es mi festividad favorita.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Apenas recuerdo cómo fallecí. Entre las lagunas consigo discernir algo, pero no me gusta lo que veo. Prefiero que siga siendo una incógnita.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos a Bigotes. Solía acompañarme en Carnaval metido en una [wave] cesta [/wave].
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que mi existencia sea un crimen.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, pude ser feliz ya que, una vez al año, podíamos ser libres y expresarnos como quisiéramos.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El [wave] Carnaval [/wave] es mi festividad favorita.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Apenas recuerdo cómo fallecí. Entre las lagunas consigo discernir algo, pero no me gusta lo que veo. Prefiero que siga siendo una incógnita.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos a Bigotes. Solía acompañarme en Carnaval metido en una [wave] cesta [/wave].
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que mi existencia sea un crimen.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, pude ser feliz ya que, una vez al año, podíamos ser libres y expresarnos como quisiéramos.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El [wave] Carnaval [/wave] es mi festividad favorita.
+-  ¿Cómo defines tu marcha?
+	Alma errante: Apenas recuerdo cómo fallecí. Entre las lagunas consigo discernir algo, pero no me gusta lo que veo. Prefiero que siga siendo una incógnita.
+-  ¿Echas algo de menos?
+	Alma errante: Echo de menos a Bigotes. Solía acompañarme en Carnaval metido en una [wave] cesta [/wave].
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END

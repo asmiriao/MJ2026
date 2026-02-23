@@ -1,0 +1,20 @@
+~ dialogoAlma2
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: ¿Y tú?
+-  ¿Fuiste feliz?
+	Alma errante: ¿Y tú? ¿Lo [wave] fuiste [/wave]?
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El [wave] teatro [/wave].
+-  ¿Cómo defines tu marcha?
+	Alma errante: o viví en una gran ciudad. Al tiempo, me mudé a una pequeña ciudad. Después, decidí mudarme a un pueblo grande, hasta que decidí mudarme a un pueblo pequeño. Pero, de repente, me vino una idea fugaz pero poderosa: mudarme al campo. Y así es cómo acabé viviendo en un cubo.
+-  ¿Echas algo de menos?
+	Alma errante: Vivir en un cubo es bastante práctico si te paras a pensarlo.
+...
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END

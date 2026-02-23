@@ -1,0 +1,44 @@
+~ dialogoAlma6
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que este mundo no sea un lugar mejor, un lugar seguro.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, mucho. Descubrí quién era en realidad y pude transformar el miedo a la incomprensión en tranquilidad, ya que, lo más importante, fue que por fin podía mostrarme tal y cómo era.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El teatro. También actué varias veces, en el periodo de tiempo en el que me estaba [wave] encontrando [/wave]. Es algo que me ha marcado de por vida, me dio la oportunidad de interpretar otras identidades y, así, [wave] recuperar [/wave] la mía. 
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila. Mi vida no fue fácil, pero siempre pude contar con mi familia y amistades, sobre todo cuando me inundaba la confusión. Tuve una vida larga y plena, gracias a mis seres queridos y por darme la comprensión que necesitaba.
+-  ¿Echas algo de menos?
+	Alma errante: A mi comunidad. Me hizo mucho más fuerte.
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que este mundo no sea un lugar mejor, un lugar seguro.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, mucho. Descubrí quién era en realidad y pude transformar el miedo a la incomprensión en tranquilidad, ya que, lo más importante, fue que por fin podía mostrarme tal y cómo era.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El teatro. También actué varias veces, en el periodo de tiempo en el que me estaba [wave] encontrando [/wave]. Es algo que me ha marcado de por vida, me dio la oportunidad de interpretar otras identidades y, así, [wave] recuperar [/wave] la mía. 
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila. Mi vida no fue fácil, pero siempre pude contar con mi familia y amistades, sobre todo cuando me inundaba la confusión. Tuve una vida larga y plena, gracias a mis seres queridos y por darme la comprensión que necesitaba.
+-  ¿Echas algo de menos?
+	Alma errante: A mi comunidad. Me hizo mucho más fuerte.
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que este mundo no sea un lugar mejor, un lugar seguro.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, mucho. Descubrí quién era en realidad y pude transformar el miedo a la incomprensión en tranquilidad, ya que, lo más importante, fue que por fin podía mostrarme tal y cómo era.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: El teatro. También actué varias veces, en el periodo de tiempo en el que me estaba [wave] encontrando [/wave]. Es algo que me ha marcado de por vida, me dio la oportunidad de interpretar otras identidades y, así, [wave] recuperar [/wave] la mía. 
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila. Mi vida no fue fácil, pero siempre pude contar con mi familia y amistades, sobre todo cuando me inundaba la confusión. Tuve una vida larga y plena, gracias a mis seres queridos y por darme la comprensión que necesitaba.
+-  ¿Echas algo de menos?
+	Alma errante: A mi comunidad. Me hizo mucho más fuerte.
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END
