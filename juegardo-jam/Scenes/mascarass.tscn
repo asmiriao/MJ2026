@@ -6,7 +6,6 @@
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_lhvtj"]
 [ext_resource type="Texture2D" uid="uid://carml80h5ywdn" path="res://Assets/DISEÑO/2D/MASK_SATURNIA.png" id="5_1b5fk"]
 [ext_resource type="Texture2D" uid="uid://kiy5irdj3org" path="res://Assets/DISEÑO/2D/Moretta.png" id="6_2yq8g"]
-[ext_resource type="Texture2D" uid="uid://cpy58ewideik2" path="res://Assets/DISEÑO/2D/Peste.png" id="9_7q8yi"]
 [ext_resource type="Texture2D" uid="uid://0w570i2rpf0o" path="res://Assets/DISEÑO/2D/Victoriana.png" id="10_ai0eg"]
 [ext_resource type="Texture2D" uid="uid://cvewxihd3458" path="res://Assets/DISEÑO/2D/WhiteMask.png" id="11_ynxvf"]
 [ext_resource type="ArrayMesh" uid="uid://wloc1oqffd3" path="res://Assets/DISEÑO/3D/MODELS/mesa/mesa.obj" id="12_clm8j"]
@@ -23,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bjukhpoqi7q3b" path="res://Scenes/mascara_actor/mascara_namanari.tscn" id="22_2yq8g"]
 [ext_resource type="PackedScene" uid="uid://cr7c3531aldnu" path="res://Scenes/mascara_actor/mascara_payaso.tscn" id="22_lhvtj"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="23_1b5fk"]
+[ext_resource type="PackedScene" uid="uid://w1mhfwuqm7n2" path="res://Scenes/mascara_actor/mascara_peste.tscn" id="23_lhvtj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2yq8g"]
 shader = ExtResource("2_lhvtj")
@@ -211,17 +211,6 @@ offset_top = 157.0
 offset_right = 662.0
 offset_bottom = 255.0
 
-[node name="Peste" type="Sprite3D" parent="." unique_id=975137704]
-transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 1.557339, 1.4574468, -7.218251)
-texture = ExtResource("9_7q8yi")
-
-[node name="ButtonPeste" type="Button" parent="Peste" unique_id=1329863557]
-modulate = Color(1, 1, 1, 0)
-offset_left = 402.0
-offset_top = 300.0
-offset_right = 469.0
-offset_bottom = 388.0
-
 [node name="Victoriana" type="Sprite3D" parent="." unique_id=599942530]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.1560638, 1.9266415, -7.2519026)
 texture = ExtResource("10_ai0eg")
@@ -346,8 +335,10 @@ layer = 2
 
 [node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("23_1b5fk")]
 
+[node name="MascaraPeste" parent="." unique_id=754587104 instance=ExtResource("23_lhvtj")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 1.7090863, 1.2275666, -7.269228)
+
 [connection signal="pressed" from="Saturnia/ButtonSaturnia" to="." method="_on_button_saturnia_pressed"]
 [connection signal="pressed" from="Moretta/ButtonMoretta" to="." method="_on_button_moretta_pressed"]
-[connection signal="pressed" from="Peste/ButtonPeste" to="." method="_on_button_peste_pressed"]
 [connection signal="pressed" from="Victoriana/ButtonVictoriana" to="." method="_on_button_victoriana_pressed"]
 [connection signal="pressed" from="Blanca/ButtonBlanca" to="." method="_on_button_blanca_pressed"]
