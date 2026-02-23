@@ -1,36 +1,22 @@
 [gd_scene format=3 uid="uid://b36tp7mq6kfa2"]
 
 [ext_resource type="Script" uid="uid://cu61r85mam23h" path="res://UI/options_menu/VolumeController.gd" id="1_xfd8j"]
-[ext_resource type="Texture2D" uid="uid://kfy0rkyqe4ok" path="res://Assets/DISEÑO/2D/botones/caja_1_jugar.png" id="2_aibse"]
-[ext_resource type="Texture2D" uid="uid://b1o35rhcbvwei" path="res://Assets/DISEÑO/2D/botones/test.png" id="3_vqd2q"]
+[ext_resource type="Texture2D" uid="uid://b8wijy04sxnxt" path="res://Assets/DISEÑO/2D/botones/caja_opciones1.png" id="2_aibse"]
+[ext_resource type="Texture2D" uid="uid://dcdngymdt3p5y" path="res://Assets/DISEÑO/2D/botones/caja_opciones2.png" id="3_x2e2y"]
+[ext_resource type="Texture2D" uid="uid://dei0eejita734" path="res://Assets/DISEÑO/2D/botones/caja_opciones3.png" id="4_717q7"]
+[ext_resource type="Texture2D" uid="uid://kfy0rkyqe4ok" path="res://Assets/DISEÑO/2D/botones/caja_1_jugar.png" id="5_s10co"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqxaa"]
-bg_color = Color(0.14406255, 0.14406255, 0.14406249, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="Theme" id="Theme_vqd2q"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aibse"]
-texture = ExtResource("2_aibse")
-texture_margin_top = 99.0
-texture_margin_bottom = 54.0
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7lidk"]
+frames = 3
+frame_0/texture = ExtResource("2_aibse")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("3_x2e2y")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("4_717q7")
+frame_2/duration = 0.2
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vqd2q"]
-texture = ExtResource("3_vqd2q")
-texture_margin_top = 99.0
-texture_margin_bottom = 54.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2e2y"]
-texture = ExtResource("3_vqd2q")
-texture_margin_top = 99.0
-texture_margin_bottom = 54.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
+texture = SubResource("AnimatedTexture_7lidk")
 
 [node name="OptionsMenu" type="Control" unique_id=2126775385]
 layout_mode = 3
@@ -61,7 +47,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_fqxaa")
+theme_override_styles/panel = SubResource("StyleBoxTexture_vqd2q")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1021750122]
 layout_mode = 1
@@ -89,13 +75,8 @@ text = "Música"
 [node name="MusicSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=911769255]
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_vqd2q")
-theme_override_styles/slider = SubResource("StyleBoxTexture_aibse")
-theme_override_styles/grabber_area = SubResource("StyleBoxTexture_vqd2q")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_x2e2y")
 min_value = -80.0
 max_value = 0.0
-value = -15.0
 
 [node name="SfxVolumeLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1318802609]
 layout_mode = 2
@@ -126,6 +107,9 @@ offset_right = -54.0
 offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
+icon = ExtResource("5_s10co")
+flat = true
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/Control/CloseButton" unique_id=1620997230]
 layout_mode = 1
