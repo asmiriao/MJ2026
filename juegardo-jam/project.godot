@@ -28,6 +28,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 GameManager="*uid://dtnnnok2hji12"
 Debug="*uid://b4qqfi3faytj0"
 AudioManager="*uid://d164pt2l2reny"
+Plugin="*uid://bc0b5v66xdidn"
 
 [dialogue_manager]
 
