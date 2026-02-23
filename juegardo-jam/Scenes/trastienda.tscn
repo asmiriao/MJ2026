@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://rr8tcd80buwi" path="res://Assets/DISEÑO/3D/MODELS/AKU AKU/Pluma1-color.png" id="23_f85p2"]
 [ext_resource type="PackedScene" uid="uid://by046ikhweodn" path="res://Assets/DISEÑO/3D/MODELS/majora/majora.tscn" id="30_5xbhp"]
 [ext_resource type="AudioStream" uid="uid://ba3cg5mrwgsc4" path="res://Assets/SONIDO/TRASTIENDA.mp3" id="31_pjjdg"]
+[ext_resource type="PackedScene" uid="uid://dg20k4vipncyo" path="res://Scenes/cursor.tscn" id="32_vmndq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0mud"]
 albedo_texture = ExtResource("4_ei46i")
@@ -350,3 +351,8 @@ attenuation_model = 2
 volume_db = -24.425
 autoplay = true
 parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1971268946]
+layer = 104286
+
+[node name="Cursor" parent="CanvasLayer" unique_id=1291160640 instance=ExtResource("32_vmndq")]

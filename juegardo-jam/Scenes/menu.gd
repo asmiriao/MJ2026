@@ -1,18 +1,21 @@
 extends Node3D
 
-const ALMA_1 = preload("uid://cxi16kb2wu3h4")
-@onready var button = $ui/Button
-@onready var animation_player = $AnimationPlayer
+const PRESENTATION_DIALOGUE = preload("uid://bdxlks7dao2my")
 
+@export var play_button : Button
+@export var animation_player : AnimationPlayer
+@export var menu_controller : MenuController
 
-func _on_button_pressed():
+func _ready() -> void:
+	AudioManager.stream_player.playing = true
+
+func _on_play_button_pressed():
 	animation_player.play("iniciar")
-	
+	menu_controller.hide_main_menu()
+
 func desactivar_boton():
-	button.disabled = true
+	play_button.disabled = true
 
+# se llama desde el animation player -> "iniciar"
 func iniciar_dialogo_jefe():
-	DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma0")
-
-func pruebaa():
-	pass
+	DialogueManager.show_dialogue_balloon(PRESENTATION_DIALOGUE, "dialogoAlma0")

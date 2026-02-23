@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dg20k4vipncyo"]
+
+[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="1_8pp82"]
+
+[node name="Cursor" type="Node2D" unique_id=1291160640]
+
+[node name="AnimatedSprite2D" parent="." unique_id=2036012360 instance=ExtResource("1_8pp82")]
