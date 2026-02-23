@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://gi2w2n4qxngv"]
+
+[ext_resource type="Texture2D" uid="uid://b3v5fiyrta01b" path="res://Assets/DISEÑO/2D/Maori.png" id="1_7pmtk"]
+[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_7k605"]
+[ext_resource type="Texture2D" uid="uid://de82l17sfebbv" path="res://Assets/DISEÑO/2D/Maori_outline.png" id="3_7k605"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
+size = Vector3(10.500519, 12.9843445, 1.9692383)
+
+[node name="MascaraMaori" type="Sprite3D" unique_id=1524469149]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+texture = ExtResource("1_7pmtk")
+script = ExtResource("2_7k605")
+base_texture = ExtResource("1_7pmtk")
+outline_texture = ExtResource("3_7k605")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=51427647]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9647064, 1.5233917, -0.48461914)
+shape = SubResource("BoxShape3D_4yh21")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]

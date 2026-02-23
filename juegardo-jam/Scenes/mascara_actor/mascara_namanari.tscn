@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bjukhpoqi7q3b"]
+
+[ext_resource type="Texture2D" uid="uid://bnhu5xuleceja" path="res://Assets/DISEÑO/2D/Namanari.png" id="1_n3xij"]
+[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_0mkvu"]
+[ext_resource type="Texture2D" uid="uid://6t0ks8yc0wxt" path="res://Assets/DISEÑO/2D/Namanari_outline.png" id="3_0mkvu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
+size = Vector3(6.3745804, 8.636215, 1.9692383)
+
+[node name="MascaraNamanari" type="Sprite3D" unique_id=1524469149]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+texture = ExtResource("1_n3xij")
+script = ExtResource("2_0mkvu")
+base_texture = ExtResource("1_n3xij")
+outline_texture = ExtResource("3_0mkvu")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=51427647]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66987234, -0.6506729, -0.48461914)
+shape = SubResource("BoxShape3D_4yh21")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]

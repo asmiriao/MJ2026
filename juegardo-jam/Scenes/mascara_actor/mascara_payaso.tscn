@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cr7c3531aldnu"]
+
+[ext_resource type="Texture2D" uid="uid://b0sgoj2y7fbiy" path="res://Assets/DISEÑO/2D/clown.png" id="1_r53c7"]
+[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_wjvey"]
+[ext_resource type="Texture2D" uid="uid://brq35gfd83d31" path="res://Assets/DISEÑO/2D/clown_outline.png" id="3_wjvey"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
+size = Vector3(7.8221674, 7.925048, 1.9692383)
+
+[node name="MascaraClown" type="Sprite3D" unique_id=1524469149]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+texture = ExtResource("1_r53c7")
+script = ExtResource("2_wjvey")
+base_texture = ExtResource("1_r53c7")
+outline_texture = ExtResource("3_wjvey")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=51427647]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23978281, 0.46761167, -0.48461914)
+shape = SubResource("BoxShape3D_4yh21")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]
