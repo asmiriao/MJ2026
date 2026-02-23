@@ -1,0 +1,44 @@
+~ dialogoAlma7
+
+do enter_shadow()
+
+Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
+
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que desaparezca mi [wave] pueblo [/wave], mi familia.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, fui muy feliz. Pude ver cómo la comunidad en la que me crié fue tan próspera que ya me era imposible conocer a todo el mundo.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: Me gustan las fiestas vecinales. Nuestras celebraciones definen quiénes somos y cuáles son nuestras [wave] raíces [/wave].
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila, [wave] plácida [/wave]. Toda mi familia estuvo conmigo y me arropó.
+-  ¿Echas algo de menos?
+	Alma errante: No, porque ahora puedo reencontrarme con mis ancestros y todos mis familiares viven en mí.
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que desaparezca mi [wave] pueblo [/wave], mi familia.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, fui muy feliz. Pude ver cómo la comunidad en la que me crié fue tan próspera que ya me era imposible conocer a todo el mundo.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: Me gustan las fiestas vecinales. Nuestras celebraciones definen quiénes somos y cuáles son nuestras [wave] raíces [/wave].
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila, [wave] plácida [/wave]. Toda mi familia estuvo conmigo y me arropó.
+-  ¿Echas algo de menos?
+	Alma errante: No, porque ahora puedo reencontrarme con mis ancestros y todos mis familiares viven en mí.
+...
+-  ¿Tienes miedo?
+	Alma errante: Tengo miedo de que desaparezca mi [wave] pueblo [/wave], mi familia.
+-  ¿Fuiste feliz?
+	Alma errante: Sí, fui muy feliz. Pude ver cómo la comunidad en la que me crié fue tan próspera que ya me era imposible conocer a todo el mundo.
+-  ¿Cuál es tu festividad favorita?
+	Alma errante: Me gustan las fiestas vecinales. Nuestras celebraciones definen quiénes somos y cuáles son nuestras [wave] raíces [/wave].
+-  ¿Cómo defines tu marcha?
+	Alma errante: Tranquila, [wave] plácida [/wave]. Toda mi familia estuvo conmigo y me arropó.
+-  ¿Echas algo de menos?
+	Alma errante: No, porque ahora puedo reencontrarme con mis ancestros y todos mis familiares viven en mí.
+...
+
+Tú: De acuerdo, te asignaré una máscara.
+do GameManager.shadow_disappear()
+
+=> END
