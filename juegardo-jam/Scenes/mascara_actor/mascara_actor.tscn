@@ -1,23 +1,34 @@
 [gd_scene format=3 uid="uid://cj3h6q2ytgg77"]
 
-[ext_resource type="Texture2D" uid="uid://cy7bbogry3hlf" path="res://Assets/DISEÑO/2D/carnaval.png" id="1_3ojmk"]
+[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_4yh21"]
 [ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_4yh21"]
-[ext_resource type="Texture2D" uid="uid://lc75t6xktwej" path="res://Assets/DISEÑO/2D/carnaval_outline.png" id="3_tujo4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]
+atlas = ExtResource("1_4yh21")
+region = Rect2(123, 59, 818, 1213)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxqs0"]
+atlas = ExtResource("1_4yh21")
+region = Rect2(123, 59, 818, 1213)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmrun"]
+atlas = ExtResource("1_4yh21")
+region = Rect2(4299, 19, 896, 1293)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
-size = Vector3(10.500519, 12.9843445, 1.9692383)
+size = Vector3(6, 11, 1.9692383)
 
 [node name="Mascara" type="Sprite3D" unique_id=1524469149]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
-texture = ExtResource("1_3ojmk")
+texture = SubResource("AtlasTexture_tujo4")
 script = ExtResource("2_4yh21")
-base_texture = ExtResource("1_3ojmk")
-outline_texture = ExtResource("3_tujo4")
+base_texture = SubResource("AtlasTexture_gxqs0")
+outline_texture = SubResource("AtlasTexture_vmrun")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=51427647]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9647064, 1.5233917, -0.48461914)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28555292, -0.46878058, -0.48461914)
 shape = SubResource("BoxShape3D_4yh21")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]

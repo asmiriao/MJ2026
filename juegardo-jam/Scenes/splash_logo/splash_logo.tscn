@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dqodfjujf027w" path="res://Scenes/splash_logo/splash_logo.gd" id="1_fmghn"]
 [ext_resource type="Shader" uid="uid://ftancp7jbxd2" path="res://dissolve.gdshader" id="2_d7o7s"]
 [ext_resource type="Texture2D" uid="uid://cot5358ijspe5" path="res://Assets/DISEÑO/2D/Saturnia_blanco.png" id="3_r7ra5"]
+[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="4_d7o7s"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_c42gb"]
 offset = Vector3(156.25, 0, 0)
@@ -31,10 +32,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("trigger warning:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_6mno2"]
 resource_name = "dissolve"
-length = 4.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -42,10 +55,22 @@ tracks/0/path = NodePath("TextureRect:material:shader_parameter/dissolve_value")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 2.5, 3, 4),
+"times": PackedFloat32Array(0, 0.5, 1, 5, 5.733333, 6.733333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, 1.0, 1.0, 0.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("trigger warning:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.06666667, 1, 1.5, 5, 5.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s2g68"]
@@ -53,6 +78,14 @@ _data = {
 &"RESET": SubResource("Animation_bsi15"),
 &"dissolve": SubResource("Animation_6mno2")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7ra5"]
+line_spacing = 5.0
+paragraph_spacing = 5.0
+font = ExtResource("4_d7o7s")
+font_size = 42
+outline_size = 3
+shadow_color = Color(0, 0, 0, 0.92941177)
 
 [node name="SplashLogo" type="Control" unique_id=506529447]
 layout_mode = 3
@@ -80,10 +113,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -250.0
-offset_right = 250.0
-offset_bottom = 250.0
+offset_left = -197.0
+offset_top = -330.0
+offset_right = 198.0
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_r7ra5")
@@ -92,5 +125,23 @@ expand_mode = 1
 [node name="DissolveAnim" type="AnimationPlayer" parent="." unique_id=404216592]
 libraries/ = SubResource("AnimationLibrary_s2g68")
 autoplay = &"dissolve"
+
+[node name="trigger warning" type="Label" parent="." unique_id=1219913542]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -551.0
+offset_top = -399.0
+offset_right = 551.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "ESTE JUEGO CONTIENE PAYASOS, REFERENCIAS A LA MUERTE,
+VIOLENCIA DE GÉNERO, MALTRATO, DISCRIMINACIÓN Y OPRESIÓN."
+label_settings = SubResource("LabelSettings_r7ra5")
+horizontal_alignment = 1
 
 [connection signal="animation_finished" from="DissolveAnim" to="." method="_on_dissolve_anim_animation_finished"]

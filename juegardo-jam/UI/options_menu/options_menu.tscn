@@ -1,22 +1,13 @@
 [gd_scene format=3 uid="uid://b36tp7mq6kfa2"]
 
-[ext_resource type="Script" uid="uid://cu61r85mam23h" path="res://UI/options_menu/VolumeController.gd" id="1_xfd8j"]
-[ext_resource type="Texture2D" uid="uid://b8wijy04sxnxt" path="res://Assets/DISEÑO/2D/botones/caja_opciones1.png" id="2_aibse"]
-[ext_resource type="Texture2D" uid="uid://dcdngymdt3p5y" path="res://Assets/DISEÑO/2D/botones/caja_opciones2.png" id="3_x2e2y"]
-[ext_resource type="Texture2D" uid="uid://dei0eejita734" path="res://Assets/DISEÑO/2D/botones/caja_opciones3.png" id="4_717q7"]
-[ext_resource type="Texture2D" uid="uid://kfy0rkyqe4ok" path="res://Assets/DISEÑO/2D/botones/caja_1_jugar.png" id="5_s10co"]
+[ext_resource type="Script" uid="uid://cu61r85mam23h" path="res://UI/options_menu/VolumeControllerClass.gd" id="1_xfd8j"]
+[ext_resource type="FontFile" uid="uid://doqq1if1to2kc" path="res://Assets/DISEÑO/FONTS/Pecita.otf" id="3_x2e2y"]
+[ext_resource type="PackedScene" uid="uid://clut5dh3s8186" path="res://UI/panel_styled.tscn" id="5_7lidk"]
+[ext_resource type="PackedScene" uid="uid://4xib8srswkyp" path="res://UI/smaller_button.tscn" id="6_s10co"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_7lidk"]
-frames = 3
-frame_0/texture = ExtResource("2_aibse")
-frame_0/duration = 0.2
-frame_1/texture = ExtResource("3_x2e2y")
-frame_1/duration = 0.2
-frame_2/texture = ExtResource("4_717q7")
-frame_2/duration = 0.2
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vqd2q"]
-texture = SubResource("AnimatedTexture_7lidk")
+[sub_resource type="LabelSettings" id="LabelSettings_mwcqm"]
+font = ExtResource("3_x2e2y")
+font_size = 42
 
 [node name="OptionsMenu" type="Control" unique_id=2126775385]
 layout_mode = 3
@@ -27,91 +18,95 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 
-[node name="VolumeController" type="Node" parent="." unique_id=1223459056 node_paths=PackedStringArray("music_slider", "sfx_slider")]
+[node name="VolumeControllerClass" type="Node" parent="." unique_id=1223459056 node_paths=PackedStringArray("music_slider", "sfx_slider")]
 script = ExtResource("1_xfd8j")
-music_slider = NodePath("../Panel/HBoxContainer/VBoxContainer/MusicSlider")
-sfx_slider = NodePath("../Panel/HBoxContainer/VBoxContainer/SfxSlider")
+music_slider = NodePath("../PanelStyled/HBoxContainer/VBoxContainer/MusicSlider")
+sfx_slider = NodePath("../PanelStyled/HBoxContainer/VBoxContainer/SfxSlider")
 metadata/_custom_type_script = "uid://cu61r85mam23h"
 
-[node name="Panel" type="Panel" parent="." unique_id=1837789469]
-custom_minimum_size = Vector2(800, 400)
+[node name="PanelStyled" parent="." unique_id=545693603 instance=ExtResource("5_7lidk")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -628.5
+offset_top = -349.0
+offset_right = 628.5
+offset_bottom = 349.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_vqd2q")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1021750122]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelStyled" unique_id=1021750122]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 77.5
+offset_right = -63.0
+offset_bottom = -70.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control2" type="Control" parent="Panel/HBoxContainer" unique_id=1161886186]
+[node name="Control2" type="Control" parent="PanelStyled/HBoxContainer" unique_id=1161886186]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=484490465]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelStyled/HBoxContainer" unique_id=484490465]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
-[node name="MusicVolumeLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1957121645]
+[node name="MusicVolumeLabel" type="Label" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=1957121645]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Música"
+text = "MÚSICA"
+label_settings = SubResource("LabelSettings_mwcqm")
 
-[node name="MusicSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=911769255]
+[node name="MusicSlider" type="HSlider" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=911769255]
 layout_mode = 2
 size_flags_vertical = 3
 min_value = -80.0
 max_value = 0.0
 
-[node name="SfxVolumeLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1318802609]
+[node name="SfxVolumeLabel" type="Label" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=1318802609]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Efectos"
+text = "EFECTOS"
+label_settings = SubResource("LabelSettings_mwcqm")
 
-[node name="SfxSlider" type="HSlider" parent="Panel/HBoxContainer/VBoxContainer" unique_id=309082614]
+[node name="SfxSlider" type="HSlider" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=309082614]
 layout_mode = 2
 size_flags_vertical = 3
 min_value = -80.0
 max_value = 0.0
 value = -15.0
 
-[node name="Control" type="Control" parent="Panel/HBoxContainer" unique_id=617320305]
+[node name="Control" type="Control" parent="PanelStyled/HBoxContainer" unique_id=617320305]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CloseButton" type="Button" parent="Panel/HBoxContainer/Control" unique_id=2068840876]
+[node name="CloseOptionsButton" parent="PanelStyled/HBoxContainer/Control" unique_id=319703805 instance=ExtResource("6_s10co")]
+custom_minimum_size = Vector2(194.5, 110)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -176.0
-offset_top = -98.0
-offset_right = -54.0
-offset_bottom = -48.0
+offset_left = -279.5
+offset_top = -151.5
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 0
-icon = ExtResource("5_s10co")
-flat = true
-expand_icon = true
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Control/CloseButton" unique_id=1620997230]
+[node name="Label" type="Label" parent="PanelStyled/HBoxContainer/Control/CloseOptionsButton" unique_id=1620997230]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -124,7 +119,9 @@ offset_right = 25.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Cerrar"
+theme_override_font_sizes/font_size = 31
+text = "CERRAR"
+label_settings = SubResource("LabelSettings_mwcqm")
 
-[connection signal="value_changed" from="Panel/HBoxContainer/VBoxContainer/MusicSlider" to="VolumeController" method="_on_music_slider_value_changed"]
-[connection signal="value_changed" from="Panel/HBoxContainer/VBoxContainer/SfxSlider" to="VolumeController" method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="PanelStyled/HBoxContainer/VBoxContainer/MusicSlider" to="VolumeControllerClass" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="PanelStyled/HBoxContainer/VBoxContainer/SfxSlider" to="VolumeControllerClass" method="_on_sfx_slider_value_changed"]

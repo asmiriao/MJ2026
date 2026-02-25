@@ -1,5 +1,6 @@
 extends Sprite3D
 
+@export var id : int
 @export var base_texture : Texture2D
 @export var outline_texture : Texture2D
 

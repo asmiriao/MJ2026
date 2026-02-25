@@ -1,3 +1,10 @@
+TextureRect
+AudioStreamPlayer
+Panel
+TextureButton
+Button
+Control
+Sprite2D
 Node3D
 Camera3D
 CollisionShape3D
@@ -6,10 +13,3 @@ Sprite3D
 AnimationPlayer
 CanvasLayer
 ResourcePreloader
-Node
-ColorRect
-Timer
-TextureRect
-AudioStreamPlayer
-Label
-Button

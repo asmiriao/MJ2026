@@ -17,12 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://digvd65fjdgtt" path="res://Assets/DISEÑO/2D/suelo.png" id="18_xov7l"]
 [ext_resource type="ArrayMesh" uid="uid://ds8c82afypvt0" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj" id="19_e8060"]
 [ext_resource type="Texture2D" uid="uid://df2gy5lulr60k" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png" id="20_xdb4h"]
-[ext_resource type="PackedScene" uid="uid://gi2w2n4qxngv" path="res://Scenes/mascara_actor/mascara_maori.tscn" id="22_1b5fk"]
-[ext_resource type="PackedScene" uid="uid://fx3ytexq7ajj" path="res://Scenes/mascara_actor/mascara_carnaval.tscn" id="22_2raxt"]
-[ext_resource type="PackedScene" uid="uid://bjukhpoqi7q3b" path="res://Scenes/mascara_actor/mascara_namanari.tscn" id="22_2yq8g"]
-[ext_resource type="PackedScene" uid="uid://cr7c3531aldnu" path="res://Scenes/mascara_actor/mascara_payaso.tscn" id="22_lhvtj"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="23_1b5fk"]
-[ext_resource type="PackedScene" uid="uid://w1mhfwuqm7n2" path="res://Scenes/mascara_actor/mascara_peste.tscn" id="23_lhvtj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2yq8g"]
 shader = ExtResource("2_lhvtj")
@@ -150,6 +145,7 @@ albedo_texture = ExtResource("20_xdb4h")
 script = ExtResource("1_j25tj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=890051040]
+visible = false
 material = SubResource("ShaderMaterial_2yq8g")
 anchors_preset = 15
 anchor_right = 1.0
@@ -159,18 +155,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Mascaras" type="Node3D" parent="." unique_id=1782718498]
-
-[node name="MascaraCarnaval" parent="Mascaras" unique_id=1524469149 instance=ExtResource("22_2raxt")]
-transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0.3593471, 1.8857595, -7.149996)
-
-[node name="MascaraClown" parent="Mascaras" unique_id=1005661452 instance=ExtResource("22_lhvtj")]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.9767908, 2.6059685, -7.1233845)
-
-[node name="MascaraMaori" parent="Mascaras" unique_id=1492972713 instance=ExtResource("22_1b5fk")]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 1.6408563, 2.65301, -7.222693)
-
-[node name="MascaraNamanari" parent="Mascaras" unique_id=523082780 instance=ExtResource("22_2yq8g")]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 1.1538625, 1.8847711, -7.266803)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1975681653]
 transform = Transform3D(-0.9970527, -0.07332756, 0.0225585, -0.04174152, 0.7652068, 0.6424297, -0.06436972, 0.6395948, -0.76601243, 0, 0, 0)
@@ -332,11 +316,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=40177203]
 layer = 2
+visible = false
 
 [node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("23_1b5fk")]
-
-[node name="MascaraPeste" parent="." unique_id=754587104 instance=ExtResource("23_lhvtj")]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 1.7090863, 1.2275666, -7.269228)
 
 [connection signal="pressed" from="Saturnia/ButtonSaturnia" to="." method="_on_button_saturnia_pressed"]
 [connection signal="pressed" from="Moretta/ButtonMoretta" to="." method="_on_button_moretta_pressed"]

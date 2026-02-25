@@ -1,4 +1,4 @@
-extends Node
+class_name AudioManagerClass extends Node
 
 @export var stream_player : AudioStreamPlayer
 @export var resource_preloader : ResourcePreloader

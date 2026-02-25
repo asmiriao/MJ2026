@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1o35rhcbvwei"
-path="res://.godot/imported/test.png-a6f3fd32374283c5f45b9de6b5bbe1af.ctex"
+uid="uid://bbburqv58k7u8"
+path="res://.godot/imported/cursor_atlas.png-cab3a3d8b629bd7de352c51ae81c21e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DISEÑO/2D/botones/test.png"
-dest_files=["res://.godot/imported/test.png-a6f3fd32374283c5f45b9de6b5bbe1af.ctex"]
+source_file="res://Assets/spritesheets/cursor_atlas.png"
+dest_files=["res://.godot/imported/cursor_atlas.png-cab3a3d8b629bd7de352c51ae81c21e2.ctex"]
 
 [params]
 

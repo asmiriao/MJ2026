@@ -1,34 +1,34 @@
-[gd_scene format=3 uid="uid://fx3ytexq7ajj"]
+[gd_scene format=3 uid="uid://bg4b88fbp7ryk"]
 
-[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_hfhwy"]
-[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_wr3pq"]
+[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_5c82v"]
+[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_g62hq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]
-atlas = ExtResource("1_hfhwy")
-region = Rect2(123, 59, 818, 1213)
+atlas = ExtResource("1_5c82v")
+region = Rect2(1903, 2382, 494, 548)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxqs0"]
-atlas = ExtResource("1_hfhwy")
-region = Rect2(123, 59, 818, 1213)
+atlas = ExtResource("1_5c82v")
+region = Rect2(1903, 2382, 494, 548)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmrun"]
-atlas = ExtResource("1_hfhwy")
-region = Rect2(4299, 19, 896, 1293)
+atlas = ExtResource("1_5c82v")
+region = Rect2(6040, 2341, 611, 628)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
-size = Vector3(6, 11, 1.9692383)
+size = Vector3(5.018982, 5.018982, 1.9692383)
 
-[node name="MascaraCarnaval" type="Sprite3D" unique_id=1524469149]
+[node name="MascaraVictoriana" type="Sprite3D" unique_id=1524469149]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
 texture = SubResource("AtlasTexture_tujo4")
-script = ExtResource("2_wr3pq")
+script = ExtResource("2_g62hq")
 base_texture = SubResource("AtlasTexture_gxqs0")
 outline_texture = SubResource("AtlasTexture_vmrun")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=51427647]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28555292, -0.46878058, -0.48461914)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024658192, -0.31042495, -0.48461914)
 shape = SubResource("BoxShape3D_4yh21")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]

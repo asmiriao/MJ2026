@@ -3,9 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://ddv1jhuh43215" path="res://Scenes/menu.tscn" id="1_n45e2"]
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_opfnp"]
 [ext_resource type="PackedScene" uid="uid://clulu1cc3rrjo" path="res://UI/main_menu_ui.tscn" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://bywvy676aqvfu" path="res://Assets/DISEÑO/2D/1.png" id="4_t1dhk"]
+[ext_resource type="AudioStream" uid="uid://dlt7ogcxva65e" path="res://Assets/SONIDO/EFFECTS/puerta_open_FX.wav" id="4_trj04"]
 [ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="4_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://d3bihpmalbnf8" path="res://Assets/DISEÑO/2D/2.png" id="5_5egv6"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="5_trj04"]
 [ext_resource type="PackedScene" uid="uid://dqjbhtmv351ut" path="res://UI/simple_transition/simple_transition.tscn" id="6_opfnp"]
+[ext_resource type="Texture2D" uid="uid://cuqxq1snwajv2" path="res://Assets/DISEÑO/2D/3.png" id="6_vtepg"]
 [ext_resource type="Script" uid="uid://cgn6ks1kkgv22" path="res://Scripts/transitioner_to_main.gd" id="7_cp0ys"]
 [ext_resource type="PackedScene" uid="uid://b8deyqhtr5fg0" path="res://Scenes/intro_cutscene/intro_cutscene.tscn" id="8_yhxw7"]
 
@@ -14,6 +18,15 @@ shader = ExtResource("2_opfnp")
 shader_parameter/fog_color = Color(1, 1, 1, 1)
 shader_parameter/resolution_downsampling = 3.0
 shader_parameter/bit_depth = 12.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_8dnnj"]
+frames = 3
+frame_0/texture = ExtResource("4_t1dhk")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("5_5egv6")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("6_vtepg")
+frame_2/duration = 0.3
 
 [sub_resource type="Animation" id="Animation_n45e2"]
 length = 0.001
@@ -112,9 +125,26 @@ mouse_filter = 2
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 
-[node name="MenuController" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="0" unique_id=680846341 node_paths=PackedStringArray("options_menu", "main_menu_ui")]
+[node name="MenuController" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="0" unique_id=680846341 node_paths=PackedStringArray("options_menu", "main_menu_ui", "close_options_button")]
 options_menu = NodePath("../../../OptionsMenu")
 main_menu_ui = NodePath("../..")
+close_options_button = NodePath("../../../OptionsMenu/PanelStyled/HBoxContainer/Control/CloseOptionsButton")
+
+[node name="GameTitle" type="TextureRect" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="1" unique_id=46668004]
+layout_mode = 1
+offset_left = 87.0
+offset_top = 39.0
+offset_right = 639.0
+offset_bottom = 591.0
+texture = SubResource("AnimatedTexture_8dnnj")
+expand_mode = 1
+
+[node name="AnimatedSprite2D" parent="MainMenuUI/ui" parent_id_path=PackedInt32Array(537494712, 1365403067) index="2" unique_id=1463390439]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainMenuUI/ui/PlayButton" parent_id_path=PackedInt32Array(537494712, 319703805) index="1" unique_id=1815688471]
+stream = ExtResource("4_trj04")
+bus = &"Sfx reverb"
 
 [node name="SaturniaBlanco" parent="MainMenuUI" index="1" unique_id=1885301382]
 layout_direction = 2
@@ -157,7 +187,7 @@ resource_preloader = NodePath("ResourcePreloader")
 resources = [PackedStringArray("intro_cutscene"), [ExtResource("8_yhxw7")]]
 
 [connection signal="pressed" from="MainMenuUI/ui/PlayButton" to="CurrentScene/SubViewport/Menu" method="_on_play_button_pressed"]
-[connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="MainMenuUI/ui/MenuController" method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainMenuUI/ui/OptionsButton" to="MainMenuUI/ui/MenuController" method="_on_options_button_pressed"]
 
 [editable path="MainMenuUI"]
 [editable path="OptionsMenu"]
