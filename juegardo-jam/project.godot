@@ -28,7 +28,6 @@ DialogueManager="*uid://c3rodes2l3gxb"
 GameManager="*uid://dtnnnok2hji12"
 Debug="*uid://b4qqfi3faytj0"
 AudioManager="*uid://d164pt2l2reny"
-Plugin="*uid://bc0b5v66xdidn"
 
 [dialogue_manager]
 
@@ -68,7 +67,7 @@ click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue", "res://Dialogos/introduction.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue", "res://Dialogos/introduction.dialogue", "res://alma6.dialogue", "res://alma3.dialogue", "res://alma2.dialogue", "res://alma5.dialogue", "res://alma4.dialogue", "res://alma7.dialogue", "res://alma9.dialogue", "res://alma8.dialogue")
 
 [physics]
 
