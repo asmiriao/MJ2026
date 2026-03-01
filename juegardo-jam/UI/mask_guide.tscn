@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://bnriurqsohnlb"]
+
+[ext_resource type="Script" uid="uid://cycyikkgv5jen" path="res://UI/mask_guide_ui.gd" id="1_g4arm"]
+[ext_resource type="Texture2D" uid="uid://dm2uhwrymn415" path="res://icon.svg" id="2_pmydu"]
+[ext_resource type="Texture2D" uid="uid://yfg53gneyvki" path="res://Assets/DISEÑO/2D/MASK GUIDE_02.png" id="2_u4ing"]
+[ext_resource type="Texture2D" uid="uid://bdc31oug2w4nl" path="res://Assets/DISEÑO/2D/MASK GUIDE_01.png" id="3_2a6lv"]
+[ext_resource type="Texture2D" uid="uid://cl76pun2nd8rl" path="res://Assets/DISEÑO/2D/MASK GUIDE_03.png" id="3_sbk08"]
+[ext_resource type="Texture2D" uid="uid://kfy0rkyqe4ok" path="res://Assets/DISEÑO/2D/botones/caja_1_jugar.png" id="4_1p6at"]
+[ext_resource type="Texture2D" uid="uid://bquqfd1tqfpip" path="res://Assets/DISEÑO/2D/MASK GUIDE_04.png" id="4_o8dqa"]
+[ext_resource type="Texture2D" uid="uid://guwsskoo5m28" path="res://Assets/DISEÑO/2D/MASK GUIDE_05.png" id="5_pwc82"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m4ag3"]
+load_path = "res://.godot/imported/MASK GUIDE_01.png-010d2ef381c0bdddf3296bf3cda1f66f.ctex"
+
+[node name="MaskGuide" type="Node2D" unique_id=927746177]
+
+[node name="mask_guide_ui" type="CanvasLayer" parent="." unique_id=451809366]
+script = ExtResource("1_g4arm")
+pages = Array[Texture2D]([SubResource("CompressedTexture2D_m4ag3"), ExtResource("2_u4ing"), ExtResource("3_sbk08"), ExtResource("4_o8dqa"), ExtResource("5_pwc82")])
+
+[node name="guide_toggle" type="TextureButton" parent="mask_guide_ui" unique_id=172015132]
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("2_pmydu")
+
+[node name="guide_container" type="Control" parent="mask_guide_ui" unique_id=1321531896]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg_darken" type="ColorRect" parent="mask_guide_ui/guide_container" unique_id=666029531]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65882355)
+
+[node name="page_display" type="TextureRect" parent="mask_guide_ui/guide_container" unique_id=990821045]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -252.0
+offset_right = 280.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2a6lv")
+expand_mode = 5
+
+[node name="prev_button" type="TextureButton" parent="mask_guide_ui/guide_container" unique_id=1019337720]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.25
+anchor_bottom = 0.5
+offset_left = -491.0
+offset_top = -135.0
+offset_right = 210.0
+offset_bottom = 126.0
+grow_vertical = 2
+texture_normal = ExtResource("4_1p6at")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="mask_guide_ui/guide_container/prev_button" unique_id=1430729243]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 114.0
+offset_right = 399.0
+offset_bottom = 137.0
+text = "PREVIOUS"
+
+[node name="next_button" type="TextureButton" parent="mask_guide_ui/guide_container" unique_id=1682489196]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("4_1p6at")
+
+[node name="Label" type="Label" parent="mask_guide_ui/guide_container/next_button" unique_id=370402158]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 116.5
+offset_right = 366.0
+offset_bottom = 139.5
+text = "NEXT"
+
+[node name="close_button" type="TextureButton" parent="mask_guide_ui/guide_container" unique_id=1562034875]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -701.0
+offset_bottom = 261.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_1p6at")
+
+[node name="Label" type="Label" parent="mask_guide_ui/guide_container/close_button" unique_id=573902030]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 112.0
+offset_right = 364.0
+offset_bottom = 135.0
+text = "CLOSE"
+
+[connection signal="pressed" from="mask_guide_ui/guide_toggle" to="mask_guide_ui" method="_on_guide_toggle_pressed"]
+[connection signal="pressed" from="mask_guide_ui/guide_container/prev_button" to="mask_guide_ui" method="_on_prev_button_pressed"]
+[connection signal="pressed" from="mask_guide_ui/guide_container/next_button" to="mask_guide_ui" method="_on_next_button_pressed"]
+[connection signal="pressed" from="mask_guide_ui/guide_container/close_button" to="mask_guide_ui" method="_on_close_button_pressed"]
