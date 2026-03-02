@@ -68,7 +68,7 @@ click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue", "res://Dialogos/introduction.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogos/alma1.dialogue", "res://Dialogos/introduction.dialogue", "res://Dialogos/alma2.dialogue", "res://Dialogos/alma3.dialogue", "res://Dialogos/alma4.dialogue", "res://Dialogos/alma5.dialogue", "res://Dialogos/alma6.dialogue", "res://Dialogos/alma7.dialogue", "res://Dialogos/alma8.dialogue", "res://Dialogos/alma9.dialogue")
 
 [physics]
 
