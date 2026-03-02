@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://wiu1trulxic4"]
+
+[ext_resource type="Texture2D" uid="uid://kfy0rkyqe4ok" path="res://Assets/DISEÑO/2D/botones/caja_1_jugar.png" id="1_tgjd6"]
+[ext_resource type="Texture2D" uid="uid://riwac50sbgfo" path="res://Assets/DISEÑO/2D/botones/caja_2_jugar.png" id="2_ylhku"]
+[ext_resource type="Texture2D" uid="uid://kmp3nwk4ywsw" path="res://Assets/DISEÑO/2D/botones/caja_3_jugar.png" id="3_vwqfs"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hcbyo"]
+frames = 3
+frame_0/texture = ExtResource("1_tgjd6")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("2_ylhku")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("3_vwqfs")
+frame_2/duration = 0.3
+
+[node name="GenericButton" type="TextureButton" unique_id=319703805]
+texture_filter = 1
+offset_right = 701.0
+offset_bottom = 261.0
+texture_normal = SubResource("AnimatedTexture_hcbyo")
+ignore_texture_size = true
+stretch_mode = 0

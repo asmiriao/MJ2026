@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://clut5dh3s8186"]
+
+[ext_resource type="Texture2D" uid="uid://b8wijy04sxnxt" path="res://Assets/DISEÑO/2D/botones/caja_opciones1.png" id="1_dys1b"]
+[ext_resource type="Texture2D" uid="uid://dcdngymdt3p5y" path="res://Assets/DISEÑO/2D/botones/caja_opciones2.png" id="2_udv3h"]
+[ext_resource type="Texture2D" uid="uid://dei0eejita734" path="res://Assets/DISEÑO/2D/botones/caja_opciones3.png" id="3_qi1ya"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_02yec"]
+frames = 3
+frame_0/texture = ExtResource("1_dys1b")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("2_udv3h")
+frame_1/duration = 0.3
+frame_2/texture = ExtResource("3_qi1ya")
+frame_2/duration = 0.3
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhn3b"]
+texture = SubResource("AnimatedTexture_02yec")
+
+[node name="PanelStyled" type="Panel" unique_id=545693603]
+texture_filter = 1
+offset_right = 1081.0
+offset_bottom = 747.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_uhn3b")

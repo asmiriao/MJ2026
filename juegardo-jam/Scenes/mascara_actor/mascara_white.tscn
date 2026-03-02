@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ol7rgu6nic5s"]
+
+[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_vao2m"]
+[ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_axmbx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]
+atlas = ExtResource("1_vao2m")
+region = Rect2(264, 2364, 484, 577)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxqs0"]
+atlas = ExtResource("1_vao2m")
+region = Rect2(264, 2364, 484, 577)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmrun"]
+atlas = ExtResource("1_vao2m")
+region = Rect2(4440, 2325, 563, 655)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
+size = Vector3(4.9191895, 5.8637695, 1.9692383)
+
+[node name="MascaraWhite" type="Sprite3D" unique_id=1524469149]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+texture = SubResource("AtlasTexture_tujo4")
+script = ExtResource("2_axmbx")
+base_texture = SubResource("AtlasTexture_gxqs0")
+outline_texture = SubResource("AtlasTexture_vmrun")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=51427647]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1150533203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02493283, -0.037384197, -0.48461914)
+shape = SubResource("BoxShape3D_4yh21")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d164pt2l2reny"]
 
-[ext_resource type="Script" uid="uid://6d1x24blbcs8" path="res://autoload/audio_manager/audio_manager.gd" id="1_veri3"]
+[ext_resource type="Script" uid="uid://6d1x24blbcs8" path="res://autoload/audio_manager/AudioManagerClass.gd" id="1_veri3"]
 [ext_resource type="AudioStream" uid="uid://crup8jaa1ho28" path="res://Assets/SONIDO/menu.mp3" id="2_1ir50"]
 [ext_resource type="AudioStream" uid="uid://c783bvstesp17" path="res://Assets/SONIDO/BANDA SONORA/mostrador_main_loop.mp3" id="3_1ir50"]
 
