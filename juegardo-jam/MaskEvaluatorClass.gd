@@ -8,8 +8,4 @@ class_name MaskEvaluatorClass extends Node
 var soul_owned_mask : String
 
 func mask_selected_compare(player_selected_mask : String) -> bool:
-	
-	if player_selected_mask == soul_owned_mask:
-		return true
-	else:
-		return false
+	return player_selected_mask == soul_owned_mask

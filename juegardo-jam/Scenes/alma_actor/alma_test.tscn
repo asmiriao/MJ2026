@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cn1qxyetbx3cm"]
+
+[ext_resource type="Texture2D" uid="uid://dsnqdfnkcave7" path="res://Assets/spritesheets/alma_atlas.png" id="1_1jnjc"]
+[ext_resource type="Script" uid="uid://blpsndu35g4yr" path="res://Scenes/alma_actor/alma_test.gd" id="2_1jnjc"]
+
+[sub_resource type="Animation" id="Animation_1jnjc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xwigo"]
+resource_name = "entrar"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(7, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_inqb6"]
+resource_name = "salir"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(7, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inqb6"]
+_data = {
+&"RESET": SubResource("Animation_1jnjc"),
+&"entrar": SubResource("Animation_xwigo"),
+&"salir": SubResource("Animation_inqb6")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2y3q"]
+atlas = ExtResource("1_1jnjc")
+region = Rect2(0, 0, 1923, 3123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me3nk"]
+atlas = ExtResource("1_1jnjc")
+region = Rect2(1923, 0, 1923, 3123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dicua"]
+atlas = ExtResource("1_1jnjc")
+region = Rect2(3846, 0, 1923, 3123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgq2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2y3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me3nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dicua")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="alma_test" type="Node3D" unique_id=592913754]
+script = ExtResource("2_1jnjc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=248982510]
+root_node = NodePath("../AlmaActor")
+libraries/ = SubResource("AnimationLibrary_inqb6")
+
+[node name="AlmaActor" type="AnimatedSprite3D" parent="." unique_id=980641192]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_hgq2k")
+autoplay = "default"
+frame_progress = 0.47212392
+
+[node name="Label3D" type="Label3D" parent="AlmaActor" unique_id=2109580079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.240553, 0)
+text = "alma 0"
+font_size = 400

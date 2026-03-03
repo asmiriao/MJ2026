@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bjlidclf6lvy"]
+
+[ext_resource type="Script" uid="uid://d3664xry2hnvx" path="res://Scenes/mascara_actor/mascara_test.gd" id="2_ge4cl"]
+[ext_resource type="Texture2D" uid="uid://b0sgoj2y7fbiy" path="res://Assets/DISEÑO/2D/clown.png" id="3_or3pm"]
+[ext_resource type="Texture2D" uid="uid://brq35gfd83d31" path="res://Assets/DISEÑO/2D/clown_outline.png" id="4_ijguj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yh21"]
+size = Vector3(6, 11, 1.9692383)
+
+[node name="Mascara" type="Sprite3D" unique_id=1726564671]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
+script = ExtResource("2_ge4cl")
+base_texture = ExtResource("3_or3pm")
+outline_texture = ExtResource("4_ijguj")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=289239904]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=726452006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28555292, -0.46878058, -0.48461914)
+shape = SubResource("BoxShape3D_4yh21")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=2117336810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0643697, 0)
+text = "mascara 0"
+font_size = 400
+
+[connection signal="input_event" from="Area3D" to="." method="_on_mascara_input_event"]
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]

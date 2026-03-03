@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b43drhwsqpweh"]
+
+[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="1_73skp"]
+[ext_resource type="PackedScene" uid="uid://bjlidclf6lvy" path="res://Scenes/mascara_actor/mascara_test.tscn" id="2_73skp"]
+[ext_resource type="PackedScene" uid="uid://cn1qxyetbx3cm" path="res://Scenes/alma_actor/alma_test.tscn" id="3_73skp"]
+[ext_resource type="Script" uid="uid://tym6wulk8dja" path="res://MaskEvaluatorClass.gd" id="4_axbmg"]
+[ext_resource type="Script" uid="uid://bs4wja831j65i" path="res://Scenes/test/manager_test.gd" id="5_ifwx3"]
+
+[node name="TestScene" type="Node3D" unique_id=1293678088]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1258324186]
+
+[node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("1_73skp")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2116249982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011711717, 3.7081735)
+
+[node name="Mascara0" parent="." unique_id=1726564671 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -2.5786886, 1.4693295, 0)
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara1" parent="." unique_id=1692880134 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -2.6114755, -0.18454969, 0)
+mask_type = "clown"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara2" parent="." unique_id=1623984282 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -2.652392, -1.9752868, 0)
+mask_type = "maori"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="almas" type="Node" parent="." unique_id=383968725]
+
+[node name="Alma0" parent="almas" unique_id=980641192 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="Alma1" parent="almas" unique_id=2036170384 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_owned = "clown"
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="Alma2" parent="almas" unique_id=996698283 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_owned = "maori"
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="Alma3" parent="almas" unique_id=592913754 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_owned = "moretta"
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="Alma4" parent="almas" unique_id=1079543307 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_owned = "peste"
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="Alma5" parent="almas" unique_id=423444392 node_paths=PackedStringArray("mask_evaluator") instance=ExtResource("3_73skp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.845, 0)
+visible = false
+mask_owned = "victoriana"
+mask_evaluator = NodePath("../../MaskEvaluatorClass")
+
+[node name="MaskEvaluatorClass" type="Node" parent="." unique_id=1936083477]
+script = ExtResource("4_axbmg")
+
+[node name="ManagerTest" type="Node" parent="." unique_id=654913665]
+unique_name_in_owner = true
+script = ExtResource("5_ifwx3")
