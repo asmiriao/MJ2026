@@ -13,7 +13,7 @@
 [node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("1_73skp")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2116249982]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011711717, 3.7081735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5659049, -0.011711717, 3.7081735)
 
 [node name="Mascara0" parent="." unique_id=1726564671 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -2.5786886, 1.4693295, 0)
@@ -27,6 +27,26 @@ MaskEvaluator = NodePath("../MaskEvaluatorClass")
 [node name="Mascara2" parent="." unique_id=1623984282 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -2.652392, -1.9752868, 0)
 mask_type = "maori"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara3" parent="." unique_id=575265179 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -3.7773533, 0.6492213, 0)
+mask_type = "moretta"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara4" parent="." unique_id=1703179784 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -3.8849428, -1.318694, 0)
+mask_type = "peste"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara5" parent="." unique_id=38467546 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -5.0315995, 1.3319103, 0)
+mask_type = "victoriana"
+MaskEvaluator = NodePath("../MaskEvaluatorClass")
+
+[node name="Mascara6" parent="." unique_id=346167026 node_paths=PackedStringArray("MaskEvaluator") instance=ExtResource("2_73skp")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -5.5609694, -0.4334402, 0)
+mask_type = "white"
 MaskEvaluator = NodePath("../MaskEvaluatorClass")
 
 [node name="almas" type="Node" parent="." unique_id=383968725]
