@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dmrqjed8day63"]
+
+[ext_resource type="Script" uid="uid://b2w2nick2x4ar" path="res://Scenes/alma_actor/alma_actor.gd" id="1_fnmry"]
+[ext_resource type="Texture2D" uid="uid://dsnqdfnkcave7" path="res://Assets/spritesheets/alma_atlas.png" id="1_psv1c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2y3q"]
+atlas = ExtResource("1_psv1c")
+region = Rect2(0, 0, 1923, 3123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me3nk"]
+atlas = ExtResource("1_psv1c")
+region = Rect2(1923, 0, 1923, 3123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dicua"]
+atlas = ExtResource("1_psv1c")
+region = Rect2(3846, 0, 1923, 3123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgq2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2y3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me3nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dicua")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AlmaActor" type="AnimatedSprite3D" unique_id=1983796656]
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_hgq2k")
+autoplay = "default"
+frame_progress = 0.47212392
+script = ExtResource("1_fnmry")

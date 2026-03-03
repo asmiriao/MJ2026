@@ -16,6 +16,7 @@ Alma errante: ...
 	Alma errante: Yo marchaba sin poder parar. Supongo que mi marcha de este mundo fue similar.
 - ¿Echas algo de menos?
 	Alma errante: Echo de menos el olor a lluvia, el lugar donde me crié, sus costumbres y su [wave] cultura [/wave].
+- Esto es un tremendo test
 ...	
 Tú: De acuerdo, te asignaré una máscara.
 do GameManager.shadow_disappear()

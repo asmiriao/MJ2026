@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj3h6q2ytgg77"]
 
-[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_4yh21"]
+[ext_resource type="Texture2D" uid="uid://rry10r14huua" path="res://Assets/spritesheets/mascaras_atlas.png" id="1_4yh21"]
 [ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_4yh21"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]
@@ -22,6 +22,7 @@ size = Vector3(6, 11, 1.9692383)
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
 texture = SubResource("AtlasTexture_tujo4")
 script = ExtResource("2_4yh21")
+mask_type = "peste"
 base_texture = SubResource("AtlasTexture_gxqs0")
 outline_texture = SubResource("AtlasTexture_vmrun")
 

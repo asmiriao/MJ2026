@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fx3ytexq7ajj"]
 
-[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_hfhwy"]
+[ext_resource type="Texture2D" uid="uid://rry10r14huua" path="res://Assets/spritesheets/mascaras_atlas.png" id="1_hfhwy"]
 [ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_wr3pq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]
@@ -31,5 +31,6 @@ outline_texture = SubResource("AtlasTexture_vmrun")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28555292, -0.46878058, -0.48461914)
 shape = SubResource("BoxShape3D_4yh21")
 
+[connection signal="input_event" from="Area3D" to="." method="_on_mascara_input_event"]
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_mascara_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="_on_mascara_mouse_exited"]

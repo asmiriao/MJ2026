@@ -1,3 +1,8 @@
+MaskEvaluatorClass
+AnimatedSprite3D
+Camera3D
+CanvasLayer
+Sprite3D
 TextureRect
 AudioStreamPlayer
 Panel
@@ -6,10 +11,5 @@ Button
 Control
 Sprite2D
 Node3D
-Camera3D
 CollisionShape3D
 Area3D
-Sprite3D
-AnimationPlayer
-CanvasLayer
-ResourcePreloader
