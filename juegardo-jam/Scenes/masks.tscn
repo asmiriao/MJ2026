@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://73kayedc4xrk"]
 
-[ext_resource type="Script" uid="uid://wub6rjwhtle1" path="res://Scenes/mascarass.gd" id="1_j25tj"]
+[ext_resource type="Script" uid="uid://wub6rjwhtle1" path="res://Scenes/masks.gd" id="1_j25tj"]
 [ext_resource type="Texture2D" uid="uid://bf0peuisgrnqg" path="res://Assets/DISEÑO/2D/cortinaabierta.png" id="1_wvs36"]
 [ext_resource type="Texture2D" uid="uid://chisvnmrybqo0" path="res://Assets/DISEÑO/2D/CortinaCerrada.png" id="2_j25tj"]
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_lhvtj"]

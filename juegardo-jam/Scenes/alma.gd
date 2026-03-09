@@ -1,32 +1,18 @@
 extends CharacterBody3D
 
-var dialogos = [
-	"dialogoAlma1",
-	"dialogoAlma2",
-	"dialogoAlma3",
-	"dialogoAlma4",
-	"dialogoAlma5",
-	"dialogoAlma6",
-	"dialogoAlma7",
-	"dialogoAlma8",
-	"dialogoAlma9",
+var dialogues : Array[String] = [
+	"dialogoAlma1", "dialogoAlma2", "dialogoAlma3",
+	"dialogoAlma4", "dialogoAlma5", "dialogoAlma6",
+	"dialogoAlma7", "dialogoAlma8", "dialogoAlma9",
 ]
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
+@onready var anim_player = $AnimationPlayer
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-func animacion_desaparecer():
-	$AnimationPlayer.play("animacion_desaparecer")
-
-func desaparecer():
-	$AnimationPlayer.play("desaparecer")
+func play_disappear_anim() -> void:
+	anim_player.play("desaparecer")
 	
-func eliminar():
-	GameManager.cargar_mascaras()
+func delete_soul():
+	GameManager.load_mask_scene()
+	queue_free()
 	
 	

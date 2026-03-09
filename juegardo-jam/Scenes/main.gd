@@ -1,30 +1,43 @@
 extends Node3D
-const ALMA_1 = preload("uid://cxi16kb2wu3h4")
 
-var almas = preload("res://Scenes/alma.tscn")
-var instance
+# --- CONFIGURATION ---
+const DIALOGUE_RESOURCE = preload("uid://cxi16kb2wu3h4")
+const SOUL_SCENE = preload("res://Scenes/alma.tscn")
+@export var spawn_position : Vector3 = Vector3(-2645, 0, -4585)
 
-# Called when the node enters the scene tree for the first time.
+# --- NODE REFERENCES ---
+@onready var final_message_ui = $mensaje_final
+
+# --- STATE ---
+var active_soul_node : Node = null
+
+# --- LIFECYCLE ---
 func _ready() -> void:
-	if (GameManager.alma_actual == 9):
-		$mensaje_final.visible = true
-	else:
-		#DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma1")
-		print("alma actual: ", GameManager.alma_actual)
-		if not GameManager.activado:
-			instantiate(Vector3(-2645, 0, -4585))
-			GameManager.activado = true
-			await get_tree().create_timer(2).timeout
-			mostrar_dialogo(GameManager.alma_actual)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func instantiate(pos):
-	instance = almas.instantiate()
-	instance.position = pos
-	add_child(instance)
+	# Listen to GameManager's events
+	GameManager.soul_vanish_requested.connect(vanish_active_soul)
 	
-func mostrar_dialogo(num_alma: int):
-	DialogueManager.show_dialogue_balloon(ALMA_1, instance.dialogos[num_alma])
+	# Check for Win/End State
+	if GameManager.current_soul_index == 9:
+		final_message_ui.visible = true
+		return
+	
+	# Standard Game Loop
+	spawn_soul(spawn_position)
+	
+	await get_tree().create_timer(2.0).timeout
+	show_dialogue(GameManager.current_soul_index)
+
+# --- WORLD LOGIC ---
+func vanish_active_soul() -> void:
+	get_tree().call_group("Almas","animacion_desaparecer")
+	if is_instance_valid(active_soul_node):
+		active_soul_node.play_disappear_anim()
+		
+func spawn_soul(pos : Vector3) -> void:
+	active_soul_node = SOUL_SCENE.instantiate()
+	active_soul_node.position = pos
+	add_child(active_soul_node)
+	
+func show_dialogue(soul_index: int) -> void:
+	if is_instance_valid(active_soul_node):
+		DialogueManager.show_dialogue_balloon(DIALOGUE_RESOURCE, active_soul_node.dialogues[soul_index])

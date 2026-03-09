@@ -1,53 +1,30 @@
 extends Node
+# Script registered as 'GameManager'
 
-signal transition_volume_down
+# --- SIGNALS ---
+signal soul_vanish_requested 
+signal volume_transition_requested
 
-const ALMA_1 = preload("uid://cxi16kb2wu3h4")
+# --- STATE DATA ---
+var current_soul_index : int = 0
+var chosen_masks : Array[int] = [0,0,0,0,0,0,0,0,0]
 
-var instance
-var activado = false
-var almas = preload("res://Scenes/alma.tscn")
-var alma_actual: int = 0
-
-var mascaras_elegidas = [0,0,0,0,0,0,0,0,0]
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-func enter_shadow():
-	pass
-	if not activado:
-		instantiate(Vector3(-2645, 0, -4585))
-		activado = true
-		await get_tree().create_timer(2).timeout
-		mostrar_dialogo(alma_actual)
-		#DialogueManager.show_dialogue_balloon(ALMA_1, "dialogoAlma1")
+func confirm_mask_choice(mask_index : int) -> void:
+	chosen_masks[mask_index] = 1
+	current_soul_index += 1
+	load_main_scene()
 	
+# --- DIALOGUE TRIGGERS ---
+func trigger_shadow_vanish() -> void:
+	soul_vanish_requested.emit()
 
-
-func instantiate(pos):
-	instance = almas.instantiate()
-	instance.position = pos
-	add_child(instance)
-	
-func shadow_disappear():
-	get_tree().call_group("Almas","animacion_desaparecer")
-	instance.desaparecer()
-
-func mostrar_dialogo(num_alma: int):
-	DialogueManager.show_dialogue_balloon(ALMA_1, instance.dialogos[alma_actual])
-	
-func cargar_main():
-	emit_signal("transition_volume_down")
+# --- SCENE ROUTING ---
+func load_main_menu() -> void:
+	volume_transition_requested.emit()
 	#get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
-func cargar_mascaras():
-	get_tree().change_scene_to_file("res://Scenes/mascarass.tscn")
+func load_mask_scene() -> void:
+	get_tree().change_scene_to_file("res://Scenes/masks.tscn")
 	
-func fin():
-	print("fin")
+func load_main_scene() -> void:
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")

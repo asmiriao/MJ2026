@@ -1,7 +1,5 @@
 ~ dialogoAlma1
 
-do enter_shadow()
-
 Tú: Hola, ¿en qué puedo ayudarte, alma errante?
 Alma errante: Necesito un destino, una identidad.
 Tú: Necesitas una [wave] máscara [/wave]. Te haré una serie de preguntas.
@@ -19,6 +17,6 @@ Alma errante: ...
 - Esto es un tremendo test
 ...	
 Tú: De acuerdo, te asignaré una máscara.
-do GameManager.shadow_disappear()
+do GameManager.trigger_shadow_vanish()
 
 => END

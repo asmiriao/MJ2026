@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5gfj1tkt3cd8"]
 
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="1_ts16j"]
-[ext_resource type="PackedScene" uid="uid://73kayedc4xrk" path="res://Scenes/mascarass.tscn" id="1_wgqsk"]
+[ext_resource type="PackedScene" uid="uid://73kayedc4xrk" path="res://Scenes/masks.tscn" id="1_wgqsk"]
 [ext_resource type="PackedScene" uid="uid://b36tp7mq6kfa2" path="res://UI/options_menu/options_menu.tscn" id="2_wgqsk"]
 [ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="3_c8giw"]
 
