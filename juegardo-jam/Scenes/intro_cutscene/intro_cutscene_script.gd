@@ -24,6 +24,6 @@ func _on_camera_panning_animation_finished(anim_name: StringName) -> void:
 		$SimpleTransition/AnimationPlayer.play_backwards("fade_in")
 		$CameraPanning.play("mostrador_pan")
 	else:
-		#load level
-		pass
-	pass # Replace with function body.
+		#Load level
+		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		

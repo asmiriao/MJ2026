@@ -85,7 +85,7 @@ mostrador_camera = NodePath("Menu/Camera3D")
 
 [node name="Trastienda" parent="." unique_id=468557803 instance=ExtResource("2_f8tdu")]
 
-[node name="Camera3D" parent="Trastienda" index="15" unique_id=449170725]
+[node name="Camera3D" parent="Trastienda" index="12" unique_id=449170725]
 transform = Transform3D(0.9018264, 0.03689004, -0.430521, 0, 0.996349, 0.085374124, 0.4320986, -0.07699264, 0.8985338, 2, 1.786, -4.645)
 
 [node name="Menu" parent="." unique_id=1538424508 instance=ExtResource("3_r8j7v")]
