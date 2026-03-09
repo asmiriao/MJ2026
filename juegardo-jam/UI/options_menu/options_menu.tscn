@@ -69,8 +69,8 @@ label_settings = SubResource("LabelSettings_mwcqm")
 [node name="MusicSlider" type="HSlider" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=911769255]
 layout_mode = 2
 size_flags_vertical = 3
-min_value = -80.0
-max_value = 0.0
+max_value = 1.0
+step = 0.01
 
 [node name="SfxVolumeLabel" type="Label" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=1318802609]
 layout_mode = 2
@@ -81,9 +81,8 @@ label_settings = SubResource("LabelSettings_mwcqm")
 [node name="SfxSlider" type="HSlider" parent="PanelStyled/HBoxContainer/VBoxContainer" unique_id=309082614]
 layout_mode = 2
 size_flags_vertical = 3
-min_value = -80.0
-max_value = 0.0
-value = -15.0
+max_value = 1.0
+step = 0.01
 
 [node name="Control" type="Control" parent="PanelStyled/HBoxContainer" unique_id=617320305]
 layout_mode = 2
