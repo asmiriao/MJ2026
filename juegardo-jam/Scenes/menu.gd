@@ -14,7 +14,7 @@ func _on_play_button_pressed():
 	AudioManager.reduce_volume_to_zero()
 	#animation_player.play("iniciar")
 	#menu_controller.hide_main_menu()
-	GameManager.cargar_main()
+	GameManager.transition_to_main()
 	
 
 func desactivar_boton():

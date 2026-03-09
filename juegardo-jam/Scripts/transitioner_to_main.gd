@@ -4,7 +4,7 @@ extends Node
 @export var resource_preloader : ResourcePreloader
 
 func _ready() -> void:
-	GameManager.connect("transition_volume_down", transition_to_main)
+	GameManager.connect("main_scene_transition_requested", transition_to_main)
 
 func transition_to_main() -> void:
 	# 1. reduce music volume

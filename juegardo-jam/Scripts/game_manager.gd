@@ -3,7 +3,7 @@ extends Node
 
 # --- SIGNALS ---
 signal soul_vanish_requested 
-signal volume_transition_requested
+signal main_scene_transition_requested
 
 # --- STATE DATA ---
 var current_soul_index : int = 0
@@ -19,8 +19,8 @@ func trigger_shadow_vanish() -> void:
 	soul_vanish_requested.emit()
 
 # --- SCENE ROUTING ---
-func load_main_menu() -> void:
-	volume_transition_requested.emit()
+func transition_to_main() -> void:
+	main_scene_transition_requested.emit()
 	#get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
 func load_mask_scene() -> void:
