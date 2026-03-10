@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://73kayedc4xrk"]
 
-[ext_resource type="Script" uid="uid://wub6rjwhtle1" path="res://Scenes/masks.gd" id="1_j25tj"]
 [ext_resource type="Texture2D" uid="uid://bf0peuisgrnqg" path="res://Assets/DISEÑO/2D/cortinaabierta.png" id="1_wvs36"]
 [ext_resource type="Texture2D" uid="uid://chisvnmrybqo0" path="res://Assets/DISEÑO/2D/CortinaCerrada.png" id="2_j25tj"]
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_lhvtj"]
@@ -17,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://digvd65fjdgtt" path="res://Assets/DISEÑO/2D/suelo.png" id="18_xov7l"]
 [ext_resource type="ArrayMesh" uid="uid://ds8c82afypvt0" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/WAVEFRONT/CAJA_CARTON.obj" id="19_e8060"]
 [ext_resource type="Texture2D" uid="uid://df2gy5lulr60k" path="res://Assets/DISEÑO/3D/MODELS/CAJA CARTON/Texturas/-color.png" id="20_xdb4h"]
-[ext_resource type="PackedScene" uid="uid://bt828u1eqr6uw" path="res://UI/cursor.tscn" id="23_1b5fk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2yq8g"]
 shader = ExtResource("2_lhvtj")
@@ -129,9 +127,6 @@ albedo_texture = ExtResource("17_8ffwr")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnm0e"]
 albedo_texture = ExtResource("17_8ffwr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1a2"]
-albedo_texture = ExtResource("18_xov7l")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqhb4"]
 albedo_texture = ExtResource("18_xov7l")
 
@@ -141,8 +136,7 @@ albedo_texture = ExtResource("17_8ffwr")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7npk2"]
 albedo_texture = ExtResource("20_xdb4h")
 
-[node name="Trastienda" type="Node3D" unique_id=468557803]
-script = ExtResource("1_j25tj")
+[node name="Masks" type="Node3D" unique_id=468557803]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=890051040]
 visible = false
@@ -164,6 +158,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 965.0
 
 [node name="Cortinas" type="Node3D" parent="." unique_id=564776419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.774844)
 
 [node name="Cortina1" type="Sprite3D" parent="Cortinas" unique_id=1915788278]
 transform = Transform3D(0.08699008, 0, -0.0016908067, 0, 0.112, 0, 0.0013133944, 0, 0.11198724, 4.366822, 1.5170804, -7.225559)
@@ -174,7 +169,7 @@ transform = Transform3D(0.085990205, 0, -0.0016455172, 0, 0.109, 0, 0.001298298,
 texture = ExtResource("2_j25tj")
 
 [node name="Saturnia" type="Sprite3D" parent="." unique_id=223879277]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 2.2418344, 2.76925, -7.1866007)
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 2.2418344, 2.76925, -3.3815994)
 texture = ExtResource("5_1b5fk")
 
 [node name="ButtonSaturnia" type="Button" parent="Saturnia" unique_id=1637757913]
@@ -185,7 +180,7 @@ offset_right = 589.0
 offset_bottom = 165.0
 
 [node name="Moretta" type="Sprite3D" parent="." unique_id=2137279151]
-transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 2.766973, 2.3130362, -7.2293663)
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 2.766973, 2.3130362, -3.424365)
 texture = ExtResource("6_2yq8g")
 
 [node name="ButtonMoretta" type="Button" parent="Moretta" unique_id=142699425]
@@ -196,7 +191,7 @@ offset_right = 662.0
 offset_bottom = 255.0
 
 [node name="Victoriana" type="Sprite3D" parent="." unique_id=599942530]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.1560638, 1.9266415, -7.2519026)
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.1560638, 1.9266415, -3.4469013)
 texture = ExtResource("10_ai0eg")
 
 [node name="ButtonVictoriana" type="Button" parent="Victoriana" unique_id=1439560210]
@@ -207,7 +202,7 @@ offset_right = 579.0
 offset_bottom = 317.0
 
 [node name="Blanca" type="Sprite3D" parent="." unique_id=1565670005]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 3.1069505, 1.6146929, -7.21621)
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 3.1069505, 1.6146929, -3.4112086)
 texture = ExtResource("11_ynxvf")
 
 [node name="ButtonBlanca" type="Button" parent="Blanca" unique_id=458045831]
@@ -218,7 +213,7 @@ offset_right = 705.0
 offset_bottom = 359.0
 
 [node name="Mesa" type="MeshInstance3D" parent="." unique_id=562645961]
-transform = Transform3D(0.37691525, 0, -0.0073464233, 0, 0.48500007, 0, 0.005690745, 0, 0.4865758, 2.1338131, 0, -6.4215236)
+transform = Transform3D(0.37691525, 0, -0.0073464233, 0, 0.48500007, 0, 0.005690745, 0, 0.4865758, 2.1338131, 0, -2.7291713)
 mesh = ExtResource("12_clm8j")
 surface_material_override/0 = SubResource("StandardMaterial3D_u0mud")
 
@@ -241,11 +236,6 @@ light_specular = 0.0
 shadow_enabled = true
 distance_fade_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=449170725]
-transform = Transform3D(0.9018264, 0.03689004, -0.430521, 0, 0.996349, 0.085374124, 0.4320986, -0.07699264, 0.8985338, 1.1896286, 1.785775, -4.6454697)
-current = true
-fov = 71.0
-
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1240463549]
 transform = Transform3D(2.998, 0, 0, 0, 1.107, 0, 0, 0, 2, 2.7361133, 1.5108544, -5.6246357)
 amount = 10
@@ -258,6 +248,7 @@ draw_pass_1 = SubResource("QuadMesh_igvlw")
 draw_pass_2 = null
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=295917687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.48210388, 0, 0, 0)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=31179746]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 6.097815, 1.2492588, -3.035389)
@@ -270,12 +261,6 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.4
 gi_lightmap_texel_scale = 0.01
 size = Vector3(4.3174124, 0.1661377, 8.641174)
 material = SubResource("StandardMaterial3D_lnm0e")
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1439124265]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 2.9638653, 0.036222503, -3.035389)
-gi_lightmap_texel_scale = 0.01
-size = Vector3(6.7694435, 0.1661377, 8.641174)
-material = SubResource("StandardMaterial3D_6c1a2")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="CSGCombiner3D" unique_id=248920156]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 2.9638653, 3.2428648, -3.035389)
@@ -298,27 +283,15 @@ gi_lightmap_texel_scale = 0.01
 size = Vector3(4.3174124, 0.1661377, 6.5661926)
 material = SubResource("StandardMaterial3D_1ugco")
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1170258884]
-transform = Transform3D(-8.881784e-16, -2.9802322e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, 2.9802322e-08, 2.859367, 1.2492588, 1.2246428)
-gi_lightmap_texel_scale = 0.01
-size = Vector3(4.3174124, 0.1661377, 6.615982)
-material = SubResource("StandardMaterial3D_mqhb4")
-
 [node name="CajaCarton" type="MeshInstance3D" parent="." unique_id=1952593632]
-transform = Transform3D(-0.8441127, 0, -0.53616565, 0, 1, 0, 0.53616565, 0, -0.8441127, 0.39797735, 0, -6.521211)
+transform = Transform3D(-0.8441127, 0, -0.53616565, 0, 1, 0, 0.53616565, 0, -0.8441127, 0.5740332, 0, -2.8129525)
 mesh = ExtResource("19_e8060")
 surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
 
 [node name="CajaCarton2" type="MeshInstance3D" parent="." unique_id=553702002]
-transform = Transform3D(-0.047106475, 0, -0.9988898, 0, 1, 0, 0.9988898, 0, -0.047106475, 0.32028723, 0.65205884, -6.521211)
+transform = Transform3D(-0.047106475, 0, -0.9988898, 0, 1, 0, 0.9988898, 0, -0.047106475, 0.49634308, 0.65205884, -2.8129525)
 mesh = ExtResource("19_e8060")
 surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=40177203]
-layer = 2
-visible = false
-
-[node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("23_1b5fk")]
 
 [connection signal="pressed" from="Saturnia/ButtonSaturnia" to="." method="_on_button_saturnia_pressed"]
 [connection signal="pressed" from="Moretta/ButtonMoretta" to="." method="_on_button_moretta_pressed"]

@@ -12,7 +12,6 @@ func play_disappear_anim() -> void:
 	anim_player.play("desaparecer")
 	
 func delete_soul():
-	GameManager.load_mask_scene()
 	queue_free()
 	
 	

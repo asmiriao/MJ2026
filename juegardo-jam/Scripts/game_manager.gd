@@ -2,7 +2,8 @@ extends Node
 # Script registered as 'GameManager'
 
 # --- SIGNALS ---
-signal soul_vanish_requested 
+signal dialogue_start_requested
+signal dialogue_finish_requested
 signal main_scene_transition_requested
 
 # --- STATE DATA ---
@@ -15,9 +16,11 @@ func confirm_mask_choice(mask_index : int) -> void:
 	load_main_scene()
 	
 # --- DIALOGUE TRIGGERS ---
-func trigger_shadow_vanish() -> void:
-	soul_vanish_requested.emit()
+func trigger_dialogue_end() -> void:
+	dialogue_finish_requested.emit()	
 
+func trigger_dialogue_start() -> void:
+	dialogue_start_requested.emit()
 # --- SCENE ROUTING ---
 func transition_to_main() -> void:
 	main_scene_transition_requested.emit()

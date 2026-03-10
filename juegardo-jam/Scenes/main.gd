@@ -4,7 +4,7 @@ extends Node3D
 const DIALOGUE_RESOURCE = preload("uid://cxi16kb2wu3h4")
 const SOUL_SCENE = preload("res://Scenes/alma.tscn")
 @export var spawn_position : Vector3 = Vector3(-2645, 0, -4585)
-
+@export var camera_controls : Control 
 # --- NODE REFERENCES ---
 @onready var final_message_ui = $mensaje_final
 
@@ -14,7 +14,10 @@ var active_soul_node : Node = null
 # --- LIFECYCLE ---
 func _ready() -> void:
 	# Listen to GameManager's events
-	GameManager.soul_vanish_requested.connect(vanish_active_soul)
+	GameManager.dialogue_finish_requested.connect(show_camera_controls)
+	GameManager.dialogue_start_requested.connect(hide_camera_controls)
+	# Disable camera controls on start
+	camera_controls.visible = false
 	
 	# Check for Win/End State
 	if GameManager.current_soul_index == 9:
@@ -41,3 +44,9 @@ func spawn_soul(pos : Vector3) -> void:
 func show_dialogue(soul_index: int) -> void:
 	if is_instance_valid(active_soul_node):
 		DialogueManager.show_dialogue_balloon(DIALOGUE_RESOURCE, active_soul_node.dialogues[soul_index])
+
+func show_camera_controls() -> void:
+	camera_controls.visible = true
+
+func hide_camera_controls() -> void:
+	camera_controls.visible = false

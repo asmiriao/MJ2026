@@ -64,7 +64,6 @@ layer = 2
 [node name="Cursor" parent="CanvasLayer" unique_id=2036012360 instance=ExtResource("8_0l1pn")]
 
 [connection signal="pressed" from="MainMenuUI/ui/PlayButton" to="CurrentScene/SubViewport/Menu" method="_on_play_button_pressed"]
-[connection signal="pressed" from="OptionsMenu/Panel/HBoxContainer/Control/CloseButton" to="MainMenuUI/ui/MenuController" method="_on_close_button_pressed"]
 
 [editable path="MainMenuUI"]
 [editable path="OptionsMenu"]
