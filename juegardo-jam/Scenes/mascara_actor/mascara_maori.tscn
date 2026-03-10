@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gi2w2n4qxngv"]
 
-[ext_resource type="Texture2D" uid="uid://jdlpxb2ayge7" path="res://Assets/spritesheets/mascaras.png" id="1_m80q5"]
+[ext_resource type="Texture2D" uid="uid://rry10r14huua" path="res://Assets/spritesheets/mascaras_atlas.png" id="1_m80q5"]
 [ext_resource type="Script" uid="uid://iyoctsf3qiua" path="res://Scenes/mascara_actor/mascara_actor.gd" id="2_7k605"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tujo4"]

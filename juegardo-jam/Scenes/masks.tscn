@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://73kayedc4xrk"]
 
 [ext_resource type="Texture2D" uid="uid://bf0peuisgrnqg" path="res://Assets/DISEÑO/2D/cortinaabierta.png" id="1_wvs36"]
+[ext_resource type="PackedScene" uid="uid://cj3h6q2ytgg77" path="res://Scenes/mascara_actor/mascara_actor.tscn" id="2_4hpyt"]
 [ext_resource type="Texture2D" uid="uid://chisvnmrybqo0" path="res://Assets/DISEÑO/2D/CortinaCerrada.png" id="2_j25tj"]
 [ext_resource type="Shader" uid="uid://chouri0pi28b4" path="res://resources/shaders/dither.gdshader" id="2_lhvtj"]
+[ext_resource type="Texture2D" uid="uid://bnhu5xuleceja" path="res://Assets/DISEÑO/2D/Namanari.png" id="3_4q7eh"]
+[ext_resource type="Texture2D" uid="uid://6t0ks8yc0wxt" path="res://Assets/DISEÑO/2D/Namanari_outline.png" id="4_3fm3a"]
 [ext_resource type="Texture2D" uid="uid://carml80h5ywdn" path="res://Assets/DISEÑO/2D/MASK_SATURNIA.png" id="5_1b5fk"]
-[ext_resource type="Texture2D" uid="uid://kiy5irdj3org" path="res://Assets/DISEÑO/2D/Moretta.png" id="6_2yq8g"]
+[ext_resource type="Texture2D" uid="uid://b0sgoj2y7fbiy" path="res://Assets/DISEÑO/2D/clown.png" id="5_03j5t"]
+[ext_resource type="Texture2D" uid="uid://brq35gfd83d31" path="res://Assets/DISEÑO/2D/clown_outline.png" id="7_4wiga"]
+[ext_resource type="Texture2D" uid="uid://b3v5fiyrta01b" path="res://Assets/DISEÑO/2D/Maori.png" id="7_jedcr"]
+[ext_resource type="Texture2D" uid="uid://cpy58ewideik2" path="res://Assets/DISEÑO/2D/Peste.png" id="8_330ml"]
 [ext_resource type="Texture2D" uid="uid://0w570i2rpf0o" path="res://Assets/DISEÑO/2D/Victoriana.png" id="10_ai0eg"]
-[ext_resource type="Texture2D" uid="uid://cvewxihd3458" path="res://Assets/DISEÑO/2D/WhiteMask.png" id="11_ynxvf"]
+[ext_resource type="Texture2D" uid="uid://de82l17sfebbv" path="res://Assets/DISEÑO/2D/Maori_outline.png" id="10_twyuj"]
 [ext_resource type="ArrayMesh" uid="uid://wloc1oqffd3" path="res://Assets/DISEÑO/3D/MODELS/mesa/mesa.obj" id="12_clm8j"]
+[ext_resource type="Texture2D" uid="uid://dwr6bcfx8gvvd" path="res://Assets/DISEÑO/2D/Peste_outline.png" id="12_st0sm"]
 [ext_resource type="Texture2D" uid="uid://jaakh7sqmtn7" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Base_color_Utility - sRGB - Texture.png" id="13_wsei3"]
 [ext_resource type="Texture2D" uid="uid://db2npbvv8oqv0" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Height_Utility - Raw.png" id="14_sc6l3"]
 [ext_resource type="Texture2D" uid="uid://6m51pochlai8" path="res://Assets/DISEÑO/3D/MODELS/mesa/tex/mesa_Normal_DirectX_Utility - Raw.png" id="15_bdh6n"]
@@ -157,6 +164,48 @@ light_energy = 4.0
 shadow_enabled = true
 directional_shadow_max_distance = 965.0
 
+[node name="Masks" type="Node3D" parent="." unique_id=952581456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2037067, 1.9246786, -3.5023944)
+
+[node name="Namanari" parent="Masks" unique_id=1524469149 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.8119724, 0, 0)
+texture = ExtResource("3_4q7eh")
+base_texture = ExtResource("3_4q7eh")
+outline_texture = ExtResource("4_3fm3a")
+
+[node name="Saturnia" parent="Masks" unique_id=1886878221 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -0.9044833, 0, 0)
+texture = ExtResource("5_1b5fk")
+base_texture = ExtResource("5_1b5fk")
+outline_texture = ExtResource("5_1b5fk")
+
+[node name="Clown" parent="Masks" unique_id=1756918411 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -0.80523527, 0.6075907, 0)
+texture = ExtResource("5_03j5t")
+base_texture = ExtResource("5_03j5t")
+outline_texture = ExtResource("7_4wiga")
+
+[node name="Carnaval" parent="Masks" unique_id=1134996290 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, -0.025882483, -0.12161398, 0)
+
+[node name="Victoriana" parent="Masks" unique_id=116913730 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0.72201896, 0)
+texture = ExtResource("10_ai0eg")
+base_texture = ExtResource("10_ai0eg")
+outline_texture = ExtResource("10_ai0eg")
+
+[node name="Maori" parent="Masks" unique_id=753826842 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.7512877, 0.6122289, 0)
+texture = ExtResource("7_jedcr")
+base_texture = ExtResource("7_jedcr")
+outline_texture = ExtResource("10_twyuj")
+
+[node name="Peste" parent="Masks" unique_id=1437010125 instance=ExtResource("2_4hpyt")]
+transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0.48936844, -0.702307, -0.0055980682)
+texture = ExtResource("8_330ml")
+base_texture = ExtResource("8_330ml")
+outline_texture = ExtResource("12_st0sm")
+
 [node name="Cortinas" type="Node3D" parent="." unique_id=564776419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.774844)
 
@@ -167,50 +216,6 @@ texture = ExtResource("1_wvs36")
 [node name="Cortina2" type="Sprite3D" parent="Cortinas" unique_id=1092400222]
 transform = Transform3D(0.085990205, 0, -0.0016455172, 0, 0.109, 0, 0.001298298, 0, 0.10898758, 4.810056, 1.5170804, -7.1875877)
 texture = ExtResource("2_j25tj")
-
-[node name="Saturnia" type="Sprite3D" parent="." unique_id=223879277]
-transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 2.2418344, 2.76925, -3.3815994)
-texture = ExtResource("5_1b5fk")
-
-[node name="ButtonSaturnia" type="Button" parent="Saturnia" unique_id=1637757913]
-modulate = Color(1, 1, 1, 0)
-offset_left = 522.0
-offset_top = 67.0
-offset_right = 589.0
-offset_bottom = 165.0
-
-[node name="Moretta" type="Sprite3D" parent="." unique_id=2137279151]
-transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 2.766973, 2.3130362, -3.424365)
-texture = ExtResource("6_2yq8g")
-
-[node name="ButtonMoretta" type="Button" parent="Moretta" unique_id=142699425]
-modulate = Color(1, 1, 1, 0)
-offset_left = 595.0
-offset_top = 157.0
-offset_right = 662.0
-offset_bottom = 255.0
-
-[node name="Victoriana" type="Sprite3D" parent="." unique_id=599942530]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.1560638, 1.9266415, -3.4469013)
-texture = ExtResource("10_ai0eg")
-
-[node name="ButtonVictoriana" type="Button" parent="Victoriana" unique_id=1439560210]
-modulate = Color(1, 1, 1, 0)
-offset_left = 493.0
-offset_top = 218.0
-offset_right = 579.0
-offset_bottom = 317.0
-
-[node name="Blanca" type="Sprite3D" parent="." unique_id=1565670005]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 3.1069505, 1.6146929, -3.4112086)
-texture = ExtResource("11_ynxvf")
-
-[node name="ButtonBlanca" type="Button" parent="Blanca" unique_id=458045831]
-modulate = Color(1, 1, 1, 0)
-offset_left = 638.0
-offset_top = 261.0
-offset_right = 705.0
-offset_bottom = 359.0
 
 [node name="Mesa" type="MeshInstance3D" parent="." unique_id=562645961]
 transform = Transform3D(0.37691525, 0, -0.0073464233, 0, 0.48500007, 0, 0.005690745, 0, 0.4865758, 2.1338131, 0, -2.7291713)
@@ -292,8 +297,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
 transform = Transform3D(-0.047106475, 0, -0.9988898, 0, 1, 0, 0.9988898, 0, -0.047106475, 0.49634308, 0.65205884, -2.8129525)
 mesh = ExtResource("19_e8060")
 surface_material_override/0 = SubResource("StandardMaterial3D_7npk2")
-
-[connection signal="pressed" from="Saturnia/ButtonSaturnia" to="." method="_on_button_saturnia_pressed"]
-[connection signal="pressed" from="Moretta/ButtonMoretta" to="." method="_on_button_moretta_pressed"]
-[connection signal="pressed" from="Victoriana/ButtonVictoriana" to="." method="_on_button_victoriana_pressed"]
-[connection signal="pressed" from="Blanca/ButtonBlanca" to="." method="_on_button_blanca_pressed"]
