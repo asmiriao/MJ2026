@@ -1,24 +1,15 @@
 extends Node3D
 
-@onready var mask_nodes: Array[Node] = [
-	#$Payaso, 
-	#$Maori, 
-	$Saturnia, 
-	$Moretta, 
-	#$Namanari, 
-	#$Carnaval, 
-	#$Peste, 
-	$Victoriana, 
-	$Blanca
-]
 
-func _ready() -> void:
-	sync_mask_visibility()
+@export var camera : Camera3D
 
-func sync_mask_visibility() -> void:
-	for i in range(mask_nodes.size()):
-		if GameManager.chosen_masks[i] == 1:
-			mask_nodes[i].visible = false
+#func _ready() -> void:
+	# sync_mask_visibility()
+
+#func sync_mask_visibility() -> void:
+#	for i in range(mask_nodes.size()):
+#		if GameManager.chosen_masks[i] == 1:
+#			mask_nodes[i].visible = false
 	
 func choose_mask(mask_node : Node, index : int) -> void:
 	mask_node.visible = false

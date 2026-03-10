@@ -12,6 +12,33 @@ shader_parameter/fog_color = Color(1, 1, 1, 1)
 shader_parameter/resolution_downsampling = 3.0
 shader_parameter/bit_depth = 12.0
 
+[sub_resource type="Animation" id="Animation_r8j7v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trastienda/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.19, 1.786, -4.645)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Trastienda/Camera3D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_8kdc3"]
 resource_name = "mostrador_pan"
 length = 5.0
@@ -52,10 +79,10 @@ tracks/0/path = NodePath("Trastienda/Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.001, 5),
+"times": PackedFloat32Array(0, 4.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(1.19, 1.786, -4.645), Vector3(2, 1.786, -4.645)]
+"values": [Vector3(1.19, 1.786, -1.7966623), Vector3(1.9490559, 1.786, -1.7966623)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -71,26 +98,38 @@ tracks/1/keys = {
 "method": &"play"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Trastienda/Camera3D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kdc3"]
 _data = {
+&"RESET": SubResource("Animation_r8j7v"),
 &"mostrador_pan": SubResource("Animation_8kdc3"),
 &"transtienda_pan": SubResource("Animation_s7lq7")
 }
 
-[node name="IntroCutscene" type="Node3D" unique_id=1460881622 node_paths=PackedStringArray("transtienda_camera", "mostrador_camera")]
+[node name="IntroCutscene" type="Node3D" unique_id=1460881622 node_paths=PackedStringArray("masks_camera", "counter_camera")]
 script = ExtResource("1_38g86")
-transtienda_camera = NodePath("Trastienda/Camera3D")
-mostrador_camera = NodePath("Menu/Camera3D")
+masks_camera = NodePath("Trastienda/Camera3D")
+counter_camera = NodePath("Menu/Camera3D")
 
 [node name="Trastienda" parent="." unique_id=468557803 instance=ExtResource("2_f8tdu")]
 
-[node name="Camera3D" parent="Trastienda" index="12" unique_id=449170725]
-transform = Transform3D(0.9018264, 0.03689004, -0.430521, 0, 0.996349, 0.085374124, 0.4320986, -0.07699264, 0.8985338, 2, 1.786, -4.645)
+[node name="Camera3D" parent="Trastienda" index="13" unique_id=1842601233]
+transform = Transform3D(0.9018264, 0.03689004, -0.430521, 0, 0.996349, 0.085374124, 0.4320986, -0.07699264, 0.8985338, 1.19, 1.786, -4.645)
 
 [node name="Menu" parent="." unique_id=1538424508 instance=ExtResource("3_r8j7v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.348473)
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=267493059]
 
