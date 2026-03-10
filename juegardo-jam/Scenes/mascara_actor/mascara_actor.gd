@@ -8,14 +8,13 @@ extends Sprite3D
 
 func _on_mascara_mouse_entered() -> void:
 	texture = outline_texture
-	pass # Replace with function body.
 
 
 func _on_mascara_mouse_exited() -> void:
 	texture = base_texture
-	pass # Replace with function body.
 
-func _on_mascara_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if (event.is_action_pressed("click")):
-		MaskEvaluator.mask_selected_compare(mask_type)
-	pass # Replace with function body.
+		visible = false
+		var mask_correct : bool = MaskEvaluator.mask_selected_compare(mask_type)
+		GameManager.confirm_mask_choice(0)

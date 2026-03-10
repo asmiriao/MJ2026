@@ -28,7 +28,12 @@ func turn_left() -> void:
 	
 	current_target_rotation += deg_to_rad(turn_amount_degrees)
 	animate_rotation()
-	
+
+func force_look_forward() -> void:
+	if is_moving:
+		return
+	current_target_rotation = 0.0
+	animate_rotation()
 # --- ANIMATION ---
 func animate_rotation( ) -> void:
 	is_moving = true
@@ -41,7 +46,6 @@ func animate_rotation( ) -> void:
 # --- UI BUTTONS ---
 func _on_turn_left_button_pressed() -> void:
 	turn_left()
-
 
 func _on_turn_right_button_pressed() -> void:
 	turn_right()

@@ -226,7 +226,7 @@ script = ExtResource("1_bo1nx")
 camera_controls = NodePath("CanvasLayer/Camera_Controls")
 
 [node name="Trastienda" parent="." unique_id=468557803 instance=ExtResource("2_b3802")]
-transform = Transform3D(-0.993301, 0, -0.022031784, 0, 1, 0, 0.015604111, 0, -1.4024632, 2.91, -1.034, 0.6908728)
+transform = Transform3D(-0.993301, 0, -0.022031784, 0, 1, 0, 0.015604111, 0, -1.4024632, 2.913479, -1.0332676, 0.6903845)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=793002764]
 transform = Transform3D(-0.9970527, -0.07332756, 0.0225585, -0.04174152, 0.7652068, 0.6424297, -0.06436972, 0.6395948, -0.76601243, 0, 0, 0)

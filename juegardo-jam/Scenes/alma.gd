@@ -12,6 +12,7 @@ func play_disappear_anim() -> void:
 	anim_player.play("desaparecer")
 	
 func delete_soul():
+	GameManager.finish_soul_interaction()
 	queue_free()
 	
 	
